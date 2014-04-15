@@ -9,7 +9,7 @@
             }
         };
 
-        var displayStatus = document.querySelector("#online-status");
+        var displayStatus = document.querySelector("#online-status");   // i have never seen the offline state.   does this even work?
         if (displayStatus) {
             // Using this, since navigator.onLine is very inconcistent and unreliable
             appCache.onerror = function() {

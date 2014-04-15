@@ -1,0 +1,142 @@
+/*
+base.css
+
+Base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
+
+Base styles include setting heading sizes, default link styles, default font styles, and body backgrounds. There should be no need to use !important in a Base style.
+*/
+
+
+
+/* 
+FONTS
+===================
+*/
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-Light.woff") format("woff");
+    font-weight: 300; /* lighter */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-LightItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: 300; /* lighter */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-Regular.woff") format("woff");
+    font-style: normal; 
+    font-weight: normal; /* 400 */
+}
+@font-face {
+    font-family: "FiraSans Regular Italic";
+    src: url("../fonts/FiraSans-RegularItalic.woff") format("woff");
+    font-weight: normal; /* 400 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-Medium.woff") format("woff");
+    font-weight: bold; /* 700 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-MediumItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: bold; /* 700 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-Bold.woff") format("woff");
+    font-weight: 800; /* bolder */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-BoldItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: 800; /* bolder */
+}
+
+
+/* 
+TYPE
+===================
+*/
+h1,.alpha   { 
+    font-size: 23rem; 
+    line-height: 26rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: var(--color-root-gamma);
+}
+
+h2,.beta  {
+    font-size: 18rem;
+    color: var(--color-root-gamma);
+}
+
+h3,.gamma   { 
+    font-size: 14rem;
+    font-style: bold;
+    text-transform: uppercase;;
+    font-weight: normal;
+    color: var(--color-root-gamma);
+}
+
+h4,.delta   { 
+    font-size: 14rem;
+}
+
+h5,.epsilon { }
+h6,.zeta    { }
+
+/* font styles larger than h1 */
+.giga{ }
+.mega{ }
+.kilo{ }
+
+/* font style smaller than regular */
+small, .milli {}
+
+/* base font */
+* { 
+    font-family: "FiraSans"; 
+    font-size: 14rem;
+    font-weight: normal;
+    line-height: 17rem;
+    color: var(--color-root-epsilon);
+}
+
+
+/*
+COLORS
+=================
+*/
+
+:root {
+    /* root colors */
+    --color-root-alpha: #333333;
+    --color-root-beta: #ffffff;
+    --color-root-gamma: #4d4d4d;
+    --color-root-delta: #5f5f5f;
+    --color-root-epsilon: #858585;
+    --color-root-zeta: #a6a6a6;
+    --color-root-eta: #c7c7c7;
+    --color-root-theta: #e7e7e7;
+    --color-root-iota: #f4f4f4;
+}
+
+
+
+/* 
+TAGS
+===================
+*/
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--color-root-iota);
+  font-size: 1px;
+}
+
+

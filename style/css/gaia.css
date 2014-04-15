@@ -1,0 +1,75 @@
+/*
+gaia.css
+
+Theme file for Gaia specific styles.
+
+Themes can affect any of the primary types. They can override base styles like default link colours. They can change module elements such as colours and borders. They can affect layout with different arrangements. They can also alter how states look.
+*/
+
+:root {
+    /* brand colors*/
+    --color-brand-darkblue: #00539f;
+    --color-brand-blue: #00caf2;
+    --color-brand-turquoise: #27c8c2;
+    --color-brand-darkorange: #e66000;
+    --color-brand-orange: #ff9500;
+    --color-brand-yellow: #ffcb00;
+    --color-brand-violet: #c40c84;
+}
+
+/* BUTTONS */
+.btn:active {
+    background-color: var(--color-brand-blue);
+    border: 1rem solid var(--color-brand-blue);
+}
+
+/* HEADERS */
+/* settings*/
+.header-settings {
+    /* use default */
+}
+.header-settings .header-btn {
+    color: var(--color-brand-blue);
+}
+
+/* comms */
+.header-comms {
+    background-color: var(--color-brand-turquoise);
+}
+.header-comms  .title {
+    color: var(--color-root-beta);
+}
+.header-comms .header-btn {
+    color: #16706c;
+}
+.header-comms .header-btn:active {
+    background-color: #24bab4;
+}
+
+/* media */
+.header-media {
+    background-color: var(--color-root-gamma);
+}
+.header-media  .title {
+    color: var(--color-root-theta);
+}
+.header-media .header-btn {
+    color: #00aac5;
+}
+.header-media .header-btn:active {
+    background-color: #3e3e3e;
+}
+
+/* media */
+.header-productivity {
+    background-color: var(--color-brand-orange);
+}
+.header-productivity  .title {
+    color: var(--color-root-beta);
+}
+.header-productivity .header-btn {
+    color: var(--color-root-beta);
+}
+.header-productivity .header-btn:active {
+    background-color: #ed8a00;
+}

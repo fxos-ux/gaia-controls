@@ -1,0 +1,85 @@
+/*
+modules.css
+
+A Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component.
+*/
+
+
+
+/*
+BUTTONS
+=================
+*/
+
+
+.btn {
+    display:inline-block;
+    height: 50rem;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 17rem;
+    padding: 0rem 25rem;
+    border-radius: 25rem;
+    border: 1px solid #eeeeee;
+    border-bottom: 1px solid #dddddd;
+    background-color:  var(--color-root-beta);
+    color: var(--color-root-alpha);
+}
+
+.btn:active {
+    color: var(--color-root-beta);
+    border: 1px solid var(--color-root-delta);
+    background-color: var(--color-root-delta);
+}
+
+.btn-rectangle {
+    border-radius: 0rem;
+}
+
+.btn-circle {
+    width: 60rem;
+    height: 60rem;
+    border-radius: 30rem;
+}
+
+
+/*
+HEADERS
+=================
+*/
+
+.header {
+    display: flex;
+    width: 100%;
+    min-height: 50rem;
+    justify-content: center;
+}
+
+.header > .header-btn {
+    position: relative;
+    order: 3;
+    min-width: 50rem;
+    min-height: 50rem;
+    text-align: center;
+    font-style: italic;
+    text-decoration: none;
+    line-height: 50rem;
+    margin: 0;
+    padding:0;
+    border: none;
+    background-color: transparent;
+}
+
+.header > .header-btn:first-child {     /* first header button is assumed to be navigation  */
+    order: 1;
+}
+
+.header > .header-btn:active {
+    background-color: #e3e3e3;
+}
+
+.header > .title {
+    margin: 14rem 16rem;
+    order: 2;
+    flex: 1;
+}

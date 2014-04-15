@@ -1,0 +1,27 @@
+/* layout.css */
+
+
+/* helper classes */
+.l-clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.l-align-right {
+    float: right;
+}
+
+.l-align-left {
+    float: left;
+}
+
+.l-align-center {
+    text-align: center;
+}
+
+
+/* content */
+.l-content {
+    margin: 16rem 12rem 50rem 12rem;
+}
