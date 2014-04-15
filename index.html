@@ -26,8 +26,8 @@
     <link rel="stylesheet" type="text/css" href="style/css/state.css"/>
 
     <!-- Theme styles: -->
-    <link rel="stylesheet" type="text/css" href="style/css/gaia.css"/>
     <link rel="stylesheet" type="text/css" href="style/css/styleguide.css"/>
+    <link rel="stylesheet" type="text/css" href="style/css/gaia.css"/>
 
     <script type="application/javascript" src="js/l10n.js"></script>
     <base target="_blank">
@@ -38,7 +38,7 @@
         <a class="header-btn">=</a>
         <button class="header-btn" id="reload" data-l10n-id="update-button">Reload</button>
 
-        <h1 class="title l-align-center" data-l10n-id="app-heading">Firefox OS Styleguide</h1>
+        <h1 class="title l-align-center" data-l10n-id="app-heading">FirefoxOS Styleguide</h1>
     </header>
 
 
@@ -111,10 +111,22 @@
         
     </section>
     
-    <section id="input">
+    <section id="input" class="l-content">
         <h2>Input fields</h2>
         
-        
+        <h3>Default input field</h3>
+        <input placeholder="Placeholder text">
+
+        <h3>Regular input field</h3>
+
+        <label class="input-label" for="SampleInput">Inputbox Label</label>
+        <input class="input" id="sampleInput" placeholder="Placeholder text 1">
+        <input class="input" placeholder="Placeholder text 2">
+        <input class="input" placeholder="Placeholder text 3">
+
+        <!-- todo: Required input fields -->
+        <!-- todo: Read only input fields -->
+
     </section>
 
     

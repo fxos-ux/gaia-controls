@@ -22,7 +22,7 @@ BUTTONS
     border-radius: 25rem;
     border: 1px solid #eeeeee;
     border-bottom: 1px solid #dddddd;
-    background-color:  var(--color-root-beta);
+    background:  var(--color-root-beta);
     color: var(--color-root-alpha);
 }
 
@@ -82,4 +82,35 @@ HEADERS
     margin: 14rem 16rem;
     order: 2;
     flex: 1;
+}
+
+
+/*
+INPUT
+=================
+*/
+
+.input {
+    border: 1rem solid #d6d6d6;
+    background: var(--color-root-beta);
+    font-size: 17rem;
+    color: var(--color-root-alpha);
+    min-height: 40rem;
+    margin: 0rem 0rem 16rem 0rem;
+    padding: 0rem 16rem;
+}
+
+.input::-moz-placeholder {
+    font-style: italic;
+    font-weight: lighter;
+    color: #909ca7;
+}
+
+.input:focus {
+    border: 1rem solid var(--color-root-alpha);
+}
+
+.input-label {
+    display: block;
+    margin: 0 0 0 16rem;
 }

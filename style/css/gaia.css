@@ -73,3 +73,11 @@ Themes can affect any of the primary types. They can override base styles like d
 .header-productivity .header-btn:active {
     background-color: #ed8a00;
 }
+
+
+/* FORM INPUT */
+.input:focus {
+    border: 1rem solid #d6d6d6;
+    box-shadow: 0 1rem 0 0 var(--color-brand-blue);
+    border-bottom: 1px solid var(--color-brand-blue);
+}
