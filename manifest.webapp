@@ -17,6 +17,7 @@
     "name": "Casey Yee",
     "url": "http://www.octetnerve.com"
   },
+  "fullscreen": true,
   "installs_allowed_from": [
     "*"
   ],
@@ -27,8 +28,7 @@
     },
     "geolocation": {
       "description": "Marking out user location"
-    },
-    "fullscreen": "true"
+    }
   },
   "locales": {
     "en-US": {
