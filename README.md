@@ -13,3 +13,26 @@
 
 ## Considerations
 * It would be great to have some kind of live documentation output from this code so that 
+* Responsive to phone, tablet and other form factors.
+
+
+## About CSS
+
+CSS files organization based off of http://smacss.com
+
+### Base rules
+base.css
+* base font size set to 1px for ease of calculation.   1rem = 1pixel.  
+* All measurements delcared in rem.   Because of this, the entire interface is responsive to this base font size.   
+* Set base font-size to 1.5px for 1.5x resolution devices, 2.0px for retina resolution devices.
+
+### layout rules
+layout.css
+
+### Module rules
+modules.css
+
+
+### theme rules
+gaia.css
+* Removing gaia.css will remove all the Gaia specific styling and leave a "white-label" generic design from a themed design can be added to.

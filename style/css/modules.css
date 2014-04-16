@@ -126,6 +126,7 @@ MENU
 */
 .menu {
     padding: 0 var(--dim-small) 0;
+    margin: 0;
 }
 
 .menu-item {
@@ -136,7 +137,7 @@ MENU
 }
 
 .menu-item:active {
-    background: red;
+    background: var(--color-root-theta);
 }
 
 /*
