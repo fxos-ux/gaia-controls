@@ -58,58 +58,11 @@ FONTS
 }
 
 
-/* 
-TYPE
-===================
-*/
-h1,.alpha   { 
-    font-size: 23rem; 
-    line-height: 26rem;
-    font-weight: lighter;
-    font-style: italic;
-    color: var(--color-root-gamma);
-}
 
-h2,.beta  {
-    font-size: 18rem;
-    color: var(--color-root-gamma);
-}
-
-h3,.gamma   { 
-    font-size: 14rem;
-    font-style: bold;
-    text-transform: uppercase;;
-    font-weight: normal;
-    color: var(--color-root-gamma);
-}
-
-h4,.delta   { 
-    font-size: 14rem;
-}
-
-h5,.epsilon { }
-h6,.zeta    { }
-
-/* font styles larger than h1 */
-.giga{ }
-.mega{ }
-.kilo{ }
-
-/* font style smaller than regular */
-small, .milli {}
-
-/* base font */
-* { 
-    font-family: "FiraSans"; 
-    font-size: 14rem;
-    font-weight: normal;
-    line-height: 17rem;
-    color: var(--color-root-epsilon);
-}
 
 
 /*
-COLORS
+VARIABLES
 =================
 */
 
@@ -124,8 +77,66 @@ COLORS
     --color-root-eta: #c7c7c7;
     --color-root-theta: #e7e7e7;
     --color-root-iota: #f4f4f4;
+
+    /* root dimensions */
+    --dim-milli: 12rem;
+    --dim-small: 16rem;
+    --dim-medium: 45rem;
+    --dim-large: 50rem;
+    --dim-mega: 60rem;
+
+    /* font sizes */
+    --font-small: 14rem;
+    --font-medium: 17rem;
+    --font-large: 23rem;
 }
 
+
+/* 
+TYPE
+===================
+*/
+h1,.alpha   { 
+    font-size: var(--font-large);
+    line-height: 26rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: var(--color-root-gamma);
+}
+
+h2,.beta  {
+    font-size: var(--font-medium);
+    color: var(--color-root-gamma);
+}
+
+h3,.gamma   { 
+    font-size: var(--font-small);
+    font-style: bold;
+    text-transform: uppercase;;
+    font-weight: normal;
+    color: var(--color-root-gamma);
+}
+
+h4,.delta   { }
+h5,.epsilon { }
+h6,.zeta    { }
+
+/* font styles larger than h1 */
+.mega{ }
+.giga{ }
+.kilo{ }
+
+/* font style smaller than regular */
+small, .milli {}
+
+/* base font */
+* { 
+    font-family: "FiraSans"; 
+    font-size: var(--font-medium);
+    font-weight: normal;
+    line-height: 19rem;
+    color: var(--color-root-epsilon);
+}
 
 
 /* 
@@ -138,5 +149,9 @@ html, body {
   background-color: var(--color-root-iota);
   font-size: 1px;
 }
+
+a {
+}
+
 
 

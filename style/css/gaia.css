@@ -26,7 +26,6 @@ Themes can affect any of the primary types. They can override base styles like d
 /* HEADERS */
 /* settings*/
 .header-settings {
-    /* use default */
 }
 .header-settings .header-btn {
     color: var(--color-brand-blue);

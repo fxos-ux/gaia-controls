@@ -15,6 +15,10 @@
 
 
 /* content */
-.l-content {
-    margin: 16rem 12rem 30rem 12rem;
+.l-mb60 {
+    margin-bottom: var(--dim-mega);
+}
+
+.l-plr16 {
+   padding: var(--dim-small); 
 }

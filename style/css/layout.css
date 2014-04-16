@@ -21,3 +21,11 @@
 }
 
 
+/* content */
+.l-mb60 {
+    margin-bottom: var(--dim-mega);
+}
+
+.l-plr16 {
+   padding: var(--dim-small); 
+}

@@ -6,6 +6,8 @@ A Module is a more discrete component of the page. It is your navigation bars an
 
 
 
+
+
 /*
 BUTTONS
 =================
@@ -17,7 +19,7 @@ BUTTONS
     height: 50rem;
     font-weight: lighter;
     font-style: italic;
-    font-size: 17rem;
+    font-size: var(--font-medium);
     padding: 0rem 25rem;
     border-radius: 25rem;
     border: 1px solid #eeeeee;
@@ -62,6 +64,7 @@ HEADERS
     min-height: 50rem;
     text-align: center;
     font-style: italic;
+    font-size: var(--font-small);
     text-decoration: none;
     line-height: 50rem;
     margin: 0;
@@ -93,7 +96,7 @@ INPUT
 .input {
     border: 1rem solid #d6d6d6;
     background: var(--color-root-beta);
-    font-size: 17rem;
+    font-size: var(--font-medium);
     color: var(--color-root-alpha);
     min-height: 40rem;
     margin: 0rem 0rem 16rem 0rem;
@@ -111,6 +114,26 @@ INPUT
 }
 
 .input-label {
+    font-size: var(--font-small);
     display: block;
-    margin: 0 0 0 16rem;
+    margin: 0 0 4rem 16rem;
+}
+
+/*
+MENU
+=================
+*/
+.menu {
+    padding: 0 var(--dim-small) 0;
+}
+
+.menu-item {
+    list-style: none;
+    border-bottom: 1rem solid var(--color-root-theta);
+    padding: var(--dim-small) 0;
+    color: var(--color-root-gamma);
+}
+
+.menu-item:active {
+    background: red;
 }

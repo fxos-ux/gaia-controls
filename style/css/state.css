@@ -16,3 +16,7 @@ State rules are ways to describe how our modules or layouts will look when in a 
     border: 1px solid #f0f0f0!important;
     color: #ababab!important;
 }
+
+.is-hidden {
+    display: none;
+}
