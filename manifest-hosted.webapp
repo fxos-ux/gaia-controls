@@ -1,8 +1,8 @@
 {
   "version": "1",
-  "name": "Firefox OS Boilerplate App",
-  "launch_path": "/Firefox-OS-Boilerplate-App/index.html",
-  "description": "Boilerplate Firefox OS app with example use cases to get started",
+  "name": "Firefox OS Styleguide",
+  "launch_path": "/ffxos-controls/index.html",
+  "description": "Styleguide",
   "icons": {
     "16": "/Firefox-OS-Boilerplate-App/images/logo16.png",
     "32": "/Firefox-OS-Boilerplate-App/images/logo32.png",
@@ -14,8 +14,8 @@
     "128": "/Firefox-OS-Boilerplate-App/images/logo128.png"
   },
   "developer": {
-    "name": "Robert Nyman",
-    "url": "http://robertnyman.com"
+    "name": "Casey Yee",
+    "url": "http://mozilla.com"
   },
   "installs_allowed_from": [
     "*"
