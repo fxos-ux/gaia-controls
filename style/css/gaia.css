@@ -6,8 +6,14 @@ Theme file for Gaia specific styles.
 Themes can affect any of the primary types. They can override base styles like default link colours. They can change module elements such as colours and borders. They can affect layout with different arrangements. They can also alter how states look.
 */
 
+
+/*
+GAIA THEME
+===================
+*/
+
 :root {
-    /* brand colors*/
+    /* colors */
     --color-brand-darkblue: #00539f;
     --color-brand-blue: #00caf2;
     --color-brand-turquoise: #27c8c2;
@@ -15,68 +21,128 @@ Themes can affect any of the primary types. They can override base styles like d
     --color-brand-orange: #ff9500;
     --color-brand-yellow: #ffcb00;
     --color-brand-violet: #c40c84;
+
+    --color-brand-alpha: #00aac5;
+    --color-brand-beta: #00caf2;
+    --color-brand-gamma: #b2f2ff;
 }
 
-/* BUTTONS */
+
+
+/* input */
+.input:focus {
+    border: 1rem solid #d6d6d6;
+    box-shadow: 0 1rem 0 0 var(--color-brand-blue);
+    border-bot
+    tom: 1px solid var(--color-brand-blue);
+}
+
+
+/* buttons */
 .btn:active {
     background-color: var(--color-brand-blue);
     border: 1rem solid var(--color-brand-blue);
 }
 
-/* HEADERS */
-/* settings*/
-.header-settings {
+
+/*
+SETTINGS THEME
+===================
+*/
+
+/* headers */
+.theme-settings .header {
+    background: var(--color-root-iota);
 }
-.header-settings .header-btn {
+.theme-settings .header-btn {
     color: var(--color-brand-blue);
 }
 
-/* comms */
-.header-comms {
-    background-color: var(--color-brand-turquoise);
+
+/*
+COMMS THEME
+===================
+*/
+
+/* headers */
+.theme-comms .header {
+    background: var(--color-brand-turquoise);
 }
-.header-comms  .title {
+.theme-comms .header .title  {
     color: var(--color-root-beta);
 }
-.header-comms .header-btn {
+.theme-comms .header .header-btn  {
     color: #16706c;
 }
-.header-comms .header-btn:active {
-    background-color: #24bab4;
+.theme-comms .header .header-btn:active  {
+    background: #24bab4;
+}
+/* tabs */
+.theme-comms .tabs-is-selected {
+    color:  var(--color-brand-turquoise);
+    border-bottom: 3rem solid var(--color-brand-turquoise);
 }
 
-/* media */
-.header-media {
-    background-color: var(--color-root-gamma);
+
+/*
+MEDIA THEME
+===================
+*/
+/* headers */
+.theme-media .header {
+    background: var(--color-root-gamma);
 }
-.header-media  .title {
+.theme-media .header  .title {
     color: var(--color-root-theta);
 }
-.header-media .header-btn {
+.theme-media .header .header-btn {
     color: #00aac5;
 }
-.header-media .header-btn:active {
-    background-color: #3e3e3e;
+.theme-media .header .header-btn:active {
+    background: #3e3e3e;
 }
 
-/* media */
-.header-productivity {
-    background-color: var(--color-brand-orange);
-}
-.header-productivity  .title {
+/* tabs*/
+.theme-media .tabs {
+    background: var(--color-root-alpha);
     color: var(--color-root-beta);
 }
-.header-productivity .header-btn {
+.theme-media .tabs-item {
     color: var(--color-root-beta);
 }
-.header-productivity .header-btn:active {
-    background-color: #ed8a00;
+.theme-media .tabs-item:active {
+    background: #242424;
+}
+.theme-media .tabs-is-selected {
+    color: var(--color-brand-alpha);
+    border-bottom: 3rem solid var(--color-brand-alpha);
+}
+.theme-media .tabs-is-selected:active {
+    background: transparent;
 }
 
 
-/* FORM INPUT */
-.input:focus {
-    border: 1rem solid #d6d6d6;
-    box-shadow: 0 1rem 0 0 var(--color-brand-blue);
-    border-bottom: 1px solid var(--color-brand-blue);
+/*
+PRODUCTIVITY THEME
+===================
+*/
+/* header */
+.theme-productivity .header {
+    background: var(--color-brand-orange);
 }
+.theme-productivity .header  .title {
+    color: var(--color-root-beta);
+}
+.theme-productivity .header .header-btn {
+    color: var(--color-root-beta);
+}
+.theme-productivity .header .header-btn:active {
+    background: #ed8a00;
+}
+
+/* tabs */
+
+
+
+
+

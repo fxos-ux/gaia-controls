@@ -7,7 +7,6 @@ A Module is a more discrete component of the page. It is your navigation bars an
 
 
 
-
 /*
 BUTTONS
 =================
@@ -55,6 +54,7 @@ HEADERS
     width: 100%;
     min-height: 50rem;
     justify-content: center;
+    background: var(--color-root-beta);
 }
 
 .header > .header-btn {
@@ -70,7 +70,7 @@ HEADERS
     margin: 0;
     padding:0;
     border: none;
-    background-color: transparent;
+    background: transparent;
 }
 
 .header > .header-btn:first-child {     /* first header button is assumed to be navigation  */
@@ -78,13 +78,14 @@ HEADERS
 }
 
 .header > .header-btn:active {
-    background-color: #e3e3e3;
+    background: #e3e3e3;
 }
 
 .header > .title {
     margin: 14rem 16rem;
     order: 2;
     flex: 1;
+    text-align: center;
 }
 
 
@@ -136,4 +137,29 @@ MENU
 
 .menu-item:active {
     background: red;
+}
+
+/*
+TABS
+=================
+*/
+
+.tabs {
+    background: var(--color-root-beta);
+    margin: 0;
+    padding: 0;
+}
+
+.tabs-item {
+    box-sizing:border-box;
+    list-style: none;
+    text-align: center;
+    font-size: var(--font-medium);
+    color: var(--color-root-epsilon);
+    height: var(--dim-medium);
+    line-height: var(--dim-medium);
+}
+
+.tabs-item:active {
+    background: var(--color-root-iota);
 }

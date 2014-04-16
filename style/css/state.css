@@ -4,7 +4,7 @@ state.css
 State rules are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page. – SMACSS, Categorizing CSS Rules 
 */
 
-
+/* buttons */
 .btn-is-disabled {
     border: 1px solid #f0f0f0;
     background-color: #fbfbfb;
@@ -17,6 +17,13 @@ State rules are ways to describe how our modules or layouts will look when in a 
     color: #ababab!important;
 }
 
-.is-hidden {
-    display: none;
+
+/* tabs */
+.tabs-is-selected {
+    color: var(--color-root-alpha);
+    border-bottom: 3rem solid var(--color-root-alpha);
+}
+
+.tabs-is-selected:active {
+    background: transparent;
 }
