@@ -1,14 +1,32 @@
-/* layout.css */
+/* 
+layout.css 
+
+Layout rules divides a page into sections. Layouts hold one or more modules together.
+
+All layout definitions are prefixed with "l-".
+*/
+
+
+/*
+HELPERS
+===================
+*/
+
+.l-clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 /*
 GRID
 ===================
 */
-
 .grid {
 }
-
-.grid:after {
+.grid:after { 
+  /* clearfix */
   content: "";
   display: table;
   clear: both;
@@ -38,19 +56,6 @@ GRID
 
 
 
-
-/*
-HELPERS
-===================
-*/
-
-.l-clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
 /*
 ALIGNMENT
 ===================
@@ -59,11 +64,9 @@ ALIGNMENT
 .l-align-right {
     float: right;
 }
-
 .l-align-left {
     float: left;
 }
-
 .l-align-center {
     text-align: center;
 }
@@ -71,11 +74,15 @@ ALIGNMENT
 /*
 SPACING
 ===================
+margins and columns.
+specify in a single dimension only for calrity.
+
+naming syntax:
+[m = margin, b = border][t = top, r = right, b = bottom, l = left]
 */
 .l-mb60 {
     margin-bottom: var(--dim-mega);
 }
-
 .l-plr16 {
    padding:  0 var(--dim-small); 
 }

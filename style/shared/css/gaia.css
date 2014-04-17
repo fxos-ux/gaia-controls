@@ -3,7 +3,16 @@ gaia.css
 
 Theme file for Gaia specific styles.
 
+Gaia apps also have a sub-theme for each class of application in addition to defaults:
+* Media
+* Settings
+* Productivity
+* Communications
+
+About theme files:
 Themes can affect any of the primary types. They can override base styles like default link colours. They can change module elements such as colours and borders. They can affect layout with different arrangements. They can also alter how states look.
+
+Themed CSS variables are also defined here.
 */
 
 
@@ -12,8 +21,8 @@ GAIA THEME
 ===================
 */
 
+/* variables */
 :root {
-    /* colors */
     --color-brand-darkblue: #00539f;
     --color-brand-blue: #00caf2;
     --color-brand-turquoise: #27c8c2;
@@ -28,6 +37,59 @@ GAIA THEME
 }
 
 
+
+/*  fonts */
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-Light.woff") format("woff");
+    font-weight: 300; /* lighter */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-LightItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: 300; /* lighter */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-Regular.woff") format("woff");
+    font-style: normal; 
+    font-weight: normal; /* 400 */
+}
+@font-face {
+    font-family: "FiraSans Regular Italic";
+    src: url("../fonts/FiraSans-RegularItalic.woff") format("woff");
+    font-weight: normal; /* 400 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-Medium.woff") format("woff");
+    font-weight: bold; /* 700 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-MediumItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: bold; /* 700 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-Bold.woff") format("woff");
+    font-weight: 800; /* bolder */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("../fonts/FiraSans-BoldItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: 800; /* bolder */
+}
+
+
+
+/*
+COMPONENTS
+------------------------
+*/
 
 /* input */
 .input:focus {
@@ -66,7 +128,7 @@ GAIA THEME
 
 /*
 SETTINGS THEME
-===================
+------------------------
 */
 
 /* headers */
@@ -80,7 +142,7 @@ SETTINGS THEME
 
 /*
 COMMS THEME
-===================
+------------------------
 */
 
 /* headers */
@@ -105,7 +167,7 @@ COMMS THEME
 
 /*
 MEDIA THEME
-===================
+------------------------
 */
 /* headers */
 .theme-media .header {
@@ -155,7 +217,7 @@ MEDIA THEME
 
 /*
 PRODUCTIVITY THEME
-===================
+------------------------
 */
 /* header */
 .theme-productivity .header {

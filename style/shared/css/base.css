@@ -4,61 +4,9 @@ base.css
 Base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
 
 Base styles include setting heading sizes, default link styles, default font styles, and body backgrounds. There should be no need to use !important in a Base style.
+
+CSS variable definitions are also defined here.
 */
-
-
-
-/* 
-FONTS
-===================
-*/
-@font-face {
-    font-family: "FiraSans";
-    src: url("../fonts/FiraSans-Light.woff") format("woff");
-    font-weight: 300; /* lighter */
-}
-@font-face {
-    font-family: "FiraSans";
-    src: url("../fonts/FiraSans-LightItalic.woff") format("woff");
-    font-style: italic;
-    font-weight: 300; /* lighter */
-}
-@font-face {
-    font-family: "FiraSans";
-    src: url("../fonts/FiraSans-Regular.woff") format("woff");
-    font-style: normal; 
-    font-weight: normal; /* 400 */
-}
-@font-face {
-    font-family: "FiraSans Regular Italic";
-    src: url("../fonts/FiraSans-RegularItalic.woff") format("woff");
-    font-weight: normal; /* 400 */
-}
-@font-face {
-    font-family: "FiraSans";
-    src: url("../fonts/FiraSans-Medium.woff") format("woff");
-    font-weight: bold; /* 700 */
-}
-@font-face {
-    font-family: "FiraSans";
-    src: url("../fonts/FiraSans-MediumItalic.woff") format("woff");
-    font-style: italic;
-    font-weight: bold; /* 700 */
-}
-@font-face {
-    font-family: "FiraSans";
-    src: url("../fonts/FiraSans-Bold.woff") format("woff");
-    font-weight: 800; /* bolder */
-}
-@font-face {
-    font-family: "FiraSans";
-    src: url("../fonts/FiraSans-BoldItalic.woff") format("woff");
-    font-style: italic;
-    font-weight: 800; /* bolder */
-}
-
-
-
 
 
 /*
@@ -67,7 +15,7 @@ VARIABLES
 */
 
 :root {
-    /* root colors */
+    /* base colors */
     --color-root-alpha: #333333;
     --color-root-beta: #ffffff;
     --color-root-gamma: #4d4d4d;
@@ -78,7 +26,7 @@ VARIABLES
     --color-root-theta: #e7e7e7;
     --color-root-iota: #f4f4f4;
 
-    /* root dimensions */
+    /* base dimensions */
     --dim-micro: 6rem;
     --dim-milli: 12rem;
     --dim-small: 16rem;
@@ -86,7 +34,7 @@ VARIABLES
     --dim-large: 50rem;
     --dim-mega: 60rem;
 
-    /* font sizes */
+    /* base font sizes */
     --font-small: 14rem;
     --font-medium: 17rem;
     --font-large: 23rem;
