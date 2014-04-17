@@ -95,13 +95,14 @@ INPUT
 */
 
 .input {
+    box-sizing:border-box;
     border: 1rem solid #d6d6d6;
     background: var(--color-root-beta);
     font-size: var(--font-medium);
     color: var(--color-root-alpha);
     min-height: 40rem;
-    margin: 0rem 0rem 16rem 0rem;
-    padding: 0rem 16rem;
+    margin: 0rem 0rem var(--dim-small) 0rem;
+    padding: 0rem var(--dim-small);
 }
 
 .input::-moz-placeholder {
@@ -109,15 +110,13 @@ INPUT
     font-weight: lighter;
     color: #909ca7;
 }
-
 .input:focus {
-    border: 1rem solid var(--color-root-alpha);
+    border-bottom: 3rem solid var(--color-root-alpha);
 }
-
 .input-label {
     font-size: var(--font-small);
     display: block;
-    margin: 0 0 4rem 16rem;
+    margin: 0 0 4rem var(--dim-small);
 }
 
 /*
@@ -125,17 +124,16 @@ MENU
 =================
 */
 .menu {
-    padding: 0 var(--dim-small) 0;
+    padding: 0; 
     margin: 0;
 }
-
 .menu-item {
+    box-sizing:border-box;
     list-style: none;
     border-bottom: 1rem solid var(--color-root-theta);
-    padding: var(--dim-small) 0;
+    padding: var(--dim-small) var(--dim-small);
     color: var(--color-root-gamma);
 }
-
 .menu-item:active {
     background: var(--color-root-theta);
 }
@@ -144,13 +142,11 @@ MENU
 TABS
 =================
 */
-
 .tabs {
     background: var(--color-root-beta);
     margin: 0;
     padding: 0;
 }
-
 .tabs-item {
     box-sizing:border-box;
     list-style: none;
@@ -160,7 +156,6 @@ TABS
     height: var(--dim-medium);
     line-height: var(--dim-medium);
 }
-
 .tabs-item:active {
     background: var(--color-root-iota);
 }

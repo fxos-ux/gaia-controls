@@ -32,11 +32,8 @@ GAIA THEME
 /* input */
 .input:focus {
     border: 1rem solid #d6d6d6;
-    box-shadow: 0 1rem 0 0 var(--color-brand-blue);
-    border-bot
-    tom: 1px solid var(--color-brand-blue);
+    border-bottom: 3rem solid var(--color-brand-blue);
 }
-
 
 /* buttons */
 .btn:active {
@@ -44,6 +41,28 @@ GAIA THEME
     border: 1rem solid var(--color-brand-blue);
 }
 
+/* menu */
+.menu {
+    padding: 0 var(--dim-small);
+}
+.menu-item {
+    padding: var(--dim-small) 0;
+    z-index: 100;
+    position: relative;
+    font-weight: bold;
+}
+.menu-item:active {
+}
+.menu-item:active:after {
+    content: " ";
+    position: absolute;
+    top: -1rem;  
+    left: calc(var(--dim-small) * -1);
+    width: calc(100% + var(--dim-small) * 2);
+    height: calc(100% + 2rem);
+    background: var(--color-root-theta);
+    z-index: -1;
+}
 
 /*
 SETTINGS THEME
@@ -139,8 +158,6 @@ PRODUCTIVITY THEME
 .theme-productivity .header .header-btn:active {
     background: #ed8a00;
 }
-
-/* tabs */
 
 
 
