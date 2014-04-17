@@ -140,6 +140,18 @@ MEDIA THEME
     background: transparent;
 }
 
+/* menu */
+.theme-media .menu {
+    background: var(--color-root-alpha);
+}
+.theme-media .menu-item {
+    color: var(--color-root-beta);
+    border-bottom: 1rem solid #3b3b3b;
+    font-weight: normal;
+}
+.theme-media .menu-item:active:after {
+    background: #242424;
+}
 
 /*
 PRODUCTIVITY THEME

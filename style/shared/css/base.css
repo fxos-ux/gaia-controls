@@ -79,6 +79,7 @@ VARIABLES
     --color-root-iota: #f4f4f4;
 
     /* root dimensions */
+    --dim-micro: 6rem;
     --dim-milli: 12rem;
     --dim-small: 16rem;
     --dim-medium: 45rem;
