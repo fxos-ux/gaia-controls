@@ -1,0 +1,50 @@
+/*
+apps.css
+These are app specific styles that do not show up anywhere else in the OS.
+
+
+CONTACTS
+===================
+*/
+
+.contact {
+    padding: var(--dim-micro) 0;
+}
+.contact-info {
+    padding-top: var(--dim-micro);
+}
+.contact .first,
+.contact .last {
+    font-size: var(--font-medium);
+    color: var(--color-root-gamma);
+}
+.contact .first {
+    font-weight: bold;
+}
+.contact .last {
+    font-weight: normal;
+}
+.contact .company {
+    font-size: var(--font-small);
+}
+.contact .thumb {
+    display: block;
+    width: calc(var(--dim-large) - 2rem);
+    height: calc(var(--dim-large) - 2rem);
+    border-radius: calc(var(--dim-large) / 2);
+    border: 1rem solid #dddddd;
+    background: #fff;
+}
+
+/*
+MEDIA
+===================
+*/
+
+.theme-media .menu-meta {       
+    /* this style seems specific to media, if there are any other applications, move to GAIA THEME section */
+    color: var(--color-brand-alpha);
+    font-style: italic;
+    font-weight: lighter;
+    font-size: var(--font-small);
+}
