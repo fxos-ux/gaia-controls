@@ -38,8 +38,13 @@ if (reload) {
     };
 }
 
+
+
 // Checkbox
-// Beware: this is just dropped in for experimentation.
-var checkbox = document.getElementById('toggle');
-var toggle = new ToggleSwitch(checkbox, 'ON', 'OFF');
-toggle.on();
+var toggles = document.querySelectorAll('.toggle');
+for (var i = 0; i < toggles.length; i++) {
+    var toggleElem = toggles[i];
+    toggleElem.addEventListener('click', function() {
+        this.classList.toggle('is-checked');
+    })       
+}

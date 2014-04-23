@@ -195,20 +195,75 @@ TOGGLE
 */
 
 .toggle {
+    position: relative;
+    height: 34rem;
+    top: -6rem;
+    left: -15rem;
+}
+
+.toggle-track {
     display: block;
     width: 50rem;
     height: 30rem;
     border-radius: 25rem;
     background: #b7b7b7;
-    position: relative;
-}
-.toggle:after {
     position: absolute;
+    overflow: hidden;
+}
+
+
+.toggle-on {
+    width: 0rem;
+    height: 0rem;
+    border-radius: 35rem;
+    left: 20rem;
+    top: 15rem;
+    position: relative;
+    background: #00aac5;
+    transition-property: width, height, top, left, background-color;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+}
+.toggle.is-checked .toggle-on {
+    width: 70rem;
+    height: 70rem;
+    left: 0rem;
+    top: -20rem;
+    background: #00caf2;
+}
+.toggle-handle {
+    position: relative;
     content: " ";
     top:-2rem;
+    left: 0rem;
     width: 34rem;
     height: 34rem;
     border-radius: 16rem;
     background: #fff;
     border: 1rem solid #aaaaaa;
+    transition: left 0.2s;
+}
+.toggle.is-checked .toggle-handle {
+    left: 17rem;
+}
+
+.toggle-handle:after {
+    content: " ";
+    background: #00caf2;
+    width: 0rem;
+    height: 0rem;
+    border-radius: 6rem;
+    top: 16rem;
+    left: 16rem;
+    position: absolute;
+    transition-property: width, height, top, left;
+    transition-duration: 0.2s;
+    transition-delay: 0.4s;
+}
+
+.toggle.is-checked .toggle-handle:after {
+    top: 10rem;
+    left: 10rem;
+    width: 12rem;
+    height: 12rem;
 }
