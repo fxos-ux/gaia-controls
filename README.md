@@ -66,3 +66,6 @@ styleguide.css
 ### Open question
 * ? have a file for z-index.
 * adjusting base font-size to 1.5px will give you a fractional pixels.   How should we address this?   We could use absolute pixel definitions in these cases.    The problem with this approach however would be that 1px on a high resolution device may not be even visible.
+
+
+

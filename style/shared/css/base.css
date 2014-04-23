@@ -88,6 +88,47 @@ small, .milli {}
 }
 
 
+
+/* 
+MEDIA QUERIES
+===================
+*/
+/* 
+to do: need to figure out where this lives 
+options include:
+    - as separate responsive.css
+    - in layout module
+*/
+
+#resolution {
+    background: green;
+    color: white;
+}
+#resolution:before {
+    content: "default";
+}
+
+@media (min-resolution: 1.5dppx) {
+    #resolution {
+        background: red;
+        color: white;
+    }
+    #resolution:before {
+        content: "min 1.5dppx ";
+    }
+}
+
+@media (min-resolution: 2dppx) {
+    #resolution {
+        background: orange;
+        color: white;
+    }
+    #resolution:before {
+        content: "min 2dppx ";
+    }
+}
+
+
 /* 
 TAGS
 ===================
@@ -96,11 +137,12 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: var(--color-root-iota);
-  font-size: 1.5px;
+  font-size: 1.0px;
 }
 
 a {
 }
+
 
 
 
