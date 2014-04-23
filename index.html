@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="style/shared/css/layout.css"/>
     <link rel="stylesheet" type="text/css" href="style/shared/css/modules.css"/>
     <link rel="stylesheet" type="text/css" href="style/shared/css/state.css"/>
+
     <!-- Theme styles: -->
     <link rel="stylesheet" type="text/css" href="style/shared/themes/gaia/theme.css"/>
     <!-- Styles only for this styleguide: -->
@@ -58,6 +59,15 @@
         </div>
     </section>
 
+    <section class="toggles l-p16">
+        <h2>Toggle switch</h2>
+        <span class="toggle"></span>
+
+        <br/>
+        
+        <input type="checkbox" id="toggle" />
+
+    </section>
     <section id="menu">
         <h2 class="l-p16">Menu</h2>
 
@@ -356,7 +366,11 @@
         </div>
     </section>
         
-        
+    <!-- components -->
+    <script type="text/javascript" src="style/shared/modules/toggle/js/ToggleSwitch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/shared/modules/toggle/css/toggleswitch.css"/>
+
+    <!-- app -->
     <script type="text/javascript" src="js/base.js"></script>
     <script type="text/javascript" src="js/webapp.js"></script>
     <script type="text/javascript" src="js/offline.js"></script>

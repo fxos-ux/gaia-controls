@@ -37,3 +37,9 @@ if (reload) {
         location.reload(true);
     };
 }
+
+// Checkbox
+// Beware: this is just dropped in for experimentation.
+var checkbox = document.getElementById('toggle');
+var toggle = new ToggleSwitch(checkbox, 'ON', 'OFF');
+toggle.on();
