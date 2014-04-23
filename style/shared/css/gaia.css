@@ -149,13 +149,13 @@ COMMS THEME
 .theme-comms .header {
     background: var(--color-brand-turquoise);
 }
-.theme-comms .header .title  {
+.theme-comms .header-title  {
     color: var(--color-root-beta);
 }
-.theme-comms .header .header-btn  {
+.theme-comms .header-btn  {
     color: #16706c;
 }
-.theme-comms .header .header-btn:active  {
+.theme-comms .header-btn:active  {
     background: #24bab4;
 }
 /* tabs */
@@ -173,13 +173,13 @@ MEDIA THEME
 .theme-media .header {
     background: var(--color-root-gamma);
 }
-.theme-media .header  .title {
+.theme-media .header-title {
     color: var(--color-root-theta);
 }
-.theme-media .header .header-btn {
+.theme-media .header-btn {
     color: #00aac5;
 }
-.theme-media .header .header-btn:active {
+.theme-media .header-btn:active {
     background: #3e3e3e;
 }
 
@@ -223,13 +223,13 @@ PRODUCTIVITY THEME
 .theme-productivity .header {
     background: var(--color-brand-orange);
 }
-.theme-productivity .header  .title {
+.theme-productivity .header-title {
     color: var(--color-root-beta);
 }
-.theme-productivity .header .header-btn {
+.theme-productivity .header-btn {
     color: var(--color-root-beta);
 }
-.theme-productivity .header .header-btn:active {
+.theme-productivity .header-btn:active {
     background: #ed8a00;
 }
 

@@ -81,7 +81,7 @@ HEADERS
     background: #e3e3e3;
 }
 
-.header > .title {
+.header-title {
     margin: 14rem 16rem;
     order: 2;
     flex: 1;
@@ -126,6 +126,7 @@ MENU
 .menu {
     padding: 0; 
     margin: 0;
+    width: 100%;
 }
 .menu-item {
     box-sizing:border-box;
@@ -158,4 +159,39 @@ TABS
 }
 .tabs-item:active {
     background: var(--color-root-iota);
+}
+
+
+
+
+/*
+ICON
+=================
+*/
+
+.icon-nav {
+    width: 100%;
+    height: 100%;
+    font-size: 0rem;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center center;
+}
+.icon-nav-back-light {
+    background-image: url('../modules/icon/nav-back-light.svg');
+}
+.icon-nav-back-dark {
+    background-image: url('../modules/icon/nav-back-dark.svg');
+}
+.icon-nav-close-light {
+    background-image: url('../modules/icon/nav-close-light.svg');
+}
+.icon-nav-close-dark {
+    background-image: url('../modules/icon/nav-close-dark.svg');
+}
+.icon-nav-menu-light {
+    background-image: url('../modules/icon/nav-menu-light.svg');
+}
+.icon-nav-menu-dark {
+     background-image: url('../modules/icon/nav-menu-dark.svg');
 }

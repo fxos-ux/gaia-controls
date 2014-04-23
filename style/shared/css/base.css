@@ -87,46 +87,17 @@ small, .milli {}
     color: var(--color-root-epsilon);
 }
 
-
-
 /* 
-MEDIA QUERIES
+RESET
 ===================
 */
-/* 
-to do: need to figure out where this lives 
-options include:
-    - as separate responsive.css
-    - in layout module
-*/
-
-#resolution {
-    background: green;
-    color: white;
-}
-#resolution:before {
-    content: "default";
+*, *:before, *:after {
+    box-sizing: border-box; 
 }
 
-@media (min-resolution: 1.5dppx) {
-    #resolution {
-        background: red;
-        color: white;
-    }
-    #resolution:before {
-        content: "min 1.5dppx ";
-    }
-}
 
-@media (min-resolution: 2dppx) {
-    #resolution {
-        background: orange;
-        color: white;
-    }
-    #resolution:before {
-        content: "min 2dppx ";
-    }
-}
+
+
 
 
 /* 
@@ -138,6 +109,7 @@ html, body {
   margin: 0;
   background-color: var(--color-root-iota);
   font-size: 1.0px;
+  height: 100%;
 }
 
 a {

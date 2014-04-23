@@ -22,6 +22,8 @@ HELPERS
 /*
 GRID
 ===================
+
+This only handles horizontal atm.    Could possibly require more extensible solution.
 */
 .grid {
 }
@@ -53,8 +55,12 @@ GRID
 .col-1-4 {
     width: 25%;
 }
-
-
+.col-2-4 {
+   width: 50%;
+}
+.col-3-4 {
+  width: 75%;
+}
 
 /*
 ALIGNMENT
@@ -71,6 +77,24 @@ ALIGNMENT
     text-align: center;
 }
 
+
+
+/*
+APP LAYOUTS
+===================
+*/
+
+.l-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.l-app-content {
+   display: flex;
+  flex: 1 1 0%;
+  overflow: auto;
+}
+
 /*
 SPACING
 ===================
@@ -79,10 +103,20 @@ specify in a single dimension only for calrity.
 
 naming syntax:
 [m = margin, b = border][t = top, r = right, b = bottom, l = left]
+
+
 */
 .l-mb60 {
     margin-bottom: var(--dim-mega);
 }
+.l-p16 {
+  padding: var(--dim-small);
+}
 .l-plr16 {
-   padding:  0 var(--dim-small); 
+   padding-left: var(--dim-small); 
+   padding-right: var(--dim-small); 
+}
+.l-tb16 {
+  padding-top: var(--dim-small); 
+  padding-bottom: var(--dim-small); 
 }
