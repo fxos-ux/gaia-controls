@@ -177,21 +177,17 @@ ICON
     background-size: 65%;
     background-position: center center;
 }
-.icon-nav-back-light {
-    background-image: url('../modules/icon/nav-back-light.svg');
+
+.icon-nav-back {
+    background-image: url('../modules/icon/nav-back.svg');
 }
-.icon-nav-back-dark {
-    background-image: url('../modules/icon/nav-back-dark.svg');
+
+.icon-nav-close {
+    background-image: url('../modules/icon/nav-close.svg');
 }
-.icon-nav-close-light {
-    background-image: url('../modules/icon/nav-close-light.svg');
+
+.icon-nav-menu {
+     background-image: url('../modules/icon/nav-menu.svg');
 }
-.icon-nav-close-dark {
-    background-image: url('../modules/icon/nav-close-dark.svg');
-}
-.icon-nav-menu-light {
-    background-image: url('../modules/icon/nav-menu-light.svg');
-}
-.icon-nav-menu-dark {
-     background-image: url('../modules/icon/nav-menu-dark.svg');
-}
+
+

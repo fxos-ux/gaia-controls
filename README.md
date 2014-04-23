@@ -15,12 +15,13 @@
 ## About the CSS
 ### folders
     /style
-        /app/        Application specific styles (contacts, email, etc.)
         /shared/     This would represent the Gaia shared styles.
+           /css      Base shared styles.
+           /modules  Modules styles
+           /themes   Themes styles
+        /app/        Application specific styles (contacts, email, etc.)
     
-
-### /style/shared
-
+### /style/shared/css
 #### base.css
 Base rules
 
@@ -31,31 +32,29 @@ Base rules
 
 #### layout.css
 Layout rules
-
 * Layout rules divide a page into sections and hold one or more modules together.
 * Helper classes for alignment, spacing, grids and clearfix are defined here.
 * Media queries for responsive layout are also included in this file.
 
 #### modules.css
 Module rules
-
 * A module is a discreet UI component.   
 * Headers, buttons, tabs, menus are some of the UI components defined here.
+* Todo: each individual module can be placed in its own CSS document here.  We would need to concat these files otherwise we run into large set of import declarations -- which is no good.
 
-#### gaia.css
-theme rules
+#### /themes directory
+specific theme rules
 
-* The Gaia theme sits on-top of the base "White-label" design.   
+* /themes/gaia/theme.css - Gaia theme sits on-top of the base "White-label" design.   
+* All the style specific to the Gaia theme are contained within /themes/gaia/theme.css
 * If removed, you will see the basic "skinnable" design in which we can add theme files for customization.
 * Gaia apps are sub-themed into 4 categories:  Media, Settings, Productivity and Communication.   Each one of these sub-themes have their own set of styles.
 
+* /themes/styleguide/theme.css - contains theme styles specific to this styleguide.
+
 ### /style/app folder
 apps.css
-* Specific styles that do not exist and are not reused anywhere else.
-
-### /style/styleguide folder
-styleguide.css
-* Styles that are specific to this styleguide app only.
+* Specific styles for individual apps that do not exist and are not reused anywhere else.
 
 
 ### Additional information

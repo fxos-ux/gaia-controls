@@ -41,45 +41,45 @@ GAIA THEME
 /*  fonts */
 @font-face {
     font-family: "FiraSans";
-    src: url("../fonts/FiraSans-Light.woff") format("woff");
+    src: url("fonts/FiraSans-Light.woff") format("woff");
     font-weight: 300; /* lighter */
 }
 @font-face {
     font-family: "FiraSans";
-    src: url("../fonts/FiraSans-LightItalic.woff") format("woff");
+    src: url("fonts/FiraSans-LightItalic.woff") format("woff");
     font-style: italic;
     font-weight: 300; /* lighter */
 }
 @font-face {
     font-family: "FiraSans";
-    src: url("../fonts/FiraSans-Regular.woff") format("woff");
+    src: url("fonts/FiraSans-Regular.woff") format("woff");
     font-style: normal; 
     font-weight: normal; /* 400 */
 }
 @font-face {
     font-family: "FiraSans Regular Italic";
-    src: url("../fonts/FiraSans-RegularItalic.woff") format("woff");
+    src: url("fonts/FiraSans-RegularItalic.woff") format("woff");
     font-weight: normal; /* 400 */
 }
 @font-face {
     font-family: "FiraSans";
-    src: url("../fonts/FiraSans-Medium.woff") format("woff");
+    src: url("fonts/FiraSans-Medium.woff") format("woff");
     font-weight: bold; /* 700 */
 }
 @font-face {
     font-family: "FiraSans";
-    src: url("../fonts/FiraSans-MediumItalic.woff") format("woff");
+    src: url("fonts/FiraSans-MediumItalic.woff") format("woff");
     font-style: italic;
     font-weight: bold; /* 700 */
 }
 @font-face {
     font-family: "FiraSans";
-    src: url("../fonts/FiraSans-Bold.woff") format("woff");
+    src: url("fonts/FiraSans-Bold.woff") format("woff");
     font-weight: 800; /* bolder */
 }
 @font-face {
     font-family: "FiraSans";
-    src: url("../fonts/FiraSans-BoldItalic.woff") format("woff");
+    src: url("fonts/FiraSans-BoldItalic.woff") format("woff");
     font-style: italic;
     font-weight: 800; /* bolder */
 }
@@ -126,6 +126,15 @@ COMPONENTS
     z-index: -1;
 }
 
+
+/* todo: we should have default nav in module.  the light&dark icon scheme should be themed */
+.icon-nav-back-light {
+    background-image: url('../modules/icon/nav-back-light.svg');
+}
+.icon-nav-menu-light {
+    background-image: url('../modules/icon/nav-menu-light.svg');
+}
+
 /*
 SETTINGS THEME
 ------------------------
@@ -158,6 +167,12 @@ COMMS THEME
 .theme-comms .header-btn:active  {
     background: #24bab4;
 }
+
+/* icon */
+.theme-comms .icon-nav-close {
+    background-image: url('icon/nav-close-light.svg');
+}
+
 /* tabs */
 .theme-comms .tabs-is-selected {
     color:  var(--color-brand-turquoise);
@@ -181,6 +196,11 @@ MEDIA THEME
 }
 .theme-media .header-btn:active {
     background: #3e3e3e;
+}
+
+/* icon */
+.theme-media .icon-nav-back {
+    background-image: url('icon/nav-back-light.svg');
 }
 
 /* tabs*/
@@ -231,6 +251,11 @@ PRODUCTIVITY THEME
 }
 .theme-productivity .header-btn:active {
     background: #ed8a00;
+}
+
+/* icon */
+.theme-productivity .icon-nav-menu {
+    background-image: url('icon/nav-menu-light.svg');
 }
 
 
