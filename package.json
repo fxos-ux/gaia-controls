@@ -1,0 +1,8 @@
+{
+  "name": "FirefoxOS-Stylguide",
+  "version": "1.0.0",
+  "description": "FirefoxOS Styleguide",
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
+}

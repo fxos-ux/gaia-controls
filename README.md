@@ -1,13 +1,21 @@
 # Firefox OS Styleguide
 
-## Goals
+## Design goals
+* Provide a design and code reference for Gaia UX patterns and UI controls.
+* Fully responsive to phone and tablet form factors.
+* Support for different orientations, device pixel densities and aspect ratios.
+* Includes a baseline "white-label" design from which themes/skins can be built on-top of.   This base design will also be the highest performance and work with the lowest end hardware supported by firefox OS.
+* Support for theming and skinnability.   We will want to easily accomodate changes to fonts, colors, dimensions.
+* Considers localization and accessibility requirements.
+
+## Technical goals
 * Design a new more efficient and easier to maintain CSS styles structure for Gaia.
 * Learn how we can leverage new browser features such as CSS variables and Web components as part of this new structure.
-* Integrate accessibility, localization, RTL requirements.
 * Create a set of best practices when writing and maintaining CSS for Gaia.
-* Provide a design and code reference for Gaia UI components.  
+* Each component should be modular, portable and free of any dependencies.
 
 ### Visual designs
+2.1 visuals craeted by Przemek Abratowski <pabratowski@mozilla.com>
 * https://www.dropbox.com/sh/up9028j8lj3s9pq/D874Y6Tbl1
 * https://www.dropbox.com/sh/g6rit30f300tvo8/PfoBMc69L-
 

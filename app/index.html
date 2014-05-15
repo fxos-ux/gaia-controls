@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Exchange the line above for this to enable offline support
+    <html manifest="manifest.appcache">
+
+    Please make your homework before doing this:
+        http://www.alistapart.com/articles/application-cache-is-a-douchebag/
+        http://appcachefacts.info
+
+    This might be necessary to set up on your server, to make sure
+    files are updated when the appcache file itself is:
+        https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/.htaccess
+ -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Firefox OS Styleguide</title>
+        <!-- Localization -->
+    <link rel="resource" type="application/l10n" href="locales/locales.ini" />
+
+    <!-- Shared styles: -->
+    <link rel="stylesheet" type="text/css" href="style/shared/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="style/shared/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="style/shared/css/modules.css"/>
+    <link rel="stylesheet" type="text/css" href="style/shared/css/state.css"/>
+
+    <!-- Theme styles: -->
+    <link rel="stylesheet" type="text/css" href="style/shared/themes/gaia/theme.css"/>
+    <!-- Styles only for this styleguide: -->
+    <link rel="stylesheet" type="text/css" href="style/theme/styleguide/theme.css"/>
+
+    <!-- App specific styles: -->
+    <link rel="stylesheet" type="text/css" href="style/app/apps.css"/>
+
+    <script type="application/javascript" src="js/l10n.js"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <header class="header header-styleguide">
+        <a href="#" class="header-btn">
+             <div class="icon-nav icon-nav-menu">Menu</div>
+        </a>
+        <button class="header-btn" id="reload" data-l10n-id="update-button">Reload</button>
+
+        <h1 class="header-title" data-l10n-id="app-heading">FFxOS Styleguide</h1>
+    </header>
+
+    
+
+    <section id="installation-instructions" class="l-p16">
+        <div class="l-align-center">
+            <p>You can install this app to your device.</p>
+
+            <button class="btn" id="install">Install Now</button>
+        </div>
+    </section>
+
+  
+    <section id="menu">
+        <h2 class="l-p16">Menu</h2>
+
+        <ul class="menu">
+            <li class="menu-item">Typography</li>
+            <li class="menu-item">Headings</li>
+            <li class="menu-item">Buttons</li>
+            <li class="menu-item">Headers</li>
+            <li class="menu-item">Toolbars</li>
+
+        </ul>
+    </section>
+    
+    <section class="l-p16">
+        <h2><span id="resolution"></span> resolution</h2>
+
+        <p>The <em>dppx</em> unit represents the number of dots per px unit. Due to the 1:96 fixed ratio of CSS in to CSS px, 1dppx is equivalent to 96dpi, that corresponds to the default resolution of images displayed in CSS as defined by image-resolution.</p>
+    </section>
+
+    <section class="l-p16">
+        <h2>Typography</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo temporibus quos in eligendi laudantium? Odio blanditiis nobis repudiandae quod sapiente.</p>
+    </section>
+
+    <section class="l-p16">
+        <h2>Headings</h2>
+
+        <h1 class="l-align-center">Heading 1, h1, .alpha</h1>
+        <h2 class="l-align-center">Heading 2, h2, .beta</h2>
+        <h3 class="l-align-center">Heading 3, h3, .gamma</h3>
+        
+    </section>
+    <section class="l-p16">
+        <h2>Spinner</h2>
+
+        <div class="spinner l-clearfix">
+            <div class="spinner-circle"></div>
+            <div class="spinner-circle"></div>
+            <div class="spinner-circle"></div>
+        </div>
+    </section>
+
+
+    <section class="l-p16">
+        <h2>Buttons</h2>
+        
+        <!-- 
+        <h3>Default buttons</h3>
+        <button>Default</button> 
+        -->
+        <div class="l-align-center">
+
+        <h3>Regular buttons</h3>
+        <button class="btn">Regular button</button>
+        <button class="btn btn-is-disabled">Disabled button</button>
+
+        <h3>Rectangle buttons</h3>
+        <button class="btn btn-rectangle">Rectangle button</button>
+        <button class="btn btn-rectangle btn-is-disabled">Rectangle button</button>
+
+        <h3>Circle buttons</h3>
+        <button class="btn btn-circle"></button>
+        <button class="btn btn-circle btn-is-disabled"></button>
+        </div>
+
+    </section>
+
+      <section class="toggles">
+        <h2 class=" l-p16">Toggle switch</h2>
+        
+        <ul class="menu">
+            <li class="menu-item">
+                Toggle me
+                <div class="toggle l-align-right">
+                    <div class="toggle-track">
+                        <div class="toggle-on"></div>
+                    </div>
+                    <div class="toggle-handle"></div>
+                </div>
+            </li>
+            <li class="menu-item">
+                Toggle me
+                <div class="toggle is-checked l-align-right">
+                    <div class="toggle-track">
+                        <div class="toggle-on"></div>
+                    </div>
+                    <div class="toggle-handle"></div>
+                </div>
+            </li>
+            <li class="menu-item">
+                Toggle me
+                <div class="toggle is-checked l-align-right">
+                    <div class="toggle-track">
+                        <div class="toggle-on"></div>
+                    </div>
+                    <div class="toggle-handle"></div>
+                </div>
+            </li>
+
+        </ul>
+
+    </section>
+    
+    <section class="l-p16">
+        <h2>Input fields</h2>
+        
+        <!-- 
+        <h3>Default input field</h3>
+        <input placeholder="Placeholder text"> 
+        -->
+
+        <h3>Regular input field</h3>
+
+        <label class="input-label" for="SampleInput">Inputbox Label</label>
+        <input class="input" id="sampleInput" placeholder="Placeholder text 1">
+        <input class="input" placeholder="Placeholder text 2">
+        
+
+        <!-- todo: Required input fields -->
+        <!-- todo: Read only input fields -->
+
+    </section>
+    
+    <section>
+        <h2 class="l-plr16">Header</h2>
+
+        <header class="header">
+            <a href="#" class="header-btn">
+                <div class="icon-nav icon-nav-back">Back</div>
+            </a>
+            <a href="#" class="header-btn">Done</a>
+            <h1 class="header-title">Generic header</h1>
+        </header>
+    </section>
+
+    <section>
+        <h2 class=" l-plr16">Tab bars</h2>
+        
+        <h3 class=" l-plr16">3 column</h3>
+        <ul class="tabs grid">
+            <li class="tabs-item col-1-3">Item 1</li>
+            <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
+            <li class="tabs-item col-1-3">Item 3</li>
+        </ul>
+
+        <h3 class=" l-plr16">4 column</h3>
+        <ul class="tabs grid">
+            <li class="tabs-item col-1-4">Item 1</li>
+            <li class="tabs-item col-1-4 tabs-is-selected">Item 2</li>
+            <li class="tabs-item col-1-4">Item 3</li>
+            <li class="tabs-item col-1-4">Item 4</li>
+        </ul>        
+
+    </section>
+    
+        
+
+    <section>
+         <div class="theme-settings l-app">
+            <header class="header">
+                <a href="#" class="header-btn">
+                     <div class="icon-nav icon-nav-back">Back</div>
+                </a>
+                <a href="#" class="header-btn">Done</a>
+                <h1 class="header-title">Settings</h1>
+            </header>
+
+            <div class="l-app-content">
+                <ul class="menu">
+                    <li class="menu-item">Setting 1</li>
+                    <li class="menu-item">Setting 2</li>
+                    <li class="menu-item">Setting 3</li>
+                    <li class="menu-item">Setting 4</li>
+                    <li class="menu-item">Setting 5</li>
+                    <li class="menu-item">Setting 7</li>
+                    <li class="menu-item">Setting 8</li>
+                    <li class="menu-item">Setting 9</li>
+                    <li class="menu-item">Setting 10</li>
+                    <li class="menu-item">Setting 11</li>
+                </ul>
+            </div><!-- .l-app-content -->
+        </div>
+    </section>
+    <section>
+         
+       <div class="theme-comms l-app">
+            <header class="header">
+                <a href="#" class="header-btn">
+                    <div class="icon-nav icon-nav-close">Close</div>
+                </a>
+                <a href="#" class="header-btn">Done</a>
+                <h1 class="header-title">Comms</h1>
+            </header>
+            
+            <div id="l-contact-container">
+                <div id="l-contact-detail">
+                    <div class="contact-detail-container l-align-center">
+                        <h1 class="contact-detail-header">Design me!</h1>
+                    </div>
+                </div><!-- #l-contact-detail -->
+
+                <div id="l-contact-list" class="l-app">
+                    <div class="l-app-content">
+                        <ul class="menu">
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                            <li class="contact menu-item">
+                                <div class="l-clearfix">
+                                    <div class="contact-info l-align-left">
+                                        <span class="first">First</span> <span class="last">Last</span><br/>
+                                        <span class="company">Company name</span>
+                                    </div>
+                                    <span class="thumb l-align-right"></span>
+                                </div>
+                            </li>
+                        </ul><!-- .menu -->
+                    </div><!-- .l-contact-list -->
+                    
+                    <ul class="tabs grid">
+                        <li class="tabs-item col-1-3">Item 1</li>
+                        <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
+                        <li class="tabs-item col-1-3">Item 3</li>
+                    </ul>
+                </div><!-- #l-app-content -->
+            </div><!-- #l-contact-list -->
+        </div><!-- #l-contact-container -->
+    </section>
+    <section>
+        <div class="theme-media l-app">
+            <header class="header">
+                <a href="#" class="header-btn">
+                     <div class="icon-nav icon-nav-back">Back</div>
+                </a>
+                <a href="#" class="header-btn">Done</a>
+                <h1 class="header-title">Media</h1>
+            </header>
+
+            <div class="l-app-content">
+                <ul class="menu">
+                    <li class="menu-item">
+                        Media 1
+                        <span class="menu-meta l-align-right">Meta</span>
+                    </li>
+                    <li class="menu-item">Media 1</li>
+                    <li class="menu-item">Media 2</li>
+                    <li class="menu-item">Media 3</li>
+                    <li class="menu-item">Media 4</li>
+                    <li class="menu-item">Media 5</li>
+                   
+                </ul>
+            </div>
+            <ul class="tabs grid">
+                <li class="tabs-item col-1-3">Item 1</li>
+                <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
+                <li class="tabs-item col-1-3">Item 3</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="theme-productivity l-app">
+            <header class="header">
+                <a href="#" class="header-btn">
+                     <div class="icon-nav icon-nav-menu">Menu</div>
+                </a>
+                <a href="#" class="header-btn">Done</a>
+                <h1 class="header-title">Productivity</h1>
+            </header>
+
+            <div class="l-app-content"></div>
+
+            <ul class="tabs grid">
+                <li class="tabs-item col-1-3">Item 1</li>
+                <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
+                <li class="tabs-item col-1-3">Item 3</li>
+            </ul>
+        </div>
+    </section>
+        
+    
+    <!-- app -->
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/webapp.js"></script>
+    <script type="text/javascript" src="js/offline.js"></script>
+
+ 
+</body>
+</html>
