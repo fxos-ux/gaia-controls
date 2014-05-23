@@ -33,33 +33,40 @@
     <!-- App specific styles: -->
     <link rel="stylesheet" type="text/css" href="style/app/apps.css"/>
 
+    <!-- Web brick -->
+    <link rel="stylesheet" type="text/css" href="../bower_components/brick/dist/brick.min.css"/>
+    <script type="text/javascript" src="./bower_components/brick/dist/brick.min.js"></script>
+
     <script type="application/javascript" src="js/l10n.js"></script>
     <base target="_blank">
 </head>
 
 <body>
-    <header class="header header-styleguide">
-        <a href="#" class="header-btn">
-             <div class="icon-nav icon-nav-menu">Menu</div>
-        </a>
-        <button class="header-btn" id="reload" data-l10n-id="update-button">Reload</button>
-
-        <h1 class="header-title" data-l10n-id="app-heading">FFxOS Styleguide</h1>
+    
+    <header class="sg-header">    
+        <div class="sg-header-title l-align-left">FirefoxOS Styleguide X</div>
+        <div class="l-align-right"></div>
     </header>
 
+    <section id="styleguide" class="sg-section l-p-mega">
+        <h1 id="styleguide-header" class="l-align-center l-p-small">FirefoxOS</h1>
+        <h2 id="styleguide-subheader" class="l-align-center l-p-micro">Styleguide</h2>
+    </section>
     
 
-    <section id="installation-instructions" class="l-p16">
+    <section id="installation-section" class="sg-section l-p-small l-mb-mega">
+        <h2 class="alpha l-align-center">Install</h2>
+
         <div class="l-align-center">
-            <p>You can install this app to your device.</p>
+            <p>You can install this Styleguide as an app to your device.</p>
 
             <button class="btn" id="install">Install Now</button>
         </div>
     </section>
 
   
-    <section id="menu">
-        <h2 class="l-p16">Menu</h2>
+    <section id="menu" class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-p-small l-align-center">Menu</h2>
 
         <ul class="menu">
             <li class="menu-item">Typography</li>
@@ -71,30 +78,71 @@
         </ul>
     </section>
     
-    <section class="l-p16">
-        <h2><span id="resolution"></span> resolution</h2>
+    <section class="sg-section sg-border l-p-small l-mb-mega"> 
+        <h2 class="alpha l-align-center">Colors</h2>
 
-        <p>The <em>dppx</em> unit represents the number of dots per px unit. Due to the 1:96 fixed ratio of CSS in to CSS px, 1dppx is equivalent to 96dpi, that corresponds to the default resolution of images displayed in CSS as defined by image-resolution.</p>
+        <div class="l-clearfix l-align-center">
+            <h3>Brand Colors</h3>
+            <div class="sg-color" style="background: var(--color-brand-darkblue)"></div>
+            <div class="sg-color" style="background: var(--color-brand-blue)"></div>
+            <div class="sg-color" style="background: var(--color-brand-turquoise)"></div>
+            <div class="sg-color" style="background: var(--color-brand-orange)"></div>
+            <div class="sg-color" style="background: var(--color-brand-yellow)"></div>
+            <div class="sg-color" style="background: var(--color-brand-violet)"></div>
+            <div class="sg-color" style="background: var(--color-brand-alpha)"></div>
+            <div class="sg-color" style="background: var(--color-brand-beta)"></div>
+            <div class="sg-color" style="background: var(--color-brand-gamma)"></div>
+        </div>
+
+        
+        <div class="l-clearfix l-align-center">
+            <h3>Base colors</h3>
+            <div class="sg-color" style="background: var(--color-root-alpha)"></div>
+            <div class="sg-color" style="background: var(--color-root-beta)"></div>
+            <div class="sg-color" style="background: var(--color-root-gamma)"></div>
+            <div class="sg-color" style="background: var(--color-root-delta)"></div>
+            <div class="sg-color" style="background: var(--color-root-epsilon)"></div>
+            <div class="sg-color" style="background: var(--color-root-zeta)"></div>
+            <div class="sg-color" style="background: var(--color-root-eta)"></div>
+            <div class="sg-color" style="background: var(--color-root-iota)"></div>
+        </div>
+
     </section>
 
-    <section class="l-p16">
-        <h2>Typography</h2>
+    <section class="sg-section sg-border l-p-small"> 
+        <h2 class="alpha l-align-center">Screen Resolution</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+        <p class="l-align-center"><span id="resolution"></span> resolution</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo temporibus quos in eligendi laudantium? Odio blanditiis nobis repudiandae quod sapiente.</p>
-    </section>
-
-    <section class="l-p16">
-        <h2>Headings</h2>
-
-        <h1 class="l-align-center">Heading 1, h1, .alpha</h1>
-        <h2 class="l-align-center">Heading 2, h2, .beta</h2>
-        <h3 class="l-align-center">Heading 3, h3, .gamma</h3>
         
     </section>
-    <section class="l-p16">
-        <h2>Spinner</h2>
+
+    <section class="sg-section sg-border l-p-small l-mb-mega">
+        <h2 class="alpha l-align-center">Typography</h2>
+
+        <h3>Standard font size</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+
+        <h3>Small font size</h3>
+        <p class="milli">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+
+        <h3>Large</h3>
+        <p class="mega">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+    </section>
+
+    <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
+        <h2 class="alpha">Headings</h2>
+
+        <h1>Heading 1, h1, .alpha</h1>
+        
+        <h2>Heading 2, h2, .beta</h2>
+        
+        <h3>Heading 3, h3, .gamma</h3>
+        
+    </section>
+
+    <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
+        <h2 class="alpha">Spinner</h2>
 
         <div class="spinner l-clearfix">
             <div class="spinner-circle"></div>
@@ -104,32 +152,34 @@
     </section>
 
 
-    <section class="l-p16">
-        <h2>Buttons</h2>
+    <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
+        <h2 class="alpha">Buttons</h2>
         
         <!-- 
         <h3>Default buttons</h3>
         <button>Default</button> 
         -->
-        <div class="l-align-center">
-
-        <h3>Regular buttons</h3>
-        <button class="btn">Regular button</button>
-        <button class="btn btn-is-disabled">Disabled button</button>
-
-        <h3>Rectangle buttons</h3>
-        <button class="btn btn-rectangle">Rectangle button</button>
-        <button class="btn btn-rectangle btn-is-disabled">Rectangle button</button>
-
-        <h3>Circle buttons</h3>
-        <button class="btn btn-circle"></button>
-        <button class="btn btn-circle btn-is-disabled"></button>
+        
+        <div class="grid">
+            <div class="col-1-2">
+                <button class="btn">Standard button</button><br/>
+                <button class="btn btn-is-disabled">Standard button</button>
+            </div>
+            <div class="col-1-2">
+                <button class="btn btn-rectangle">Rectangle button</button><br/>
+                <button class="btn btn-rectangle btn-is-disabled">Rectangle button</button>
+            </div>
+            <div class="col-1-2 l-mt-medium">
+                <button class="btn btn-circle"></button>
+                <button class="btn btn-circle btn-is-disabled"></button>
+          </div>
         </div>
+
 
     </section>
 
-      <section class="toggles">
-        <h2 class=" l-p16">Toggle switch</h2>
+    <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-align-center l-p-small">Toggles</h2>
         
         <ul class="menu">
             <li class="menu-item">
@@ -164,18 +214,16 @@
 
     </section>
     
-    <section class="l-p16">
-        <h2>Input fields</h2>
+    <section class="sg-section sg-border l-mb-mega l-p-small">
+        <h2 class="alpha l-align-center">Forms</h2>
         
         <!-- 
         <h3>Default input field</h3>
         <input placeholder="Placeholder text"> 
         -->
 
-        <h3>Regular input field</h3>
-
         <label class="input-label" for="SampleInput">Inputbox Label</label>
-        <input class="input" id="sampleInput" placeholder="Placeholder text 1">
+        <input class="input" id="sampleInput" placeholder="Placeholder text 1"><br/>
         <input class="input" placeholder="Placeholder text 2">
         
 
@@ -184,8 +232,8 @@
 
     </section>
     
-    <section>
-        <h2 class="l-plr16">Header</h2>
+    <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-align-center l-p-small">Application headers</h2>
 
         <header class="header">
             <a href="#" class="header-btn">
@@ -194,19 +242,59 @@
             <a href="#" class="header-btn">Done</a>
             <h1 class="header-title">Generic header</h1>
         </header>
+
+        <div class="theme-settings">
+            <header class="header">
+                <a href="#" class="header-btn">
+                    <div class="icon-nav icon-nav-back">Back</div>
+                </a>
+                <a href="#" class="header-btn">Done</a>
+                <h1 class="header-title">Settings</h1>
+            </header>
+        </div>
+
+        <div class="theme-comms">
+            <header class="header">
+                <a href="#" class="header-btn">
+                    <div class="icon-nav icon-nav-back">Back</div>
+                </a>
+                <a href="#" class="header-btn">Done</a>
+                <h1 class="header-title">Communication Apps</h1>
+            </header>
+        </div>
+
+        <div class="theme-productivity">
+            <header class="header">
+                <a href="#" class="header-btn">
+                    <div class="icon-nav icon-nav-back">Back</div>
+                </a>
+                <a href="#" class="header-btn">Done</a>
+                <h1 class="header-title">Productivity Apps</h1>
+            </header>
+        </div>
+
+        <div class="theme-media">
+            <header class="header">
+                <a href="#" class="header-btn">
+                    <div class="icon-nav icon-nav-back">Back</div>
+                </a>
+                <a href="#" class="header-btn">Done</a>
+                <h1 class="header-title">Media Apps</h1>
+            </header>
+        </div>
     </section>
 
-    <section>
-        <h2 class=" l-plr16">Tab bars</h2>
+    <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-align-center l-p-small">Tab bars</h2>
         
-        <h3 class=" l-plr16">3 column</h3>
+        <h3 class=" l-plr-small">3 column</h3>
         <ul class="tabs grid">
             <li class="tabs-item col-1-3">Item 1</li>
             <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
             <li class="tabs-item col-1-3">Item 3</li>
         </ul>
 
-        <h3 class=" l-plr16">4 column</h3>
+        <h3 class=" l-plr-small">4 column</h3>
         <ul class="tabs grid">
             <li class="tabs-item col-1-4">Item 1</li>
             <li class="tabs-item col-1-4 tabs-is-selected">Item 2</li>

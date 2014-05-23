@@ -4,9 +4,10 @@
 * Provide a design and code reference for Gaia UX patterns and UI controls.
 * Fully responsive to phone and tablet form factors.
 * Support for different orientations, device pixel densities and aspect ratios.
-* Includes a baseline "white-label" design from which themes/skins can be built on-top of.   This base design will also be the highest performance and work with the lowest end hardware supported by firefox OS.
+* Includes a baseline "white-label" design from which themes/skins can be built on-top of.   This base design will also be the highest performance, highest contrast and work with the lowest end hardware supported by firefox OS.
 * Support for theming and skinnability.   We will want to easily accomodate changes to fonts, colors, dimensions.
-* Considers localization and accessibility requirements.
+* Considers localization, accessibility and bidi requirements.
+* We should be designing with all form factors and capabilities at the same time. 
 
 ## Technical goals
 * Design a new more efficient and easier to maintain CSS styles structure for Gaia.
@@ -64,6 +65,16 @@ specific theme rules
 apps.css
 * Specific styles for individual apps that do not exist and are not reused anywhere else.
 
+### Todo
+* Setup build process.
+* Create navigation UI.
+* Continue to add controls from design.
+
+### Considerations
+* https://developer.mozilla.org/en-US/Apps/Build/Localization/Developing_Bidi_Apps
+* https://etherpad.mozilla.org/bidiUX
+* themes framework bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1002469
+* How does this structure change with all the web componente work happening here: https://bugzilla.mozilla.org/show_bug.cgi?id=1002417
 
 ### Additional information
 * Approach based on ideas from SMACSS and OOCSS

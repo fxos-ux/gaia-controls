@@ -106,17 +106,28 @@ naming syntax:
 
 
 */
-.l-mb60 {
-    margin-bottom: var(--dim-mega);
+.l-mb-mega {
+  margin-bottom: var(--dim-mega);
 }
-.l-p16 {
+.l-mt-large {
+  margin-top: var(--dim-large);
+}
+.l-mt-medium {
+  margin-top: var(--dim-medium);
+}
+.l-p-mega {
+  padding: var(--dim-mega);
+}
+.l-p-micro {
+  margin-bottom: var(--dim-micro);
+}
+.l-p-milli {
+  margin-bottom: var(--dim-milli);
+}
+.l-p-small {
   padding: var(--dim-small);
 }
-.l-plr16 {
+.l-plr-small {
    padding-left: var(--dim-small); 
    padding-right: var(--dim-small); 
-}
-.l-tb16 {
-  padding-top: var(--dim-small); 
-  padding-bottom: var(--dim-small); 
 }

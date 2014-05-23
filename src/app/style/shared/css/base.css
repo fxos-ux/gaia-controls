@@ -51,11 +51,13 @@ h1,.alpha   {
     font-weight: lighter;
     font-style: italic;
     color: var(--color-root-gamma);
+    margin: 6rem 0 24rem 0;
 }
 
 h2,.beta  {
     font-size: var(--font-medium);
     color: var(--color-root-gamma);
+    margin: 32rem 0 0 0;
 }
 
 h3,.gamma   { 
@@ -64,6 +66,7 @@ h3,.gamma   {
     text-transform: uppercase;;
     font-weight: normal;
     color: var(--color-root-gamma);
+    margin: 32rem 0 0 0;
 }
 
 h4,.delta   { }
@@ -71,12 +74,17 @@ h5,.epsilon { }
 h6,.zeta    { }
 
 /* font styles larger than h1 */
-.mega{ }
+.mega{
+    font-size: var(--font-large);
+    line-height: 26rem;
+}
 .giga{ }
 .kilo{ }
 
 /* font style smaller than regular */
-small, .milli {}
+small, .milli {
+    font-size: var(--font-small);
+}
 
 /* base font */
 * { 
