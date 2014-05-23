@@ -74,7 +74,12 @@ apps.css
 * https://developer.mozilla.org/en-US/Apps/Build/Localization/Developing_Bidi_Apps
 * https://etherpad.mozilla.org/bidiUX
 * themes framework bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1002469
-* How does this structure change with all the web componente work happening here: https://bugzilla.mozilla.org/show_bug.cgi?id=1002417
+* How does this structure change with all the web componente work happening here: 
+	* https://bugzilla.mozilla.org/show_bug.cgi?id=1002417
+	* https://docs.google.com/spreadsheet/ccc?key=0AmtiCneH7IoFdHFReUtRVUU0Mk9oeTRUYjNXTkdZeWc&usp=drive_web#gid=0
+* How does this fit into Chamaeleon
+	* http://people.mozilla.org/~jgruen/chameleon
+	* repo https://github.com/johngruen/project-dfa
 
 ### Additional information
 * Approach based on ideas from SMACSS and OOCSS

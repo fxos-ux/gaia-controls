@@ -20,7 +20,10 @@
 
 @media (max-width: 800px) {
     .sg-border {
-        border: none!important;
+        border-bottom: none!important;
+        border-left: none!important;
+        border-right: none!important;
+        border-top: 1px solid orange!important;
     }
 }
 @media (max-height: 480px) {
@@ -59,6 +62,11 @@ html, body {
 }
 .sh-header-title {
     color: #fff;
+}
+
+/* styleguide app */
+.sg-app {
+    height: 480rem;
 }
 
 /* styleguide colors */
