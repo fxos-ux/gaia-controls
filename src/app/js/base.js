@@ -48,3 +48,15 @@ for (var i = 0; i < toggles.length; i++) {
         this.classList.toggle('is-checked');
     })       
 }
+
+
+
+// styleguide
+
+var dialogueConfirm = document.getElementById("dialogue-confirmation");
+
+dialogueConfirm.addEventListener('click', function(e) {
+    
+    document.querySelector('.dialogue').classList.remove('is-hidden');
+    document.querySelector('.dialogue-confirm').classList.remove('is-hidden');
+});

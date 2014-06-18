@@ -19,70 +19,84 @@
         <!-- Localization -->
     <link rel="resource" type="application/l10n" href="locales/locales.ini" />
 
-    <!-- Shared styles: -->
-    <link rel="stylesheet" type="text/css" href="style/shared/css/base.css"/>
-    <link rel="stylesheet" type="text/css" href="style/shared/css/layout.css"/>
-    <link rel="stylesheet" type="text/css" href="style/shared/css/modules.css"/>
-    <link rel="stylesheet" type="text/css" href="style/shared/css/state.css"/>
-
-    <!-- Theme styles: -->
-    <link rel="stylesheet" type="text/css" href="style/shared/themes/gaia/theme.css"/>
     <!-- Styles only for this styleguide: -->
-    <link rel="stylesheet" type="text/css" href="style/theme/styleguide/theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/apps.css"/>
 
-    <!-- App specific styles: -->
-    <link rel="stylesheet" type="text/css" href="style/app/apps.css"/>
+   
+    
+    <!-- web components -->
+    <script>window.packagesBaseUrl='../bower_components/';</script>
+    <script src="../bower_components/gaia-component-utils/index.js"></script>
+    <script src="../bower_components/gaia-header/script.js"></script>
+    <script src="../bower_components/gaia-button/script.js"></script>
+    <script src="../bower_components/gaia-switch/script.js"></script>
+    <script src="../bower_components/gaia-checkbox/script.js"></script>
 
-    <!-- Web brick -->
-    <link rel="stylesheet" type="text/css" href="../bower_components/brick/dist/brick.min.css"/>
-    <script type="text/javascript" src="./bower_components/brick/dist/brick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/gaia-theme/style.css"/>
 
-    <script type="application/javascript" src="js/l10n.js"></script>
-    <base target="_blank">
+    
 </head>
 
 <body>
-    
-    <!-- <header class="sg-header">    
-        <div class="sg-header-title l-align-left">FirefoxOS Styleguide</div>
-        <div class="l-align-right"></div>
-    </header> -->
-
-    <section id="styleguide" class="sg-section l-p-mega">
-        <h1 id="styleguide-header" class="l-align-center l-p-small">FirefoxOS</h1>
-        <h2 id="styleguide-subheader" class="l-align-center l-p-micro">Styleguide</h2>
-    </section>
-    
-
-    <section id="installation-section" class="sg-section l-p-small l-mb-mega">
-        <h2 class="alpha l-align-center">Install</h2>
-
-        <div class="l-align-center">
-            <p>You can install this Styleguide as an app to your device.</p>
-
-            <button class="btn" id="install">Install Now</button>
+    <section id="sg-landing" class="sg-section">
+        <div id="sg-title">
+            <h1 id="sg-header" class="mega l-align-center">FirefoxOS</h1>
+            <h2 id="sg-subheader" class="beta l-align-center l-p-micro">Styleguide</h2>
         </div>
+
+        <div id="sg-install" class="l-width-full l-align-center">
+            <gaia-button id="install">Install this app</gaia-button>
+        </div>    
     </section>
 
+    <!-- <header class="sg-header">    
+        <form id="sg-panel">
+            Screen width
+            <input type="radio" name="screen-size" value="800"> 800
+            <input type="radio" name="screen-size" value="640"> 640
+            <input type="radio" name="screen-size" value="480"> 480
+            <input type="radio" name="screen-size" value="320"> 320
+
+            <br/>
+
+            Theme
+            <input type="radio" name="theme" value="none"> None
+            <input type="radio" name="theme" value="gaia"> Gaia
+
+            <br/>
+
+            Scale
+            <input type="range" value="1" min="0" max="2" step="0.25">
+
+        </form>    
+    </header> -->
   
     <section id="menu" class="sg-section sg-border l-mb-mega">
         <h2 class="alpha l-p-small l-align-center">Menu</h2>
 
         <ul class="menu">
-            <li class="menu-item">Typography</li>
-            <li class="menu-item">Headings</li>
-            <li class="menu-item">Buttons</li>
-            <li class="menu-item">Headers</li>
-            <li class="menu-item">Toolbars</li>
-
+            <li class="menu-item">Menu 1</li>
+            <li class="menu-item">Menu 2</li>
+            <li class="menu-item">Menu 3</li>
         </ul>
     </section>
     
     <section class="sg-section sg-border l-p-small l-mb-mega"> 
         <h2 class="alpha l-align-center">Colors</h2>
-
         <div class="l-clearfix l-align-center">
-            <h3>Brand Colors</h3>
+            <h3 class="beta">Base colors</h3>
+            <div class="sg-color" style="background: var(--color-alpha)"></div>
+            <div class="sg-color" style="background: var(--color-beta)"></div>
+            <div class="sg-color" style="background: var(--color-gamma)"></div>
+            <div class="sg-color" style="background: var(--color-delta)"></div>
+            <div class="sg-color" style="background: var(--color-epsilon)"></div>
+            <div class="sg-color" style="background: var(--color-zeta)"></div>
+            <div class="sg-color" style="background: var(--color-eta)"></div>
+            <div class="sg-color" style="background: var(--color-iota)"></div>
+        </div>
+        <div class="l-clearfix l-align-center">
+            <h3 class="beta">Gaia theme colors</h3>
             <div class="sg-color" style="background: var(--color-brand-darkblue)"></div>
             <div class="sg-color" style="background: var(--color-brand-blue)"></div>
             <div class="sg-color" style="background: var(--color-brand-turquoise)"></div>
@@ -93,20 +107,6 @@
             <div class="sg-color" style="background: var(--color-brand-beta)"></div>
             <div class="sg-color" style="background: var(--color-brand-gamma)"></div>
         </div>
-
-        
-        <div class="l-clearfix l-align-center">
-            <h3>Base colors</h3>
-            <div class="sg-color" style="background: var(--color-root-alpha)"></div>
-            <div class="sg-color" style="background: var(--color-root-beta)"></div>
-            <div class="sg-color" style="background: var(--color-root-gamma)"></div>
-            <div class="sg-color" style="background: var(--color-root-delta)"></div>
-            <div class="sg-color" style="background: var(--color-root-epsilon)"></div>
-            <div class="sg-color" style="background: var(--color-root-zeta)"></div>
-            <div class="sg-color" style="background: var(--color-root-eta)"></div>
-            <div class="sg-color" style="background: var(--color-root-iota)"></div>
-        </div>
-
     </section>
 
     <section class="sg-section sg-border l-p-small l-mb-mega"> 
@@ -118,14 +118,14 @@
     <section class="sg-section sg-border l-p-small l-mb-mega">
         <h2 class="alpha l-align-center">Typography</h2>
 
-        <h3>Standard font size</h3>
+        <h3 class="beta">Standard font size</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
 
-        <h3>Small font size</h3>
+        <h3 class="beta">Small font size</h3>
         <p class="milli">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
 
-        <h3>Large</h3>
-        <p class="mega">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+        <h3 class="beta">Large</h3>
+        <p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
     </section>
 
     <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
@@ -142,38 +142,18 @@
     <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
         <h2 class="alpha">Spinner</h2>
 
-        <div class="spinner l-clearfix">
+        <!-- <div class="spinner l-clearfix">
             <div class="spinner-circle"></div>
             <div class="spinner-circle"></div>
             <div class="spinner-circle"></div>
-        </div>
+        </div> -->
     </section>
 
 
     <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
-        <h2 class="alpha">Buttons</h2>
         
-        <!-- 
-        <h3>Default buttons</h3>
-        <button>Default</button> 
-        -->
+        <gaia-button>Gaia-button</gaia-button>
         
-        <div class="grid">
-            <div class="col-1-2">
-                <button class="btn">Standard button</button><br/>
-                <button class="btn btn-is-disabled">Standard button</button>
-            </div>
-            <div class="col-1-2">
-                <button class="btn btn-rectangle">Rectangle button</button><br/>
-                <button class="btn btn-rectangle btn-is-disabled">Rectangle button</button>
-            </div>
-            <div class="col-1-2 l-mt-medium">
-                <button class="btn btn-circle"></button>
-                <button class="btn btn-circle btn-is-disabled"></button>
-          </div>
-        </div>
-
-
     </section>
 
     <section class="sg-section sg-border l-mb-mega">
@@ -181,35 +161,29 @@
         
         <ul class="menu">
             <li class="menu-item">
-                Toggle me
-                <div class="toggle l-align-right">
-                    <div class="toggle-track">
-                        <div class="toggle-on"></div>
-                    </div>
-                    <div class="toggle-handle"></div>
-                </div>
+                <label for="switch1">Toggle switch</label>
+                <gaia-switch id="switch1" class="l-align-right"></gaia-switch>
             </li>
             <li class="menu-item">
-                Toggle me
-                <div class="toggle is-checked l-align-right">
-                    <div class="toggle-track">
-                        <div class="toggle-on"></div>
-                    </div>
-                    <div class="toggle-handle"></div>
-                </div>
+                <label for="switch3">Toggle switch checked </label>
+                <gaia-switch id="switch3" class="l-align-right" checked></gaia-switch>
             </li>
-            <li class="menu-item">
-                Toggle me
-                <div class="toggle is-checked l-align-right">
-                    <div class="toggle-track">
-                        <div class="toggle-on"></div>
-                    </div>
-                    <div class="toggle-handle"></div>
-                </div>
-            </li>
-
         </ul>
+    </section>
 
+     <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-align-center l-p-small">Checkbox</h2>
+        
+        <ul class="menu">
+            <li class="menu-item">
+                <label for="b1">Checkbox checked</label>
+                <gaia-checkbox id="b1" name="b" checked class="l-align-right"></gaia-checkbox>
+            </li>
+            <li class="menu-item">
+                <label for="b2">Checkbox</label>
+                <gaia-checkbox id="b2" name="b" class="l-align-right"></gaia-checkbox>
+            </li>
+        </ul> 
     </section>
     
     <section class="sg-section sg-border l-mb-mega l-p-small">
@@ -225,61 +199,47 @@
         <input class="input" placeholder="Placeholder text 2">
         
 
-        <!-- todo: Required input fields -->
+        <!-- todo: validation/Required input fields -->
         <!-- todo: Read only input fields -->
 
     </section>
     
     <section class="sg-section sg-border l-mb-mega">
-        <h2 class="alpha l-align-center l-p-small">Application headers</h2>
+        <h2 class="alpha l-align-center l-p-small">Application header</h2>
 
-        <header class="header">
-            <a href="#" class="header-btn">
-                <div class="icon-nav icon-nav-back">Back</div>
-            </a>
-            <a href="#" class="header-btn">Done</a>
-            <h1 class="header-title">Generic header</h1>
-        </header>
-
-        <div class="theme-settings">
-            <header class="header">
-                <a href="#" class="header-btn">
-                    <div class="icon-nav icon-nav-back">Back</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Settings</h1>
-            </header>
-        </div>
-
-        <div class="theme-comms">
-            <header class="header">
-                <a href="#" class="header-btn">
-                    <div class="icon-nav icon-nav-back">Back</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Communication Apps</h1>
-            </header>
-        </div>
-
-        <div class="theme-productivity">
-            <header class="header">
-                <a href="#" class="header-btn">
-                    <div class="icon-nav icon-nav-back">Back</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Productivity Apps</h1>
-            </header>
+        
+        <gaia-header action="back">
+          <h1 id="title1">Generic header</h1>
+          <button>Done</button>
+        </gaia-header>
+    
+        <div class="theme-communications">
+            <gaia-header action="back">
+              <h1 id="title1">Communications</h1>
+              <button>Done</button>
+            </gaia-header>
         </div>
 
         <div class="theme-media">
-            <header class="header">
-                <a href="#" class="header-btn">
-                    <div class="icon-nav icon-nav-back">Back</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Media Apps</h1>
-            </header>
+            <gaia-header action="menu">
+              <h1 id="title1">Media</h1>
+              <button>Done</button>
+            </gaia-header>
         </div>
+
+        <div class="theme-productivity">
+            <gaia-header action="close">
+              <h1 id="title1">Productivity</h1>
+              <button>Done</button>
+            </gaia-header>
+        </div>
+
+        <div class="theme-settings">
+            <gaia-header action="back">
+              <h1 id="title1">Settings</h1>
+              <button>Done</button>
+            </gaia-header>
+        </div>       
     </section>
 
     <section class="sg-section sg-border l-mb-mega">
@@ -302,19 +262,32 @@
 
     </section>
     
-        
-        
 
+    <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-align-center l-p-small">Dialogue</h2>
+
+        <ul class="menu">
+            <li class="menu-item" id="dialogue-confirmation">Confirmation</li>
+            <!-- todo: action select -->
+            <li class="menu-item">Permission</li>
+            <li class="menu-item">Value selector</li>
+            <!-- todo: date, time, single, multiple -->
+            <li class="menu-item">Date selector</li>
+            <li class="menu-item">Toast</li>
+            <li class="menu-item">Alarm</li>
+        </ul>
+
+    </section>
+        
+        
     <section class="sg-section sg-border sg-app l-mb-mega">
          <div class="theme-settings l-app">
-            <header class="header">
-                <a href="#" class="header-btn">
-                     <div class="icon-nav icon-nav-back">Back</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Settings</h1>
-            </header>
-
+            
+            <gaia-header action="back">
+              <h1 id="title1">Settings</h1>
+              <button>Done</button>
+            </gaia-header>
+ 
             <div class="l-app-content">
                 <ul class="menu">
                     <li class="menu-item">Setting 1</li>
@@ -332,17 +305,14 @@
         </div>
     </section>
 
-    
+
     <section class="sg-section sg-border sg-app l-mb-mega">
          
-       <div class="theme-comms l-app">
-            <header class="header">
-                <a href="#" class="header-btn">
-                    <div class="icon-nav icon-nav-close">Close</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Comms</h1>
-            </header>
+       <div class="theme-communications l-app">
+           <gaia-header action="back">
+              <h1 id="title1">Communications</h1>
+              <button>Done</button>
+            </gaia-header>
             
             <div id="l-contact-container">
                 <div id="l-contact-detail">
@@ -503,13 +473,10 @@
     </section>
     <section class="sg-section sg-border sg-app l-mb-mega">
         <div class="theme-media l-app">
-            <header class="header">
-                <a href="#" class="header-btn">
-                     <div class="icon-nav icon-nav-back">Back</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Media</h1>
-            </header>
+            <gaia-header action="back">
+              <h1 id="title1">Media</h1>
+              <button>Done</button>
+            </gaia-header>
 
             <div class="l-app-content">
                 <ul class="menu">
@@ -534,13 +501,10 @@
     </section>
     <section class="sg-section sg-border sg-app l-mb-mega">
         <div class="theme-productivity l-app">
-            <header class="header">
-                <a href="#" class="header-btn">
-                     <div class="icon-nav icon-nav-menu">Menu</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Productivity</h1>
-            </header>
+            <gaia-header action="back">
+              <h1 id="title1">Productivity</h1>
+              <button>Done</button>
+            </gaia-header>
 
             <div class="l-app-content"></div>
 
@@ -552,7 +516,26 @@
         </div>
     </section>
         
-    
+     <div class="dialogue is-hidden">
+        <div class="dialogue-confirm l-align-center is-hidden">
+            <div class='l-p-small'>
+                <h1>Confirmation</h1>
+                
+                <p>Are you sure you want to delete
+    this contact?</p>
+            </div>
+
+            <div class="grid">
+                <div class="col-1-2">
+                    <button class="btn btn-rectangle l-width-full">Cancel</button>
+                </div>
+                <div class="col-1-2">
+                    <button class="btn btn-rectangle l-width-full">Delete</button>
+                </div>
+            </div>
+        </div><!-- .dialogue-confirmation -->
+    </div>
+
     <!-- app -->
     <script type="text/javascript" src="js/base.js"></script>
     <script type="text/javascript" src="js/webapp.js"></script>

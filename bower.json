@@ -13,5 +13,13 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "gaia-theme": "gaia-components/gaia-theme",
+    "gaia-header": "gaia-components/gaia-header",
+    "gaia-button": "gaia-components/gaia-button",
+    "gaia-switch": "gaia-components/gaia-switch",
+    "gaia-checkbox": "gaia-components/gaia-checkbox"
+
+  }
 }

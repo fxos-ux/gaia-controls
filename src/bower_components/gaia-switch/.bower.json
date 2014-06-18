@@ -1,0 +1,27 @@
+{
+  "name": "gaia-switch",
+  "homepage": "https://github.com/gaia-components/gaia-switch",
+  "authors": [
+    "Wilson Page <wilsonpage@me.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gaia-component-utils": "gaia-components/gaia-component-utils#~0.1.0"
+  },
+  "_release": "c4ac395ddb",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c4ac395ddbb3cceff36fb39f317a43540a39e5a8"
+  },
+  "_source": "git://github.com/gaia-components/gaia-switch.git",
+  "_target": "*",
+  "_originalSource": "gaia-components/gaia-switch"
+}

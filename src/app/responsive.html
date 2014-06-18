@@ -19,16 +19,20 @@
         <!-- Localization -->
     <link rel="resource" type="application/l10n" href="locales/locales.ini" />
 
-    <!-- Shared styles: -->
-    <link rel="stylesheet" type="text/css" href="style/shared/css/base.css"/>
-    <link rel="stylesheet" type="text/css" href="style/shared/css/layout.css"/>
-    <link rel="stylesheet" type="text/css" href="style/shared/css/modules.css"/>
-    <link rel="stylesheet" type="text/css" href="style/shared/css/state.css"/>
-    <!-- Theme styles: -->
-    <link rel="stylesheet" type="text/css" href="style/shared/themes/gaia/theme.css"/>
+    <!-- Styles only for this styleguide: -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/apps.css"/>
     
-    <!-- App specific styles: -->
-    <link rel="stylesheet" type="text/css" href="style/app/apps.css"/>
+    <!-- web components -->
+    <script>window.packagesBaseUrl='../bower_components/';</script>
+    <script src="../bower_components/gaia-component-utils/index.js"></script>
+    <script src="../bower_components/gaia-header/script.js"></script>
+    <script src="../bower_components/gaia-button/script.js"></script>
+    <script src="../bower_components/gaia-switch/script.js"></script>
+    <script src="../bower_components/gaia-checkbox/script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/gaia-theme/style.css"/>
+
 
     <script type="application/javascript" src="js/l10n.js"></script>
     <base target="_blank">
@@ -36,14 +40,12 @@
 
 <body>
     
-        <div class="theme-comms l-app">
-            <header class="header">
-                <a href="#" class="header-btn">
-                    <div class="icon-nav icon-nav-close">Close</div>
-                </a>
-                <a href="#" class="header-btn">Done</a>
-                <h1 class="header-title">Comms</h1>
-            </header>
+         
+       <div class="theme-communications l-app">
+           <gaia-header action="back">
+              <h1 id="title1">Communications</h1>
+              <button>Done</button>
+            </gaia-header>
             
             <div id="l-contact-container">
                 <div id="l-contact-detail">
@@ -201,7 +203,7 @@
                 </div><!-- #l-app-content -->
             </div><!-- #l-contact-list -->
         </div><!-- #l-contact-container -->
-        
+   
         
     <script type="text/javascript" src="js/base.js"></script>
     <script type="text/javascript" src="js/webapp.js"></script>

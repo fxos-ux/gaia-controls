@@ -1,0 +1,25 @@
+{
+  "name": "gaia-icons",
+  "homepage": "https://github.com/wilsonpage/gaia-icons",
+  "authors": [
+    "Wilson Page <wilsonpage@me.com>"
+  ],
+  "main": "style.css",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "ab21733283",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ab21733283954aea083cbad9290f3bd4e6bdd0fb"
+  },
+  "_source": "git://github.com/gaia-components/gaia-icons.git",
+  "_target": "*",
+  "_originalSource": "gaia-components/gaia-icons"
+}

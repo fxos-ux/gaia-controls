@@ -1,7 +1,7 @@
 {
   "version": "1",
   "name": "FirefoxOS Styleguide",
-  "launch_path": "/gaia-controls/index.html",
+  "launch_path": "/index.html",
   "description": "Styleguide",
   "icons": {
     "16": "/images/logo16.png",
