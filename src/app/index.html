@@ -22,6 +22,7 @@
     <!-- Styles only for this styleguide: -->
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/apps.css"/>
+    <link rel="stylesheet" type="text/css" href="css/modules.css"/>
 
    
     
@@ -263,22 +264,6 @@
     </section>
     
 
-    <section class="sg-section sg-border l-mb-mega">
-        <h2 class="alpha l-align-center l-p-small">Dialogue</h2>
-
-        <ul class="menu">
-            <li class="menu-item" id="dialogue-confirmation">Confirmation</li>
-            <!-- todo: action select -->
-            <li class="menu-item">Permission</li>
-            <li class="menu-item">Value selector</li>
-            <!-- todo: date, time, single, multiple -->
-            <li class="menu-item">Date selector</li>
-            <li class="menu-item">Toast</li>
-            <li class="menu-item">Alarm</li>
-        </ul>
-
-    </section>
-        
         
     <section class="sg-section sg-border sg-app l-mb-mega">
          <div class="theme-settings l-app">
@@ -515,25 +500,305 @@
             </ul>
         </div>
     </section>
-        
-     <div class="dialogue is-hidden">
-        <div class="dialogue-confirm l-align-center is-hidden">
-            <div class='l-p-small'>
-                <h1>Confirmation</h1>
-                
-                <p>Are you sure you want to delete
-    this contact?</p>
-            </div>
+    
+     <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-align-center l-p-small">Dialogue</h2>
 
-            <div class="grid">
-                <div class="col-1-2">
-                    <button class="btn btn-rectangle l-width-full">Cancel</button>
-                </div>
-                <div class="col-1-2">
-                    <button class="btn btn-rectangle l-width-full">Delete</button>
-                </div>
+        <ul class="menu">
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-alert">Alert</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-confirm">Confirmation</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-action">Action</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-install">Install</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-permission">Permission</a></li>
+        </ul>
+    </section>
+
+    <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-align-center l-p-small">Value selector</h2>
+
+        <ul class="menu">
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-option">Option select</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-multioption">Multi-option select</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-date">Date selection</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-time">Time selection</a></li>
+        </ul>
+    </section>
+
+     <div class="dialogue-container is-hidden">
+        <div class="dialogue-alert dialogue l-align-center is-hidden">
+            <div class='l-p-small'>
+                <p>No SIM card is present.</p>
             </div>
-        </div><!-- .dialogue-confirmation -->
+            <button class="dialogue-button l-width-full">Ok</button>
+        </div><!-- .dialogue-alert -->
+
+        <div class="dialogue-confirm dialogue l-align-center is-hidden">
+            <div class='l-p-small'>
+                <p>Are you sure you want to delete this contact?</p>
+            </div>
+            <table class="dialogue-buttons">
+            <tr>
+                <td><button class="dialogue-button l-width-full">Cancel</button></td>
+                <td><button class="dialogue-button dialogue-button-warning l-width-full">Delete</button></td>
+            </tr>
+            </table>
+        </div><!-- .dialogue-confirm -->
+
+
+        <div class="dialogue-action dialogue l-align-center is-hidden">
+            <div class='l-p-small'>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu mollis tortor. </p>
+            </div>
+            <table class="dialogue-buttons">
+            <tr><td><button class="dialogue-button l-width-full">Action 1</button></td></tr>
+            <tr><td><button class="dialogue-button l-width-full">Action 2</button></td></tr>
+            <tr><td><button class="dialogue-button l-width-full">Cancel</button></td></tr>
+            </table>
+        </div><!-- .dialogue-action -->
+
+         <div class="dialogue-install dialogue is-hidden">
+            <div class='l-p-small l-align-center'>
+                <p></p>
+                
+                <table class="l-inline-block l-text-align-left">
+                <tr>
+                    <td class="l-text-valign-top"><div class="app-icon l-mr-small"></div></td>
+                    <td>
+                        <em>Facebook</em><br/>
+                        <small>Facebook Enterprises LLC<br/>
+                        2.5MB
+                        </small>
+                    </td>
+                </tr>
+                </table>
+                
+            </div>
+            <table class="dialogue-buttons">
+            <tr>
+                <td><button class="dialogue-button l-width-full">Cancel</button></td>
+                <td><button class="dialogue-button l-width-full">Install</button></td>
+            </tr>
+            </table>
+        </div><!-- .dialogue-install -->
+
+        <div class="dialogue-permission dialogue is-hidden">
+            <div class='l-p-small l-align-center'>
+                <p></p>
+                <div class="l-inline-block l-text-align-left">
+                    <table>
+                    <tr>
+                        <td class="l-text-valign-top"><div class="app-icon l-mr-small"></div></td>
+                        <td>Instagram would like to use the camera</td>
+                    <tr>
+                    </table>
+                        
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu mollis tortor. </p>
+
+                    <hr/>
+                    
+                    <gaia-checkbox id="dialogue-permission-remember" name="" checked></gaia-checkbox>
+                    <label for="dialogue-permission-remember">Remember my choice</label>
+                </div>                
+            </div>
+            <table class="dialogue-buttons">
+            <tr>
+                <td class="col-1-2"><button class="dialogue-button l-width-full">Don't allow</button></td>
+                <td class="col-1-2"><button class="dialogue-button l-width-full">Allow</button></td>
+            </tr>
+            </table>
+        </div><!-- .dialogue-install -->
+
+        <div class="dialogue-option dialogue is-hidden">
+            <div class='l-p-small l-align-center'>
+                <h1>Ring tone</h1>
+            </div>
+            <ul class="menu">
+                <li class="menu-item dialogue-option-selected">Classic Prism</li>
+                <li class="menu-item">Wallphone</li>
+                <li class="menu-item">Disco Drive</li>
+                <li class="menu-item">Touchmatic</li>
+                <li class="menu-item">Classic Courier</li>
+                <li class="menu-item">Hacker</li>
+            </ul>
+        
+            <button class="dialogue-button l-width-full">Close</button>
+        </div><!-- .dialogue-option -->
+
+        <div class="dialogue-multioption dialogue is-hidden">
+            <div class='l-p-small l-align-center'>
+                <h1>Ring tone</h1>
+            </div>
+            <ul class="menu">
+                <li class="menu-item">Classic Prism</li>
+                <li class="menu-item">Wallphone</li>
+                <li class="menu-item dialogue-option-selected">Disco Drive</li>
+                <li class="menu-item dialogue-option-selected">Touchmatic</li>
+                <li class="menu-item dialogue-option-selected">Classic Courier</li>
+                <li class="menu-item">Hacker</li>
+            </ul>
+        
+            <table class="dialogue-buttons">
+            <tr>
+                <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
+                <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
+            </tr>
+            </table>
+        </div><!-- .dialogue-multioption -->
+
+        <div class="dialogue-date dialogue-spinner dialogue is-hidden">
+            <div class='l-p-small l-align-center'>
+                <h1>Set Date</h1>
+            </div>
+            
+            <ul class="grid dialogue-spinner-selected l-clearfix">
+                <li class="col-1-3">Mar</li>
+                <li class="col-1-3">30</li>
+                <li class="col-1-3">2014</li>
+            </ul>
+
+            <div class="grid dialogue-spinner-range">
+                <ul class="col-1-3">
+                    <li>Jan</li>
+                    <li>Feb</li>
+                    <li>Mar</li>
+                    <li>Apr</li>
+                    <li>May</li>
+                    <li>Jun</li>
+                    <li>Jul</li>
+                    <li>Aug</li>
+                    <li>Sep</li>
+                    <li>Oct</li>
+                    <li>Nov</li>
+                    <li>Dec</li>
+                </ul>
+                 <ul class="col-1-3">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                </ul>
+                <ul class="col-1-3">
+                    <li>2001</li>
+                    <li>2002</li>
+                    <li>2003</li>
+                    <li>2004</li>
+                    <li>2005</li>
+                    <li>2006</li>
+                    <li>2007</li>
+                    <li>2008</li>
+                    <li>2009</li>
+                    <li>2010</li>
+                    <li>2011</li>
+                    <li>2012</li>
+                    <li>2013</li>
+                    <li>2014</li>
+                </ul>
+            </div>
+            <table class="dialogue-buttons">
+            <tr>
+                <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
+                <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
+            </tr>
+            </table>
+        </div><!-- .dialogue-date -->
+
+        <div class="dialogue-time dialogue-spinner dialogue is-hidden">
+            <div class='l-p-small l-align-center'>
+                <h1>Set Time</h1>
+            </div>
+            
+            <ul class="grid dialogue-spinner-selected l-clearfix">
+                <li class="col-1-3">7</li>
+                <li class="col-1-3">30</li>
+                <li class="col-1-3">PM</li>
+            </ul>
+
+            <div class="grid dialogue-spinner-range">
+                <ul class="col-1-3">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                </ul>
+                 <ul class="col-1-3">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                </ul>
+                <ul class="col-1-3">
+                    <li>AM</li>
+                    <li>PM</li>
+                </ul>
+            </div>
+            <table class="dialogue-buttons">
+            <tr>
+                <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
+                <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
+            </tr>
+            </table>
+        </div><!-- .dialogue-time -->
+
     </div>
 
     <!-- app -->

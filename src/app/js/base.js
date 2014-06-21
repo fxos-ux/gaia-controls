@@ -39,24 +39,44 @@ if (reload) {
 }
 
 
+window.onload = function() {
+    // styleguide
+    var dialogueElem = document.querySelectorAll(".dialogue-display");
+    var dialogueContainer = document.querySelector('.dialogue-container');
+    var currentDialogue = null;
 
-// Checkbox
-var toggles = document.querySelectorAll('.toggle');
-for (var i = 0; i < toggles.length; i++) {
-    var toggleElem = toggles[i];
-    toggleElem.addEventListener('click', function() {
-        this.classList.toggle('is-checked');
-    })       
+    for (var i = 0, length = dialogueElem.length; i < length; i++) {
+
+
+        dialogueElem[i].addEventListener('click', function(e) {
+            e.preventDefault();
+            var dialogue = document.querySelector(this.getAttribute("href"));
+            currentDialogue = dialogue;
+            dialogue.classList.remove('is-hidden');
+            dialogueContainer.classList.remove('is-hidden');
+        })
+    };
+
+    var dialogueButtonElem = document.querySelectorAll(".dialogue-button");
+    for (var i = 0, length = dialogueButtonElem.length; i < length; i++) {
+        var el = dialogueButtonElem[i];
+        el.addEventListener("click", function() {
+            if (currentDialogue) {
+                currentDialogue.classList.add('is-hidden');
+                dialogueContainer.classList.add('is-hidden');
+            }
+        });
+    }
+    // dialogueButtonElem.forEach(function(el) {
+    //     console.log(el);
+    // });
 }
 
 
 
-// styleguide
+// var dialogueConfirm = document.getElementById("dialogue-confirmation");
 
-var dialogueConfirm = document.getElementById("dialogue-confirmation");
-
-dialogueConfirm.addEventListener('click', function(e) {
-    
-    document.querySelector('.dialogue').classList.remove('is-hidden');
-    document.querySelector('.dialogue-confirm').classList.remove('is-hidden');
-});
+// dialogueConfirm.addEventListener('click', function(e) { 
+//     document.querySelector('.dialogue').classList.remove('is-hidden');
+//     document.querySelector('.dialogue-confirm').classList.remove('is-hidden');
+// });

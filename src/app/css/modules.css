@@ -1,0 +1,121 @@
+
+
+
+/* confirmation */
+.dialogue-container {
+    background: rgba(199,199,199,0.85);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    font-style: italic;
+}
+.dialogue {
+    background: var(--color-iota);
+    min-width: 300px;
+    max-width: 800px;
+    width: 75%;
+    margin: auto;    
+}
+
+.dialogue-button {
+    height: 50px;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: var(--font-medium);
+    padding: 0rem 25px;
+    margin: 0;
+    border: none;
+    background:  var(--color-beta);
+    color: var(--color-brand-blue);
+}
+.dialogue-buttons {
+    width: 100%;    
+    border-collapse: collapse;
+    border-style: hidden;
+
+}
+.dialogue-buttons td {
+    border: 1px solid #efefef;
+}
+
+.dialogue .dialogue-option-selected {
+    color:  var(--color-brand-blue);
+}
+
+/*
+value selector
+*/
+.dialogue-spinner {
+    position: relative;
+}
+.dialogue-spinner ul, 
+.dialogue-spinner li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.dialogue-spinner-range ul {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    z-index: 90;
+}
+.dialogue-spinner-range li {
+    line-height: 45px;
+    border-right: 1px solid gray;
+}
+.dialogue-spinner-range ul:last-child li {
+    border-right: none;
+}
+.dialogue-spinner-range ul:before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(to bottom, rgba(244, 244, 244, 1),  rgba(244, 244, 255, 0));
+}
+.dialogue-spinner-range ul:after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(to bottom, rgba(244, 244, 244, 0),  rgba(244, 244, 255, 1));
+}
+.dialogue-spinner-selected {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    top: 150px;
+}
+.dialogue-spinner-selected li {
+    background: var(--color-beta);
+    color: var(--color-brand-blue);
+    font-size: 27px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+/*
+todo: active states;
+*/
+.dialogue-button-warning {
+    color: var(--color-brand-orange);
+}
+
+.app-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: gray;   
+}
