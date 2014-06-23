@@ -13,11 +13,11 @@
     "test",
     "tests"
   ],
-  "_release": "ab21733283",
+  "_release": "1b1eee4096",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "ab21733283954aea083cbad9290f3bd4e6bdd0fb"
+    "commit": "1b1eee409615f7c8e2414b8edb20f36b98d9bc37"
   },
   "_source": "git://github.com/gaia-components/gaia-icons.git",
   "_target": "*",
