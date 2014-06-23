@@ -41,13 +41,12 @@ if (reload) {
 
 window.onload = function() {
     // styleguide
+    // dialogues
     var dialogueElem = document.querySelectorAll(".dialogue-display");
     var dialogueContainer = document.querySelector('.dialogue-container');
     var currentDialogue = null;
 
     for (var i = 0, length = dialogueElem.length; i < length; i++) {
-
-
         dialogueElem[i].addEventListener('click', function(e) {
             e.preventDefault();
             var dialogue = document.querySelector(this.getAttribute("href"));
@@ -67,9 +66,21 @@ window.onload = function() {
             }
         });
     }
-    // dialogueButtonElem.forEach(function(el) {
-    //     console.log(el);
-    // });
+
+    // banner
+    var bannerELem = document.querySelectorAll(".banner-display");
+    for (var i = 0, length = bannerELem.length; i < length; i++) {
+        var el = bannerELem[i];
+        el.addEventListener("click", function(e) {
+            e.preventDefault();
+            var dialogue = document.querySelector(this.getAttribute("href"));
+            currentDialogue = dialogue;
+            dialogue.classList.remove('is-hidden');
+            // dialogueContainer.classList.remove('is-hidden');
+
+        })
+    }
+    
 }
 
 

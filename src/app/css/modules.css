@@ -33,10 +33,6 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
 
 
 /* tab bar */
-/*
-to be replaced by web component
-bug :;
-*/
 .tabs {
     background: var(--color-beta);
     margin: 0;
@@ -55,7 +51,7 @@ bug :;
     background: var(--color-iota);
 }
 .tabs-is-selected {
-    border-bottom: 4px solid var(--color-alpha);
+    border-bottom: 3px solid var(--color-alpha);
 }
 .tabs-is-selected:active {
     background: transparent;
@@ -165,6 +161,23 @@ value selector
     font-size: 27px;
     padding: 15px;
     font-weight: bold;
+}
+
+.banner-container {
+    position: fixed;
+    left: 0px;
+    bottom: 25px;
+    width: 100%;
+    text-align:center;
+}
+.banner {
+    display: inline-block;
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    bottom: 15px;
+    background: var(--color-beta);
+    text-align: center;
 }
 
 /*
