@@ -19,12 +19,6 @@
         <!-- Localization -->
     <link rel="resource" type="application/l10n" href="locales/locales.ini" />
 
-    <!-- Styles only for this styleguide: -->
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/apps.css"/>
-    <link rel="stylesheet" type="text/css" href="css/modules.css"/>
-
-   
     
     <!-- web components -->
     <script>window.packagesBaseUrl='../bower_components/';</script>
@@ -34,52 +28,92 @@
     <script src="../bower_components/gaia-switch/script.js"></script>
     <script src="../bower_components/gaia-checkbox/script.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="../bower_components/gaia-icons/style.css"/>
     <link rel="stylesheet" type="text/css" href="../bower_components/gaia-theme/style.css"/>
 
-    
+    <!-- Styles only for this styleguide: -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/apps.css"/>
+    <link rel="stylesheet" type="text/css" href="css/modules.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/demo/x-tag-components.css"/>
+    <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/src/deck.css"/>
+
+   
+
+    <script type="text/javascript" src="../bower_components/x-tag-deck/demo/x-tag-components.js"></script>
+    <script type="text/javascript" src="../bower_components/x-tag-deck/src/deck.js"></script>
+
 </head>
 
 <body>
-    <section id="sg-landing" class="sg-section">
-        <div id="sg-title">
-            <h1 id="sg-header" class="mega l-align-center">FirefoxOS</h1>
-            <h2 id="sg-subheader" class="beta l-align-center l-p-micro">Styleguide</h2>
+    <section class="sg-landing sg-section-full">
+        <div class="sg-title">
+            <h1 class="mega l-align-center">FirefoxOS</h1>
+            <h2 class="beta l-align-center l-p-micro">Design guide</h2>
         </div>
 
-        <div id="sg-install" class="l-width-full l-align-center">
-            <gaia-button id="install">Install this app</gaia-button>
+        <div class="sg-landing-content l-width-full l-align-center">
+            
+            <div class="install-button-container">
+                <gaia-button id="install-button">Install this app</gaia-button>
+            </div>
+            
+
         </div>    
     </section>
 
-    <!-- <header class="sg-header">    
-        <form id="sg-panel">
-            Screen width
-            <input type="radio" name="screen-size" value="800"> 800
-            <input type="radio" name="screen-size" value="640"> 640
-            <input type="radio" name="screen-size" value="480"> 480
-            <input type="radio" name="screen-size" value="320"> 320
+    <header class="sg-toolbar">    
+        <button id="reload" class="update" data-l10n-id="update-button">Update</button>
+    </header>
 
-            <br/>
+    <!-- 
+    intro
+    [install]
+    [next]
 
-            Theme
-            <input type="radio" name="theme" value="none"> None
-            <input type="radio" name="theme" value="gaia"> Gaia
+    - principles
+    
+    - Example screens
+        - Email app
+        - Media app
 
-            <br/>
+    - Components
 
-            Scale
-            <input type="range" value="1" min="0" max="2" step="0.25">
-
-        </form>    
-    </header> -->
+     -->
   
+    <div class="sg-principles sg-section-full">
+        <x-deck class="sg-principles-cards">
+            <x-card selected>
+                Principles content here.
+            </x-card>
+
+            <x-card><img src="http://placekitten.com/300"/></x-card>
+
+            <x-card><button>Hello!</button></x-card>
+        </x-deck>
+
+    </div>
+
     <section id="menu" class="sg-section sg-border l-mb-mega">
         <h2 class="alpha l-p-small l-align-center">Menu</h2>
 
         <ul class="menu">
-            <li class="menu-item">Menu 1</li>
-            <li class="menu-item">Menu 2</li>
-            <li class="menu-item">Menu 3</li>
+            <li class="menu-item">
+                <i class="menu-item-icon icon icon-Settings-aboutphone"></i>
+                Menu 1
+                <div class="menu-item-selected"></div>
+            </li>
+            <li class="menu-item">
+                <i class="menu-item-icon icon icon-Settings-airplane"></i>
+                Menu 2
+                <div class="menu-item-selected"></div>
+            </li>
+            <li class="menu-item">
+                <i class="menu-item-icon icon icon-Settings-display"></i>
+                Menu 3
+                <div class="menu-item-selected"></div>
+            </li>
         </ul>
     </section>
     
@@ -154,6 +188,10 @@
     <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
         
         <gaia-button>Gaia-button</gaia-button>
+
+        <br/><br/>
+
+        <gaia-button><i class="icon icon-Browser-Back"></i></gaia-button>
         
     </section>
 
@@ -162,11 +200,16 @@
         
         <ul class="menu">
             <li class="menu-item">
-                <label for="switch1">Toggle switch</label>
-                <gaia-switch id="switch1" class="l-align-right"></gaia-switch>
+                <label for="switch1" class="l-flex-grow">Toggle switch</label>
+                <gaia-switch id="switch1"></gaia-switch>
             </li>
             <li class="menu-item">
-                <label for="switch3">Toggle switch checked </label>
+                <label for="switch3" class="l-flex-grow">Toggle switch checked </label>
+                <gaia-switch id="switch3" checked></gaia-switch>
+            </li>
+
+            <li class="menu-item">
+                <label for="switch3" class="l-flex-grow">Toggle switch checked </label>
                 <gaia-switch id="switch3" class="l-align-right" checked></gaia-switch>
             </li>
         </ul>
@@ -177,12 +220,16 @@
         
         <ul class="menu">
             <li class="menu-item">
-                <label for="b1">Checkbox checked</label>
-                <gaia-checkbox id="b1" name="b" checked class="l-align-right"></gaia-checkbox>
+                <label for="b1" class="l-flex-grow">Checkbox checked</label>
+                <gaia-checkbox id="b1" name="b" checked></gaia-checkbox>
             </li>
             <li class="menu-item">
-                <label for="b2">Checkbox</label>
-                <gaia-checkbox id="b2" name="b" class="l-align-right"></gaia-checkbox>
+                <label for="b2" class="l-flex-grow">Checkbox</label>
+                <gaia-checkbox id="b2" name="b"></gaia-checkbox>
+            </li>
+            <li class="menu-item">
+                <label for="b3" class="l-flex-grow">Checkbox</label>
+                <gaia-checkbox id="b3" name="b"></gaia-checkbox>
             </li>
         </ul> 
     </section>
@@ -196,9 +243,38 @@
         -->
 
         <label class="input-label" for="SampleInput">Inputbox Label</label>
-        <input class="input" id="sampleInput" placeholder="Placeholder text 1"><br/>
-        <input class="input" placeholder="Placeholder text 2">
+        <div class="input-container">
+            <input class="input" placeholder="Placeholder text"></input>
+            <div class="input-clear"><i class="input-clear-icon icon icon-pick-cancel"></i></div>
+            <div class="input-focus"></div>
+        </div>
+        <br/>
         
+        <label class="input-label" for="SamplePassword">Password</label>
+        <div class="input-container">
+            <input class="input" type="password"></input>
+            <div class="input-clear"><i class="input-clear-icon icon icon-pick-cancel"></i></div>
+            <div class="input-focus"></div>
+        </div>
+        <br/>
+            
+        <label class="input-label" for="search">Search</label>
+        <div class="input-container input-search-container">
+            <input class="input" placeholder="Search..."></input>
+            <div class="input-clear"><i class="input-clear-icon icon icon-pick-cancel"></i></div>
+            <div class="input-focus"></div>
+        </div>
+        <br/>
+
+        <label class="input-range-label large l-align-right" for="range">50%</label><label class="input-label" for="range">Range slider</label>
+
+        
+        <div class="input-range-container">
+            <div class="input-range-handle"></div>
+            <div class="input-range-track"></div>
+            <div class="input-range-track input-range-range"></div>
+        </div>
+        <br/>
 
         <!-- todo: validation/Required input fields -->
         <!-- todo: Read only input fields -->
@@ -248,9 +324,15 @@
         
         <h3 class="l-plr-small l-align-center">3 column</h3>
         <ul class="tabs grid">
-            <li class="tabs-item col-1-3">Item 1</li>
-            <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
-            <li class="tabs-item col-1-3">Item 3</li>
+            <li class="tabs-item col-1-3">
+                <i class="icon icon-Dialer-Contacts"></i>
+            </li>
+            <li class="tabs-item col-1-3 tabs-is-selected">
+                 <i class="icon icon-Dialer-Dialpad"></i>
+            </li>
+            <li class="tabs-item col-1-3">
+                 <i class="icon icon-Dialer-RecentCalls"></i>
+            </li>
         </ul>
 
         <h3 class=" l-plr-small l-align-center">4 column</h3>
@@ -261,245 +343,11 @@
             <li class="tabs-item col-1-4">Item 4</li>
         </ul>        
 
+
     </section>
     
 
         
-    <section class="sg-section sg-border sg-app l-mb-mega">
-         <div class="theme-settings l-app">
-            
-            <gaia-header action="back">
-              <h1 id="title1">Settings</h1>
-              <button>Done</button>
-            </gaia-header>
- 
-            <div class="l-app-content">
-                <ul class="menu">
-                    <li class="menu-item">Setting 1</li>
-                    <li class="menu-item">Setting 2</li>
-                    <li class="menu-item">Setting 3</li>
-                    <li class="menu-item">Setting 4</li>
-                    <li class="menu-item">Setting 5</li>
-                    <li class="menu-item">Setting 7</li>
-                    <li class="menu-item">Setting 8</li>
-                    <li class="menu-item">Setting 9</li>
-                    <li class="menu-item">Setting 10</li>
-                    <li class="menu-item">Setting 11</li>
-                </ul>
-            </div><!-- .l-app-content -->
-        </div>
-    </section>
-
-
-    <section class="sg-section sg-border sg-app l-mb-mega">
-         
-       <div class="theme-communications l-app">
-           <gaia-header action="back">
-              <h1 id="title1">Communications</h1>
-              <button>Done</button>
-            </gaia-header>
-            
-            <div id="l-contact-container">
-                <div id="l-contact-detail">
-                    <div class="contact-detail-container l-align-center">
-                        <h1 class="contact-detail-header">Design me!</h1>
-                    </div>
-                </div><!-- #l-contact-detail -->
-
-                <div id="l-contact-list" class="l-app">
-                    <div class="l-app-content">
-                        <ul class="menu">
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                            <li class="contact menu-item">
-                                <div class="l-clearfix">
-                                    <div class="contact-info l-align-left">
-                                        <span class="first">First</span> <span class="last">Last</span><br/>
-                                        <span class="company">Company name</span>
-                                    </div>
-                                    <span class="thumb l-align-right"></span>
-                                </div>
-                            </li>
-                        </ul><!-- .menu -->
-                    </div><!-- .l-contact-list -->
-                    
-                    <ul class="tabs grid">
-                        <li class="tabs-item col-1-3">Item 1</li>
-                        <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
-                        <li class="tabs-item col-1-3">Item 3</li>
-                    </ul>
-                </div><!-- #l-app-content -->
-            </div><!-- #l-contact-list -->
-        </div><!-- #l-contact-container -->
-    </section>
-    <section class="sg-section sg-border sg-app l-mb-mega">
-        <div class="theme-media l-app">
-            <gaia-header action="back">
-              <h1 id="title1">Media</h1>
-              <button>Done</button>
-            </gaia-header>
-
-            <div class="l-app-content">
-                <ul class="menu">
-                    <li class="menu-item">
-                        Media 1
-                        <span class="menu-meta l-align-right">Meta</span>
-                    </li>
-                    <li class="menu-item">Media 1</li>
-                    <li class="menu-item">Media 2</li>
-                    <li class="menu-item">Media 3</li>
-                    <li class="menu-item">Media 4</li>
-                    <li class="menu-item">Media 5</li>
-                   
-                </ul>
-            </div>
-            <ul class="tabs grid">
-                <li class="tabs-item col-1-3">Item 1</li>
-                <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
-                <li class="tabs-item col-1-3">Item 3</li>
-            </ul>
-        </div>
-    </section>
-    <section class="sg-section sg-border sg-app l-mb-mega">
-        <div class="theme-productivity l-app">
-            <gaia-header action="back">
-              <h1 id="title1">Productivity</h1>
-              <button>Done</button>
-            </gaia-header>
-
-            <div class="l-app-content"></div>
-
-            <ul class="tabs grid">
-                <li class="tabs-item col-1-3">Item 1</li>
-                <li class="tabs-item col-1-3 tabs-is-selected">Item 2</li>
-                <li class="tabs-item col-1-3">Item 3</li>
-            </ul>
-        </div>
-    </section>
     
     <section class="sg-section sg-border l-mb-mega">
         <h2 class="alpha l-align-center l-p-small">Banner</h2>
@@ -545,7 +393,7 @@
             <div class='l-p-small'>
                 <p>Are you sure you want to delete this contact?</p>
             </div>
-            <table class="dialogue-buttons">
+            <table class="dialogue-table">
             <tr>
                 <td><button class="dialogue-button l-width-full">Cancel</button></td>
                 <td><button class="dialogue-button dialogue-button-warning l-width-full">Delete</button></td>
@@ -558,7 +406,7 @@
             <div class='l-p-small'>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu mollis tortor. </p>
             </div>
-            <table class="dialogue-buttons">
+            <table class="dialogue-table">
             <tr><td><button class="dialogue-button l-width-full">Action 1</button></td></tr>
             <tr><td><button class="dialogue-button l-width-full">Action 2</button></td></tr>
             <tr><td><button class="dialogue-button l-width-full">Cancel</button></td></tr>
@@ -582,7 +430,7 @@
                 </table>
                 
             </div>
-            <table class="dialogue-buttons">
+            <table class="dialogue-table">
             <tr>
                 <td><button class="dialogue-button l-width-full">Cancel</button></td>
                 <td><button class="dialogue-button l-width-full">Install</button></td>
@@ -609,7 +457,7 @@
                     <label for="dialogue-permission-remember">Remember my choice</label>
                 </div>                
             </div>
-            <table class="dialogue-buttons">
+            <table class="dialogue-table">
             <tr>
                 <td class="col-1-2"><button class="dialogue-button l-width-full">Don't allow</button></td>
                 <td class="col-1-2"><button class="dialogue-button l-width-full">Allow</button></td>
@@ -646,7 +494,7 @@
                 <li class="menu-item">Hacker</li>
             </ul>
         
-            <table class="dialogue-buttons">
+            <table class="dialogue-table">
             <tr>
                 <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
                 <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
@@ -729,7 +577,7 @@
                     <li>2014</li>
                 </ul>
             </div>
-            <table class="dialogue-buttons">
+            <table class="dialogue-table">
             <tr>
                 <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
                 <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
@@ -800,7 +648,7 @@
                     <li>PM</li>
                 </ul>
             </div>
-            <table class="dialogue-buttons">
+            <table class="dialogue-table">
             <tr>
                 <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
                 <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
@@ -814,6 +662,7 @@
 
 
     <!-- app -->
+    <script type="text/javascript" src="js/gesture_detector.js"></script>
     <script type="text/javascript" src="js/base.js"></script>
     <script type="text/javascript" src="js/webapp.js"></script>
     <script type="text/javascript" src="js/offline.js"></script>

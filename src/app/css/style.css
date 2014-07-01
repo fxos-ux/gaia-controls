@@ -33,20 +33,49 @@
     }*/
 }
 
-
-/* styleguide header */
-.sg-header {
+.sg-landing {
+    height: 100%;
+    /*position: fixed;*/
+    z-index: 100;
+}
+.sg-title {
+    position: absolute;
+    top: 25%;
     width: 100%;
-    height: 100px;
+}
+.sg-landing-content {
+    position: absolute;
+    bottom: 15%;
+}
+
+.sg-toolbar {
+    width: 100%;
+    height: 30px;
     background: rgba(255,255,255,0.8);
     position: fixed;
     top: 0px;
-    left: 0px;
+    left: 0px;    
+    margin: 0;
+    text-align: center;
+    z-index: 101;
+}
+
+.sg-principles {
     display: none;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
 }
-.sh-header-title {
-    color: #fff;
+.sg-principles-cards {
+    height: 100%;
+    background: gray;
 }
+
+
+
+
+
+
 
 /* styleguide app */
 .sg-app {
@@ -63,6 +92,10 @@
     display: inline-block;
 }
 /* styleguide sections */
+.sg-section-full {
+    width: 100%;
+    background: #fff;
+}
 .sg-section {
     max-width: 800px;
     margin-left: auto;
@@ -73,33 +106,9 @@
     border: 1px solid #e8e8e8;
 }
 
-/* styleguide headers */
-.sg-header {
-    margin: 0;
-    text-align: center;
-}
 
-#sg-landing {
-    height: 100%;
-    position: relative;
-}
 
-#sg-title {
-    position: absolute;
-    top: 25%;
-    width: 100%;
-}
-#sg-header {
-    margin: 0;
-    margin-bottom: 15px;
-}
-#sg-subheader {
-    margin: 0;   
-}
-#sg-install {
-    position: absolute;
-    bottom: 15%;
-}
+
 
 .l-app {
   display: flex;
