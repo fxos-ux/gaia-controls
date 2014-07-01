@@ -1,0 +1,363 @@
+/*
+gaia.css
+Customizable styles?
+- fonts, colors, default stying for elements.
+- styling for non web component UI elements.
+*/
+
+@import url("base.css");
+
+
+/*
+THEME VARIABLES
+=================
+*/
+:root {
+	/* brand colors */
+	--color-brand-darkblue: #00539f;
+    --color-brand-blue: #00caf2;
+    --color-brand-turquoise: #27c8c2;
+    --color-brand-darkorange: #e66000;
+    --color-brand-orange: #ff9500;
+    --color-brand-yellow: #ffcb00;
+    --color-brand-violet: #c40c84;
+    --color-brand-alpha: #00aac5;
+    --color-brand-beta: #00caf2;
+    --color-brand-gamma: #b2f2ff;
+
+    /* base dimensions */
+    --dim-micro: 6px;
+    --dim-milli: 12px;
+    --dim-small: 16px;
+    --dim-medium: 45px;
+    --dim-large: 50px;
+    --dim-mega: 60px;
+
+    --font-small: 14px;
+    --font-medium: 17px;
+    --font-large: 23px;
+
+    /* module style vars */
+	--header-background: #fff;
+	--header-nav-button-color: 	var(--color-alpha);
+	--header-nav-button-color-active: var(--color-alpha);
+	--header-button-background: rgba(0,0,0,0.1);
+	--header-button-color-active: var(--color-alpha);
+	--header-button-color: var(--color-alpha);
+	--header-title-color: var(--color-alpha);
+
+	--button-background: var(--color-beta);
+	--button-background-active: var(--color-brand-blue);
+	--button-color: var(--color-alpha);
+	--button-color-active: var(--color-beta);
+	--button-transition: all 0.2s;
+	--button-boxshadow: inset 0 -1px 0 #d8d8d8, inset 0 1px 0 #eeeeee;
+
+	--switch-color-checked: var(--color-brand-blue);
+	--switch-color: var(--color-zeta);
+
+	--checkbox-color: var(--color-brand-blue);
+}
+
+
+/* sub-theme specific variables */
+.theme-communications {
+	--header-background: var(--color-brand-turquoise);
+	--header-nav-button-color: 	var(--color-beta);
+	--header-nav-button-color-active: var(--color-beta);
+	--header-button-color:rgba(0,0,0,0.4);
+	--header-button-color-active: rgba(0,0,0,0.4);
+	--header-title-color: var(--color-beta);
+
+	--button-background: var(--color-beta);
+	--button-background-active: var(--color-brand-turquoise);
+	--button-color: var(--color-alpha);
+	--button-color-active: var(--color-beta);
+
+	--switch-color-checked: var(--color-brand-turquoise);
+	--switch-color: var(--color-zeta);
+
+	--checkbox-color: var(--color-brand-turquoise);
+}
+
+.theme-communications .tabs-is-selected {
+    color:  var(--color-brand-turquoise);
+}
+
+.theme-communications .tabs-item:after {
+    background: var(--color-brand-turquoise);
+}
+
+
+.theme-media {
+	/* variables */
+	--header-background: var(--color-gamma);
+	--header-nav-button-color: 	var(--color-beta);
+	--header-nav-button-color-active: var(--color-beta);
+	--header-button-color: var(--color-brand-blue);
+	--header-button-color-active: var(--color-brand-blue);
+	--header-title-color: var(--color-beta);
+
+	--button-background: var(--color-delta);
+	--button-background-active: var(--color-brand-blue);
+	--button-color: var(--color-beta);
+	--button-color-active: var(--color-beta);
+	--button-boxshadow: 'none';
+	
+	--switch-color: var(--color-delta);
+	--switch-color-checked: var(--color-brand-blue);
+
+	--checkbox-color: var(--color-brand-blue);
+
+	background: var(--color-alpha);
+}
+.theme-media .menu-item {
+	border-bottom: 1px solid var(--color-gamma);
+	color: var(--color-beta)
+}
+.theme-media .menu-item:after {
+    background: var(--color-gamma);
+}
+.theme-media label {
+	color: inherit;
+}
+.theme-media h3 {
+	color: inherit;
+}
+.theme-media .tabs {
+    background: var(--color-alpha);
+    color: var(--color-beta);
+}
+.theme-media .tabs-item {
+    color: var(--color-beta);
+}
+.theme-media .tabs-is-selected {
+    color: var(--color-brand-alpha);
+}
+.theme-media .tabs-is-selected:active {
+    background: transparent;
+}
+.theme-media .tabs-item:after {
+    background: var(--color-brand-blue);
+}
+
+
+.theme-productivity {
+	--header-background: var(--color-brand-orange);
+	--header-nav-button-color: 	var(--color-beta);
+	--header-nav-button-color-active: 	rgba(255,255,255,0.2);
+	--header-button-color: var(--color-beta);
+    --header-button-color-active: rgba(255,255,255,0.2);
+    --header-button-background: transparent;
+	--header-title-color: var(--color-beta);
+
+	--button-background: var(--color-beta);
+	--button-background-active: var(--color-brand-orange);
+	--button-color: var(--color-alpha);
+	--button-color-active: var(--color-beta);	
+
+	--checkbox-color: var(--color-brand-orange);
+
+	--switch-color-checked: var(--color-brand-orange);
+}
+.theme-settings {
+	/* variables */
+	--header-background: var(--color-iota);
+	--header-nav-button-color: 	var(--color-alpha);
+	--header-nav-button-color-active: rgba(51,51,51,0.2);
+	--header-button-color: var(--color-brand-blue);
+    --header-button-background: transparent;
+	--header-button-color-active: rgba(0,202,242,0.2);
+	--header-title-color: var(--color-alpha);
+    
+
+	--button-background-active: var(--color-brand-blue);
+	--button-color-active: var(--color-beta);
+}
+
+
+/*
+FONTS
+=================
+*/
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-Light.woff") format("woff");
+    font-weight: 300; /* lighter */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-LightItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: 300; /* lighter */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-Regular.woff") format("woff");
+    font-style: normal; 
+    font-weight: normal; /* 400 */
+}
+@font-face {
+    font-family: "FiraSans Regular Italic";
+    src: url("fonts/FiraSans-RegularItalic.woff") format("woff");
+    font-weight: normal; /* 400 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-Medium.woff") format("woff");
+    font-weight: bold; /* 700 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-MediumItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: bold; /* 700 */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-Bold.woff") format("woff");
+    font-weight: 800; /* bolder */
+}
+@font-face {
+    font-family: "FiraSans";
+    src: url("fonts/FiraSans-BoldItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: 800; /* bolder */
+}
+
+/* set base font */
+* { 
+    font-family: "FiraSans"; 
+    font-weight: normal;
+    line-height: 19px;
+    font-size: 17px;
+    color: var(--color-epsilon);
+}
+
+/* standard font sizes */
+.mega{
+    font-size: 60px;
+    line-height: 60px;
+    font-style: normal;
+}
+.large {
+    font-size: 23px;
+    line-height: 26px;
+}
+.giga{ }
+.kilo{ }
+small, .milli {
+    font-size: 14px;
+}
+
+
+
+/*
+TAG STYLING
+=================
+*/
+h1,.alpha   { 
+    font-size: 23px;
+    font-weight: lighter;
+    font-style: italic;
+    line-height: 26px;
+    color: var(--color-gamma);
+    margin: 6px 0 24px 0;
+}
+
+h2,.beta  {
+    font-size: 17px;
+    color: var(--color-gamma);
+    margin: 32px 0 16px 0;
+}
+
+h3,.gamma   { 
+    font-size: 14px;
+    font-style: bold;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: var(--color-gamma);
+    margin: 32px 0 16px 0;
+}
+h4,.delta   { }
+h5,.epsilon { }
+h6,.zeta    { }
+
+em {
+    font-weight: normal;
+}
+
+/*
+MODULES
+=================
+*/
+/* menu layout */
+.menu {
+    padding: 0; 
+    margin: 0;
+    width: 100%;
+}
+.menu-item {
+    box-sizing: border-box;
+    list-style: none;
+    border-bottom: 1px solid var(--color-theta);
+    padding: var(--dim-small) var(--dim-small);
+    color: var(--color-gamma);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.menu-item-selected { 
+    /* for animated click effect */
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: center center;
+    background: var(--color-theta);
+    transform: scaleX(0);
+    z-index: -1;   
+}
+.menu-item-animate {
+    animation-name: grow;
+    animation-duration: 800ms;
+    animation-iteration: 1;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;   
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+.menu-item-icon {
+    font-size: 30px;
+    margin: -10px var(--dim-small) -10px 0;
+}
+
+/*
+STATES
+=================
+*/
+.is-hidden {
+    display: none!important;
+}

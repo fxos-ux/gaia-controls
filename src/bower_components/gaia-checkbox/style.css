@@ -1,0 +1,48 @@
+
+gaia-checkbox {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  margin: -5.5px; /* margin set to compensate for extra vertical spacing when used in .menu */
+}
+
+/** Inner
+ ---------------------------------------------------------*/
+
+.inner {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--color-zeta, #a6a6a6);
+  background: #fff;
+  overflow: hidden;
+  transition: var(--button-transition, all 0s);
+  transition-delay:  var(--button-transition-delay, 200ms);
+}
+
+.inner:active {
+  background: var(--checkbox-color, #a6a6a6);
+  border-color: var(--checkbox-color, #a6a6a6);
+  padding: 0;
+  transition: none;
+}
+
+
+/** Circle
+ ---------------------------------------------------------*/
+
+.icon-tick {
+  height: 100%;
+  font-size: 65px;
+  line-height: 22px;
+  color: var(--checkbox-color, #000);
+  display: none; 
+}
+
+[checked] .icon-tick {
+  display: block;
+}
+
