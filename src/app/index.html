@@ -36,13 +36,10 @@
     <link rel="stylesheet" type="text/css" href="css/apps.css"/>
     <link rel="stylesheet" type="text/css" href="css/modules.css"/>
 
-    <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/demo/x-tag-components.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/demo/x-tag-components.css"/>
     <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/src/deck.css"/>
-
-   
-
     <script type="text/javascript" src="../bower_components/x-tag-deck/demo/x-tag-components.js"></script>
-    <script type="text/javascript" src="../bower_components/x-tag-deck/src/deck.js"></script>
+    <script type="text/javascript" src="../bower_components/x-tag-deck/src/deck.js"></script> -->
 
 </head>
 
@@ -82,7 +79,7 @@
 
      -->
   
-    <div class="sg-principles sg-section-full">
+    <!-- <div class="sg-principles sg-section-full">
         <x-deck class="sg-principles-cards">
             <x-card selected>
                 Principles content here.
@@ -93,31 +90,18 @@
             <x-card><button>Hello!</button></x-card>
         </x-deck>
 
-    </div>
+    </div> -->
 
     <section id="menu" class="sg-section sg-border l-mb-mega">
-        <h2 class="alpha l-p-small l-align-center">Menu</h2>
+        <h2 class="alpha l-p-small l-align-center">Integrated examples</h2>
 
-        <ul class="menu">
-            <li class="menu-item">
-                <i class="menu-item-icon icon icon-Settings-aboutphone"></i>
-                Menu 1
-                <div class="menu-item-selected"></div>
-            </li>
-            <li class="menu-item">
-                <i class="menu-item-icon icon icon-Settings-airplane"></i>
-                Menu 2
-                <div class="menu-item-selected"></div>
-            </li>
-            <li class="menu-item">
-                <i class="menu-item-icon icon icon-Settings-display"></i>
-                Menu 3
-                <div class="menu-item-selected"></div>
-            </li>
-        </ul>
+        <!-- <gaia-button id="install-button" onclick="installApp('productivity.webapp');">Sample productivty</gaia-button> -->
+        <a href="../sample_productivity"><gaia-button>Productivity</gaia-button></a>
+
+
     </section>
-    
-    <section class="sg-section sg-border l-p-small l-mb-mega"> 
+
+     <section class="sg-section sg-border l-p-small l-mb-mega"> 
         <h2 class="alpha l-align-center">Colors</h2>
         <div class="l-clearfix l-align-center">
             <h3 class="beta">Base colors</h3>
@@ -154,7 +138,7 @@
         <h2 class="alpha l-align-center">Typography</h2>
 
         <h3 class="beta">Standard font size</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+        <p><a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
 
         <h3 class="beta">Small font size</h3>
         <p class="milli">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
@@ -174,14 +158,42 @@
         
     </section>
 
+    <section id="menu" class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-p-small l-align-center">Menu</h2>
+
+        <ul class="menu">
+            <li class="menu-item">
+                <i class="menu-item-icon icon icon-settings-about-phone"></i>
+                <div class="l-flex-grow">Menu 1</div>
+                <i class="icon icon-forward"></i>
+                <div class="menu-item-selected"></div>
+            </li>
+            <li class="menu-item">
+                <i class="menu-item-icon icon icon-settings-airplane"></i>
+                <div class="l-flex-grow">Menu 2</div>
+                <i class="icon icon-forward"></i>
+                <div class="menu-item-selected"></div>
+            </li>
+            <li class="menu-item">
+                <i class="menu-item-icon icon icon-settings-display"></i>
+                <div class="l-flex-grow">Menu 3</div>
+                <i class="icon icon-forward"></i>
+                <div class="menu-item-selected"></div>
+            </li>
+        </ul>
+    </section>
+    
     <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
         <h2 class="alpha">Spinner</h2>
 
-        <!-- <div class="spinner l-clearfix">
-            <div class="spinner-circle"></div>
-            <div class="spinner-circle"></div>
-            <div class="spinner-circle"></div>
-        </div> -->
+        <div class="l-align-center">
+            <span class="spinner is-invisible"></span>
+        </div>
+
+        <br/>
+
+        <gaia-button id="spinner-toggle">Toggle spinner</gaia-button>
+
     </section>
 
 
@@ -202,15 +214,18 @@
             <li class="menu-item">
                 <label for="switch1" class="l-flex-grow">Toggle switch</label>
                 <gaia-switch id="switch1"></gaia-switch>
+                <div class="menu-item-selected"></div>
             </li>
             <li class="menu-item">
                 <label for="switch3" class="l-flex-grow">Toggle switch checked </label>
                 <gaia-switch id="switch3" checked></gaia-switch>
+                <div class="menu-item-selected"></div>
             </li>
 
             <li class="menu-item">
                 <label for="switch3" class="l-flex-grow">Toggle switch checked </label>
                 <gaia-switch id="switch3" class="l-align-right" checked></gaia-switch>
+                <div class="menu-item-selected"></div>
             </li>
         </ul>
     </section>
@@ -222,14 +237,17 @@
             <li class="menu-item">
                 <label for="b1" class="l-flex-grow">Checkbox checked</label>
                 <gaia-checkbox id="b1" name="b" checked></gaia-checkbox>
+                <div class="menu-item-selected"></div>
             </li>
             <li class="menu-item">
                 <label for="b2" class="l-flex-grow">Checkbox</label>
                 <gaia-checkbox id="b2" name="b"></gaia-checkbox>
+                <div class="menu-item-selected"></div>
             </li>
             <li class="menu-item">
                 <label for="b3" class="l-flex-grow">Checkbox</label>
                 <gaia-checkbox id="b3" name="b"></gaia-checkbox>
+                <div class="menu-item-selected"></div>
             </li>
         </ul> 
     </section>
@@ -276,6 +294,8 @@
         </div>
         <br/>
 
+
+
         <!-- todo: validation/Required input fields -->
         <!-- todo: Read only input fields -->
 
@@ -289,6 +309,22 @@
           <h1 id="title1">Generic header</h1>
           <button>Done</button>
         </gaia-header>
+
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">Sub-header</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+
+        <div class="subheader subheader-link">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-link-label subheader-label gamma">Sub-header link</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+
+        <br/><br/>
+
+        <h2 id="title1" class="alpha l-align-center l-p-small">Themed headers</h2>
     
         <div class="theme-communications">
             <gaia-header action="back">
@@ -323,31 +359,46 @@
         <h2 class="alpha l-align-center l-p-small">Tab bars</h2>
         
         <h3 class="l-plr-small l-align-center">3 column</h3>
-        <ul class="tabs grid">
-            <li class="tabs-item col-1-3">
-                <i class="icon icon-Dialer-Contacts"></i>
-            </li>
-            <li class="tabs-item col-1-3 tabs-is-selected">
-                 <i class="icon icon-Dialer-Dialpad"></i>
-            </li>
-            <li class="tabs-item col-1-3">
-                 <i class="icon icon-Dialer-RecentCalls"></i>
-            </li>
-        </ul>
+        
+        <div class="tabs">
+            <div class="tabs-item">
+                <i class="tabs-item-icon icon icon-dialer-contacts"></i>
+            </div>
+            <div class="tabs-item">
+                <i class="tabs-item-icon icon icon-dialer-dialpad"></i>
+            </div>
+            <div class="tabs-item tabs-item-selected">
+                <i class="tabs-item-icon icon icon-dialer-recent-calls"></i>
+            </div>
+            <div class="tabs-selected-indicator"></div>
+        </div>
 
         <h3 class=" l-plr-small l-align-center">4 column</h3>
-        <ul class="tabs grid">
-            <li class="tabs-item col-1-4">Item 1</li>
-            <li class="tabs-item col-1-4 tabs-is-selected">Item 2</li>
-            <li class="tabs-item col-1-4">Item 3</li>
-            <li class="tabs-item col-1-4">Item 4</li>
-        </ul>        
-
-
+        <div class="tabs">
+            <div class="tabs-item">Item 1</div>
+            <div class="tabs-item tabs-item-selected">Item 2</div>
+            <div class="tabs-item">Item 3</div>
+            <div class="tabs-item">Item 4</div>
+            <div class="tabs-selected-indicator"></div>
+        </div>
     </section>
     
+    <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-align-center l-p-small">Toolbars</h2>
 
-        
+        <div class="tabs">
+            <div class="tabs-item">
+                <i class="tabs-item-icon icon icon-preview-delete"></i>
+            </div>
+            <div class="tabs-item">
+                <i class="tabs-item-icon icon icon-preview-share"></i>
+            </div>
+            <div class="tabs-item">
+                <i class="tabs-item-icon icon icon-preview-options"></i>
+            </div>
+        </div>        
+    </section>
+    
     
     <section class="sg-section sg-border l-mb-mega">
         <h2 class="alpha l-align-center l-p-small">Banner</h2>
@@ -366,39 +417,137 @@
 
 
      <section class="sg-section sg-border l-mb-mega">
-        <h2 class="alpha l-align-center l-p-small">Dialogue</h2>
+        <h2 class="alpha l-align-center l-p-small">Dialogues</h2>
 
         <ul class="menu">
-            <li class="menu-item"><a class="dialogue-display" href=".dialogue-alert">Alert</a></li>
-            <li class="menu-item"><a class="dialogue-display" href=".dialogue-confirm">Confirmation</a></li>
-            <li class="menu-item"><a class="dialogue-display" href=".dialogue-action">Action</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-alert">Alert dialogue</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-confirm">Confirmation dialogue</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-action">Action dialogue</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-input">Input dialogue</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-progress">Determinate progress dialogue</a></li>
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-infiniteprogress">Indeterminate progress dialogue</a></li>
+        </ul>    
+
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">System dialogue</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+
+        <ul class="menu">
             <li class="menu-item"><a class="dialogue-display" href=".dialogue-install">Install</a></li>
             <li class="menu-item"><a class="dialogue-display" href=".dialogue-permission">Permission</a></li>
+        </ul>
+
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">Value selection dialogue</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+
+        <ul class="menu">
             <li class="menu-item"><a class="dialogue-display" href=".dialogue-option">Option select</a></li>
             <li class="menu-item"><a class="dialogue-display" href=".dialogue-multioption">Multi-option select</a></li>
             <li class="menu-item"><a class="dialogue-display" href=".dialogue-date">Date selection</a></li>
             <li class="menu-item"><a class="dialogue-display" href=".dialogue-time">Time selection</a></li>
         </ul>
+
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">Contextual dialogue</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+        <ul class="menu">
+            <li class="menu-item"><a class="dialogue-display" href=".dialogue-objectmenu">Contextual Menu</a></li>
+        </ul>
     </section>
 
+
      <div class="dialogue-container is-hidden">
+
+        <div class="dialogue-objectmenu dialogue is-hidden">
+            <div class="dialogue-buttons dialogue-buttons-vertical">
+                <button class="dialogue-button dialogue-objectmenu-button l-width-full">
+                    <i class="dialogue-button-icon icon icon-General-new"></i>
+                    Open in New Window
+                </button>
+                <button class="dialogue-button dialogue-objectmenu-button l-width-full">
+                    <i class="dialogue-button-icon icon icon-General-bookmark"></i>
+                    Add to Home Screen
+                </button>
+                <button class="dialogue-button dialogue-objectmenu-button l-width-full">
+                    <i class="dialogue-button-icon icon icon-General-share"></i>
+                    Share Link
+                </button>
+                <button class="dialogue-button dialogue-objectmenu-button l-width-full">
+                    <i class="dialogue-button-icon icon icon-General-settings"></i>
+                    Settings
+                </button>   
+            </div>
+        </div><!-- .dialogue-objectmenu -->
+
         <div class="dialogue-alert dialogue l-align-center is-hidden">
             <div class='l-p-small'>
                 <p>No SIM card is present.</p>
             </div>
-            <button class="dialogue-button l-width-full">Ok</button>
+
+            <div class="dialogue-buttons">
+                <button class="dialogue-button">Ok</button>
+            </div>
         </div><!-- .dialogue-alert -->
+
+        <div class="dialogue-progress dialogue l-align-center is-hidden">
+            <div class='l-p-small'>
+                <p>Importing (0/100)</p>
+            </div>
+
+            <div class="progress">
+                <div class="progress-line"></div>
+            </div>
+            <div class="dialogue-buttons">
+                <button class="dialogue-button">Cancel</button>
+            </div>
+        </div><!-- .dialogue-progress -->
+
+        <div class="dialogue-input dialogue l-align-center is-hidden">
+            <div class='l-p-small'>
+               <div class="input-container l-width-full">
+                    <input class="input" placeholder="Device name"></input>
+                    <div class="input-clear"><i class="input-clear-icon icon icon-pick-cancel"></i></div>
+                    <div class="input-focus"></div>
+                </div>
+            </div>
+            
+            <div class="dialogue-buttons">
+                <button class="dialogue-button">Cancel</button>
+                <button class="dialogue-button dialogue-button-warning">Ok</button>
+            </div>
+        </div><!-- .dialogue-input -->
+
+        <div class="dialogue-infiniteprogress dialogue l-align-center is-hidden">
+            <div class='l-p-small'>
+                <p>Sending invitations</p>
+            </div>
+
+            <div class="progress">
+                <div class="progress-line"></div>
+            </div>
+
+            <div class="dialogue-buttons">
+                <button class="dialogue-button">Cancel</button>
+            </div>
+        </div><!-- .dialogue-infiniteprogress -->
 
         <div class="dialogue-confirm dialogue l-align-center is-hidden">
             <div class='l-p-small'>
                 <p>Are you sure you want to delete this contact?</p>
             </div>
-            <table class="dialogue-table">
-            <tr>
-                <td><button class="dialogue-button l-width-full">Cancel</button></td>
-                <td><button class="dialogue-button dialogue-button-warning l-width-full">Delete</button></td>
-            </tr>
-            </table>
+
+            <div class="dialogue-buttons">
+                <button class="dialogue-button">Cancel</button>
+                <button class="dialogue-button dialogue-button-warning">Delete</button>
+            </div>
+            
         </div><!-- .dialogue-confirm -->
 
 
@@ -406,11 +555,12 @@
             <div class='l-p-small'>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu mollis tortor. </p>
             </div>
-            <table class="dialogue-table">
-            <tr><td><button class="dialogue-button l-width-full">Action 1</button></td></tr>
-            <tr><td><button class="dialogue-button l-width-full">Action 2</button></td></tr>
-            <tr><td><button class="dialogue-button l-width-full">Cancel</button></td></tr>
-            </table>
+
+            <div class="dialogue-buttons dialogue-buttons-vertical">
+                <button class="dialogue-button l-width-full">Action 1</button>
+                <button class="dialogue-button l-width-full">Action 2</button>
+                <button class="dialogue-button l-width-full">Cancel</button>
+            </div>            
         </div><!-- .dialogue-action -->
 
          <div class="dialogue-install dialogue is-hidden">
@@ -430,12 +580,11 @@
                 </table>
                 
             </div>
-            <table class="dialogue-table">
-            <tr>
-                <td><button class="dialogue-button l-width-full">Cancel</button></td>
-                <td><button class="dialogue-button l-width-full">Install</button></td>
-            </tr>
-            </table>
+
+            <div class="dialogue-buttons">
+                <button class="dialogue-button l-width-full">Cancel</button>
+                <button class="dialogue-button l-width-full">Install</button>
+            </div>
         </div><!-- .dialogue-install -->
 
         <div class="dialogue-permission dialogue is-hidden">
@@ -454,15 +603,14 @@
                     <hr/>
                     
                     <gaia-checkbox id="dialogue-permission-remember" name="" checked></gaia-checkbox>
-                    <label for="dialogue-permission-remember">Remember my choice</label>
+                    <label for="dialogue-permission-remember" class="l-ml-small">Remember my choice</label>
                 </div>                
             </div>
-            <table class="dialogue-table">
-            <tr>
-                <td class="col-1-2"><button class="dialogue-button l-width-full">Don't allow</button></td>
-                <td class="col-1-2"><button class="dialogue-button l-width-full">Allow</button></td>
-            </tr>
-            </table>
+
+            <div class="dialogue-buttons">
+                <button class="dialogue-button l-width-full">Don't allow</button>
+                <button class="dialogue-button l-width-full">Allow</button>
+            </div>
         </div><!-- .dialogue-install -->
 
         <div class="dialogue-option dialogue is-hidden">
@@ -470,9 +618,20 @@
                 <h1>Ring tone</h1>
             </div>
             <ul class="menu">
-                <li class="menu-item dialogue-option-selected">Classic Prism</li>
-                <li class="menu-item">Wallphone</li>
-                <li class="menu-item">Disco Drive</li>
+                <li class="menu-item">
+                    <div class="l-flex-grow dialogue-option-selected">
+                        Classic Prism
+                    </div>
+                    <i class="icon icon-tick dialogue-option-selected-tick"></i>
+                    <div class="menu-item-selected"></div>
+                </li>
+                <li class="menu-item">Wallphone
+                    <div class="menu-item-selected"></div>
+                </li>
+                <li class="menu-item">
+                    Disco Drive
+                    <div class="menu-item-selected"></div>
+                </li>
                 <li class="menu-item">Touchmatic</li>
                 <li class="menu-item">Classic Courier</li>
                 <li class="menu-item">Hacker</li>
@@ -488,18 +647,31 @@
             <ul class="menu">
                 <li class="menu-item">Classic Prism</li>
                 <li class="menu-item">Wallphone</li>
-                <li class="menu-item dialogue-option-selected">Disco Drive</li>
-                <li class="menu-item dialogue-option-selected">Touchmatic</li>
-                <li class="menu-item dialogue-option-selected">Classic Courier</li>
+                <li class="menu-item">
+                    <div class="l-flex-grow dialogue-option-selected">
+                        Disco Drive
+                    </div>
+                    <i class="icon icon-tick dialogue-option-selected-tick"></i>
+                </li>
+                <li class="menu-item">
+                    <div class="l-flex-grow dialogue-option-selected">
+                        Touchmatic
+                    </div>
+                    <i class="icon icon-tick dialogue-option-selected-tick"></i>
+                </li>
+                <li class="menu-item">
+                    <div class="l-flex-grow dialogue-option-selected">
+                        Classic Courier
+                    </div>
+                    <i class="icon icon-tick dialogue-option-selected-tick"></i>
+                </li>
                 <li class="menu-item">Hacker</li>
             </ul>
         
-            <table class="dialogue-table">
-            <tr>
-                <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
-                <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
-            </tr>
-            </table>
+            <div class="dialogue-buttons">
+                <button class="dialogue-button l-width-full">Cancel</button>
+                <button class="dialogue-button l-width-full">Select</button>
+            </div>
         </div><!-- .dialogue-multioption -->
 
         <div class="dialogue-date dialogue-spinner dialogue is-hidden">
@@ -577,12 +749,11 @@
                     <li>2014</li>
                 </ul>
             </div>
-            <table class="dialogue-table">
-            <tr>
-                <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
-                <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
-            </tr>
-            </table>
+
+            <div class="dialogue-buttons">
+                <button class="dialogue-button l-width-full">Cancel</button>
+                <button class="dialogue-button l-width-full">Select</button>
+            </div>
         </div><!-- .dialogue-date -->
 
         <div class="dialogue-time dialogue-spinner dialogue is-hidden">
@@ -644,19 +815,19 @@
                     <li>30</li>
                 </ul>
                 <ul class="col-1-3">
+                    <li>&nbsp;</li>
                     <li>AM</li>
                     <li>PM</li>
                 </ul>
             </div>
-            <table class="dialogue-table">
-            <tr>
-                <td class="col-1-2"><button class="dialogue-button l-width-full">Cancel</button></td>
-                <td class="col-1-2"><button class="dialogue-button l-width-full">Select</button></td>
-            </tr>
-            </table>
+            <div class="dialogue-buttons">
+                <button class="dialogue-button l-width-full">Cancel</button>
+                <button class="dialogue-button l-width-full">Select</button>
+            </div>
         </div><!-- .dialogue-time -->
 
     </div><!-- .dialogue-container -->
+
 
 
 

@@ -1,150 +1,328 @@
 /* global alert, console */
 "use strict";
 // Install app
-if (navigator.mozApps) {
-    var checkIfInstalled = navigator.mozApps.getSelf();
-    checkIfInstalled.onsuccess = function () {
-        if (checkIfInstalled.result) {
-            // Already installed
-            var installationInstructions = document.querySelector(".install-button-container");
-            if (installationInstructions) {
-                installationInstructions.style.display = "none";
-            }
-        }
-        else {
-            var install = document.querySelector("#install-button"),
-                manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp";
-            install.onclick = function () {
-                var installApp = navigator.mozApps.install(manifestURL);
-                installApp.onsuccess = function() {
-                    install.style.display = "none";
-                };
-                installApp.onerror = function() {
-                    alert("Install failed\n\n:" + installApp.error.name);
-                };
+
+function Styleapp() {
+    function initAppinstall() {
+        if (navigator.mozApps) {
+            var checkIfInstalled = navigator.mozApps.getSelf();
+            checkIfInstalled.onsuccess = function () {
+                if (checkIfInstalled.result) {
+                    // Already installed
+                    var installationInstructions = document.querySelector(".install-button-container");
+                    if (installationInstructions) {
+                        installationInstructions.style.display = "none";
+                    }
+                }
+                else {
+                    var install = document.querySelector("#install-button"),
+                        manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/manifest.webapp";
+                    install.onclick = function () {
+                        var installApp = navigator.mozApps.install(manifestURL);
+                        installApp.onsuccess = function() {
+                            install.style.display = "none";
+                        };
+                        installApp.onerror = function() {
+                            alert("Install failed\n\n:" + installApp.error.name);
+                        };
+                    };
+                }
             };
         }
-    };
-}
-else {
-    console.log("Open Web Apps not supported");
-}
+        else {
+            console.log("Open Web Apps not supported");
+        }
 
-// Reload content
-var reload = document.querySelector("#reload");
-if (reload) {
-    reload.onclick = function () {
-        location.reload(true);
-    };
-}
-
-
-window.onload = function() {
-    // styleguide
-    // dialogues
-    var dialogueElem = document.querySelectorAll(".dialogue-display");
-    var dialogueContainer = document.querySelector('.dialogue-container');
-    var currentDialogue = null;
-
-    for (var i = 0, length = dialogueElem.length; i < length; i++) {
-        dialogueElem[i].addEventListener('click', function(e) {
-            e.preventDefault();
-            var dialogue = document.querySelector(this.getAttribute("href"));
-            currentDialogue = dialogue;
-            dialogue.classList.remove('is-hidden');
-            dialogueContainer.classList.remove('is-hidden');
-        })
-    };
-
-    var dialogueButtonElem = document.querySelectorAll(".dialogue-button");
-    for (var i = 0, length = dialogueButtonElem.length; i < length; i++) {
-        var el = dialogueButtonElem[i];
-        el.addEventListener("click", function() {
-            if (currentDialogue) {
-                currentDialogue.classList.add('is-hidden');
-                dialogueContainer.classList.add('is-hidden');
-            }
-        });
-    }
-
-    // banner
-    var bannerELem = document.querySelectorAll(".banner-display");
-    for (var i = 0, length = bannerELem.length; i < length; i++) {
-        var el = bannerELem[i];
-        el.addEventListener("click", function(e) {
-            e.preventDefault();
-            var dialogue = document.querySelector(this.getAttribute("href"));
-            currentDialogue = dialogue;
-            dialogue.classList.add('banner-animate');
+        function installApp(aFileName){
+            var manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/" + aFileName;
             
-            var animationEndHandler = function(e) {
-                this.classList.remove('banner-animate');
-                this.removeEventListener(e.type,animationEndHandler,e.eventPhase);
-            }
+            var installApp = navigator.mozApps.install(manifestURL);
 
-            dialogue.addEventListener('animationend', animationEndHandler, false)
-
-            dialogue.classList.remove('is-hidden');
-            // dialogueContainer.classList.remove('is-hidden');
-
-        })
+             installApp.onsuccess = function() {
+                console.log("installed!");
+            };
+            installApp.onerror = function() {
+                console.log("Install failed\n\n:" + installApp.error.name);
+            };
+        }
     }
 
-    // tab bars
-    var tabElem = document.querySelectorAll(".tabs-item");
-    for (var i = 0, length = tabElem.length; i < length; i++) {
-        var el = tabElem[i];
-        el.addEventListener('click', function(e) {
-            e.preventDefault();
-            var selected = this.parentNode.querySelector('.tabs-is-selected');
-            selected.classList.remove('tabs-is-selected');
-            this.classList.add('tabs-is-selected');
+
+    function initMenus() {
+        var menuElem = document.querySelectorAll(".menu-item");
+        for (var i = 0, length = menuElem.length; i < length; i++) {
+            var el = menuElem[i];
+            el.addEventListener('click', function(e) {
+                var animate = document.querySelector('.menu-item-animate');
+                if (animate) animate.classList.remove('menu-item-animate');
+                var selected = this.querySelector('.menu-item-selected');            
+                if (selected) {
+                    var w = selected.parentNode.offsetWidth*2;
+                    selected.style.width = w+'px';
+                    selected.style.height = w+'px';
+                    selected.style.top = (w/2*-1)+(this.offsetHeight/2)+'px';
+                    selected.style.left = (e.layerX-(w/2))+'px';
+                    selected.classList.add('menu-item-animate');
+                }
+            });    
+        }
+    }
+
+    function initTabs() {
+        var tabsElem = document.querySelectorAll('.tabs');
+
+        for (var i = 0, length = tabsElem.length; i < length; i++) {
+            var el = tabsElem[i];
+            moveTabs(el);
+
+            // add click events to each tab 
+            var tabs = el.querySelectorAll('.tabs-item');
+            for (var j = 0, jlength = tabs.length; j < jlength; j++) {
+                var tab =tabs[j];
+                tab.addEventListener('click', function(e) {
+                    this.parentNode.querySelector('.tabs-item-selected')
+                        .classList.remove('tabs-item-selected');
+                    this.classList.add('tabs-item-selected');
+                    moveTabs(this.parentNode);
+                });
+            }
+        }
+
+        function moveTabs(tabs) {
+            var select = tabs.querySelector('.tabs-item-selected');
+            var selectIndicator = tabs.querySelector('.tabs-selected-indicator');
+            if (select != null && selectIndicator != null) {
+                selectIndicator.style.width = select.offsetWidth+'px';
+                selectIndicator.style.left = select.offsetLeft+'px';
+            } 
+        }
+    }
+
+    function initDialogues() {
+        var currentDialogue = null;
+        var dialogueElem = document.querySelectorAll(".dialogue-display");
+        var dialogueContainer = document.querySelector('.dialogue-container');
+        
+        initDialogueBanners();
+        initDialogueLayout();
+        initDialogueButtons();
+
+        function initDialogueBanners() {
+            var bannerELem = document.querySelectorAll(".banner-display");
+            for (var i = 0, length = bannerELem.length; i < length; i++) {
+                var el = bannerELem[i];
+                el.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    var dialogue = document.querySelector(this.getAttribute("href"));
+                    currentDialogue = dialogue;
+                    dialogue.classList.add('banner-animate');
+                    
+                    dialogue.addEventListener('animationend', function endHandler() {
+                        this.removeEventListener('animationend', endHandler);
+                    }, false)
+
+                    dialogue.classList.remove('is-hidden');
+                })
+            }
+        }
+        
+        function initDialogueLayout() {
+            for (var i = 0, length = dialogueElem.length; i < length; i++) {
+                dialogueElem[i].addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var dialogue = document.querySelector(this.getAttribute("href"));
+                    currentDialogue = dialogue;
+                    openDialogue();
+                });
+            }
+        };
+
+        function initDialogueButtons() {
+            //  clicking any choice will close the dialogue.
+            var dialogueButtonElem = document.querySelectorAll(".dialogue-button");
+            for (var i = 0, length = dialogueButtonElem.length; i < length; i++) {
+                var el = dialogueButtonElem[i];
+                el.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    closeDialogue();
+                });
+            }
+        }
+        function openDialogue() {
+            var animation = new AnimationManager();
+            animation.queue = [{
+                  'element': dialogueContainer,
+                  'className': ['is-hidden', 'dialogue-container-in'],
+                  'nextOn': 'animationend'
+                },
+                {
+                  'element': currentDialogue,
+                  'className': ['is-hidden', 'dialogue-in'],
+                  'nextOn': 'animationend'
+                }
+            ];
+            animation.play();
+        }
+
+        function closeDialogue() {
+            if (currentDialogue) {
+
+                var animation = new AnimationManager();
+
+                animation.queue = [
+                    {
+                      'element': currentDialogue,
+                      'className': ['dialogue-in','dialogue-out'],
+                      'classAfter': ['is-hidden', 'dialogue-out'],
+                      'nextOn': 'animationend'
+                    },
+                    {
+                      'element': dialogueContainer,
+                      'className': ['dialogue-container-in','dialogue-container-out'],
+                      'classAfter': ['is-hidden', 'dialogue-container-out'],
+                      'nextOn': 'animationend'
+                    }
+                ];
+                animation.play();
+            }
+        }
+    };
+
+    function initStylemenu() {
+        var scrollY = 0;
+        var direction = 0;
+        var move = 0;
+
+        window.onscroll = function(e) {
+            if (scrollY<e.pageY) move = -1;
+            else move = 1; 
+
+            scrollY=e.pageY;
+
+            if (move != direction) {
+                if (direction == -1) {
+                    document.querySelector('.sg-toolbar').style.transform="translateY(0)";
+                } else {
+                    document.querySelector('.sg-toolbar').style.transform="translateY(-100%)";
+
+                }
+
+                direction = move;
+            } 
+        }
+
+        // Reload content
+        var reload = document.querySelector("#reload");
+        if (reload) {
+            reload.onclick = function () {
+                location.reload(true);
+            };
+        }
+    }
+
+    function initSpinner() {
+        var spinner = document.querySelector('.spinner');
+        var spinnerButton = document.querySelector('#spinner-toggle');
+        var spinning = false;
+        spinnerButton.addEventListener('click', function() {
+            if (!spinning) {
+                var animation = new AnimationManager();
+                animation.queue = [
+                    {
+                      'element': spinner,
+                      'className': ['spinner-in','is-invisible'],
+                      'nextOn': 'animationend'
+                    },
+                    {
+                      'element': spinner,
+                      'className': ['spinner-loop','spinner-in'],
+                      'nextOn': 'animationend'
+                    }
+                ];
+                animation.play();
+                spinning = true;
+            } else {
+                var animation = new AnimationManager();
+                animation.queue = [
+                    {
+                      'element': spinner,
+                      'className': ['spinner-loop', 'spinner-out'],
+                      'nextOn': 'animationend'
+                    },
+                    {
+                      'element': spinner,
+                      'className': ['spinner-out','is-invisible'],
+                      'nextOn': 'animationend'
+                    }
+                ];
+                animation.play();
+                spinning = false;
+            }
         });
     }
 
-    //  menu item
-    var menuElem = document.querySelectorAll(".menu-item");
-    for (var i = 0, length = menuElem.length; i < length; i++) {
-        var el = menuElem[i];
-        el.addEventListener('click', function(e) {
-            var animate = document.querySelector('.menu-item-animate');
-            if (animate) animate.classList.remove('menu-item-animate');
-            var selected = this.querySelector('.menu-item-selected');            
-            if (selected) {
-                var w = selected.parentNode.offsetWidth*2;
-                selected.style.width = w+'px';
-                selected.style.height = w+'px';
-                selected.style.top = (w/2*-1)+(this.offsetHeight/2)+'px';
-                selected.style.left = (e.layerX-(w/2))+'px';
-                selected.classList.add('menu-item-animate');
-            }
-        });    
+
+    //  HELPERS
+    //  animation manager
+    var AnimationManager = function() {
+        this.queue = [];
+    }
+    AnimationManager.prototype.play = function() {
+      var that = this;
+      var item = that.getItem();
+        if (item) {
+            
+            // after
+            item.element.addEventListener(item.nextOn, function handleEvent() {
+                this.removeEventListener(item.nextOn, handleEvent, true);
+
+                if (item.classAfter) {
+                    item.classAfter.forEach(function(className) {
+                        item.element.classList.toggle(className);
+                    });
+                }
+                that.play();
+            }, true);
+            
+            // before
+            item.className.forEach(function(className) {
+                item.element.classList.toggle(className);
+            });
+        
+            
+        } else {
+          if(typeof that.oncomplete == 'function') {
+              that.oncomplete();
+          }
+        }
+    }
+    AnimationManager.prototype.getItem = function() {
+        if (this.queue.length > 0) {
+        var item = this.queue[0];
+        this.queue = this.queue.slice(1,this.queue.length);
+        return item;
+      } else return false;
     }
 
-    
-
-    var scrollY = 0;
-    var direction = 0;
-    var move = 0;
-
-    window.onscroll = function(e) {
-        if (scrollY<e.pageY) move = -1;
-        else move = 1; 
-
-        scrollY=e.pageY;
-
-        if (move != direction) {
-            if (direction == -1) {
-                document.querySelector('.sg-toolbar').style.transform="translateY(0)";
-            } else {
-                document.querySelector('.sg-toolbar').style.transform="translateY(-100%)";
-
-            }
-
-            direction = move;
-        } 
+    function init() {
+        initAppinstall();
+        initStylemenu();
+        initMenus();
+        initTabs();
+        initDialogues();
+        initSpinner();
     }
-}
+    init();
+};
+
+
+
+// onload
+(function() {
+    Styleapp();
+})();
+
+
 
 // var dialogueConfirm = document.getElementById("dialogue-confirmation");
 

@@ -116,8 +116,9 @@
   height: 100%;
 }
 .l-app-content {
-   display: flex;
+  display: flex;
   flex: 1 1 0%;
+  overflow: auto;
 }
 
 html, body {
