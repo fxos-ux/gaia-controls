@@ -218,12 +218,34 @@ function Styleapp() {
                 location.reload(true);
             };
         }
+
+        // theme switch
+        var currentTheme = 'default';
+        var themeToggles = document.querySelectorAll('.sg-switch-theme');
+        for (var i = 0, length = themeToggles.length; i < length; i++) {
+            var toggle = themeToggles[i];
+            toggle.addEventListener('click', function(e) {
+                toggleTheme(this.value);
+            })
+        }
+
+        function toggleTheme(themeName) {
+            document.body.classList.remove(currentTheme);
+
+            if (themeName !== 'default') {
+                document.body.classList.add(themeName);
+                currentTheme = themeName;
+            }
+            
+        }
+
+
     }
 
     function initSpinner() {
         var spinner = document.querySelector('.spinner');
         var spinnerButton = document.querySelector('#spinner-toggle');
-        var spinning = false;
+        var spinning = true;
         spinnerButton.addEventListener('click', function() {
             if (!spinning) {
                 var animation = new AnimationManager();

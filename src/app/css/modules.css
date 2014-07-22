@@ -13,7 +13,7 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: var(--color-brand-blue);
+    background: var(--highlight-color, #000);
     transform: perspective(200px);  
 }
 .spinner-in {
@@ -37,24 +37,24 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     0% {
         transform:  rotateX(0deg) rotateY(0deg) rotateX(90deg) translateX(-30px) translateY(0px);   
         transform-origin: top 25%;
-        background: var(--color-brand-blue);
+        /*background: var(--color-brand-blue);*/
     }
     100% {
         transform:  rotateX(0deg) rotateY(360deg) rotateX(5deg) translateX(2px) translateY(0px); 
         transform-origin: top 55%;
-        background: #0095dd;
+        /*background: #0095dd;*/
     }
 }
 @keyframes spinout {
     0% {
         transform:  rotateX(0deg) rotateY(540deg) rotateX(5deg) translateX(2px) translateY(0px); 
         transform-origin: top 55%;
-        background: #0095dd;
+        /*background: #0095dd;*/
     }
     100% {
         transform:  rotateX(0deg) rotateY(0deg) rotateX(90deg) translateX(0px) translateY(0px);   
         transform-origin: top 25%;
-        background: var(--color-brand-blue);
+        /*background: var(--color-brand-blue);*/
 
     }
 }
@@ -62,12 +62,12 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     0% {
         transform:  rotateX(0deg) rotateY(0deg) rotateX(10deg) translateX(0px);   
         transform-origin: top 25%;
-        background: var(--color-brand-blue);
+        /*background: var(--color-brand-blue);*/
     }   
     100% {
         transform:  rotateX(0deg) rotateY(360deg) rotateX(5deg) translateX(2px); 
         transform-origin: top 55%;
-        background: #0095dd;
+        /*background: #0095dd;*/
         
     }
 
@@ -88,8 +88,13 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     margin: 0 var(--dim-small) 0 var(--dim-small);
     padding: 0;
 }
+.subheader-label a {
+    font-weight: inherit;
+    font-style: inherit;
+    color: var(--highlight-color);
+}
 .subheader-link-label {
-    color: var(--color-brand-blue);
+    color: var(--highlight-color, var(--color-zeta));
     position: relative;
     padding-right: var(--dim-small);
 }
@@ -100,23 +105,26 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     height: 0px;
     top: 3px;
     right: 0px;
-    border-bottom: 10px solid var(--color-brand-blue);
+    border-bottom: 10px solid var(--highlight-color, var(--color-zeta));
     border-left: 10px solid transparent;
 }
 
 .input-label {
-    font-size: 14px;
+    font-size: var(--font-small);
     display: block;
     margin: var(--dim-small) 0 4px var(--dim-small);
 }
 .input-container {
     display: inline-block;
+    width: 100%;
     min-height: 40px;
     border: 1px solid #d6d6d6;
     position: relative;
 }
 .input {
+    width: 100%;
     min-height: 40px;
+    font-size: inherit;
     width: 100%;
     border: none;
     padding:  0 var(--dim-small);
@@ -165,7 +173,7 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     height: 3px;
     transition: all 200ms;
     transform: scaleX(0);
-    background: var(--color-brand-blue);
+    background: var(--highlight-color, #000);
 }
 .input-search-container {
     border-radius: 30px;
@@ -179,7 +187,7 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
 }
 .input-range-label {
     font-style: italic;
-    color: var(--color-brand-blue);
+    color: var(--highlight-color, #000);
     font-weight: bold;
     text-align: bottom;
     position: relative;
@@ -197,7 +205,7 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     background: var(--color-eta);
 }
 .input-range-range {
-    background: var(--color-brand-blue);
+    background: var(--highlight-color, #000);
     width: 50%;
 }
 .input-range-handle {
@@ -206,7 +214,7 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     border-radius: 17px;
     background: #fff;
     box-sizing:border-box;
-    border: 1px solid var(--switch-color, #000);
+    border: 1px solid var(--highlight-color, #000);
     position: relative;
     z-index: 100;
     left: 50%;
@@ -214,8 +222,8 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     transition-delay:  var(--button-transition-delay);
 }
 .input-range-handle:active {
-    box-shadow: 0 0 0 2px var(--color-brand-blue); /* does't look good! */
-    border: 1px solid var(--color-brand-blue);
+    box-shadow: 0 0 0 2px var(--highlight-color, #000); /* does't look good! */
+    border: 1px solid var(--highlight-color, #000);
     transition: none;
 }
 .input-range-handle:after {
@@ -226,22 +234,23 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     top:-75%;
     left:-75%;
     border-radius: 50%;
-    border: 23px solid rgba(0,202,242,0.2);
+    border: 23px solid var(--highlight-color, #000);
     opacity: 0;
     transform: scale(0.5);
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275);
     /*transition-delay:  var(--button-transition-delay);*/
 }
 .input-range-handle:active:after {
-    opacity: 1;
+    opacity: 0.2;
     transform: scale(1);    
 }
 
 
 
 /* tab bar */
+/* toolbars are the same as tabs.  except for some exceptions on psuedo state */
 .tabs {
-    background: var(--color-beta);
+    border-top: 1px solid var(--color-iota);
     margin: 0;
     padding: 0;
     display: flex;
@@ -251,7 +260,6 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
 .tabs-item {
     text-align: center;
     font-style: italic;
-    color: var(--color-epsilon);
     height: 45px;
     line-height: 45px;
     transition: all 0.2s;
@@ -270,7 +278,13 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     opacity: 0.3;
 }
 
+.toolbars-item:active {
+    color: var(--highlight-color, #000);
+    opacity: 1;
+}
+
 .tabs-item-selected {   
+    color: var(--highlight-color, #000);
 }
 
 .tabs-selected-indicator {
@@ -279,7 +293,7 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
     left: 0px;
     width: 0px;
     height: 3px;
-    background: var(--color-alpha);
+    background: var(--highlight-color, #000);
     transition: all 0.2s;
 }
 
@@ -342,10 +356,14 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
 }
 .dialogue { 
     background: var(--color-iota);
-    min-width: 270px;
-    max-width: 800px;
-    width: 75%;
+    max-height: 75%;
+    max-width: 350px;
+    width: 90%;
     margin: auto;  
+}
+.dialogue .menu {
+    max-height: 250px;
+    overflow: hidden;
 }
 .dialogue-in {
     opacity: 1;
