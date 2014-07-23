@@ -1,0 +1,26 @@
+{
+  "name": "gaia-fonts",
+  "version": "0.2.0",
+  "authors": [
+    "Wilson Page <wilsonpage@me.com>"
+  ],
+  "main": "style.css",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/gaia-components/gaia-fonts",
+  "_release": "0.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.0",
+    "commit": "011710789f9f723732c189d9522169d83cc6c000"
+  },
+  "_source": "git://github.com/gaia-components/gaia-fonts.git",
+  "_target": "*",
+  "_originalSource": "gaia-components/gaia-fonts"
+}

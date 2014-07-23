@@ -8,6 +8,97 @@ blocking bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1026164
 .icon {
     color: inherit;
 }
+
+/* menu layout */
+.menu {
+    padding: 0; 
+    margin: 0;
+    width: 100%;
+}
+.menu-item {
+    box-sizing: border-box;
+    list-style: none;
+    padding: var(--dim-small) var(--dim-small);
+    color: var(--color-gamma);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.menu-item:after {
+    content: " ";
+    position: absolute;
+    bottom: 0px;
+    left: var(--dim-small);
+    width: calc(100% - var(--dim-small) * 2);
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--color-theta);
+}
+.menu-item:last-child:after {
+    display: none;
+}
+.menu-item-selected { 
+    /* for animated click effect */
+    content: " ";
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: center center;
+    background: var(--color-theta);
+    transform: scaleX(0);
+    z-index: -1;   
+}
+.menu-item-animate {
+    animation-name: grow;
+    animation-duration: 800ms;
+    animation-iteration: 1;
+}
+.menu-item-icon {
+    font-size: 25px;
+    width: 28px;
+    text-align: center;
+}
+.menu-item .icon-forward {
+    /* to do: replace with standard icon sizing variables */
+    font-size: 20px;
+}
+.menu-item > a { 
+    text-decoration: none;
+    font-style: normal;
+    font-weight: normal;
+    color: var(--color-gamma);
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;   
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+}
+.menu-item:last-child {
+    border-bottom: none;
+}
+.menu-item-icon {
+    font-size: 30px;
+    margin: -10px var(--dim-small) -10px 0;
+}
 .spinner {
     display: inline-block;
     width: 30px;
@@ -600,10 +691,3 @@ todo: active states;
     color: var(--color-brand-orange);
 }
 
-.app-icon {
-    width: 40px;
-    height: 40px;
-    background: url('../images/sample-icon-app.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-}

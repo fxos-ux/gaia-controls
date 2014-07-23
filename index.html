@@ -18,23 +18,21 @@
     <title>Firefox OS Styleguide</title>
         <!-- Localization -->
     <link rel="resource" type="application/l10n" href="locales/locales.ini" />
-
     
-    <!-- web components -->
-    <script>window.packagesBaseUrl='../bower_components/';</script>
-    <script src="../bower_components/gaia-component-utils/index.js"></script>
-    <script src="../bower_components/gaia-header/script.js"></script>
-    <script src="../bower_components/gaia-button/script.js"></script>
-    <script src="../bower_components/gaia-switch/script.js"></script>
-    <script src="../bower_components/gaia-checkbox/script.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="../bower_components/gaia-icons/style.css"/>
-    <link rel="stylesheet" type="text/css" href="../bower_components/gaia-theme/style.css"/>
+    
+    <script src="bower_components/gaia-component-utils/index.js"></script>
+    <script src="bower_components/gaia-header/dist/script.js"></script>
+    <script src="bower_components/gaia-button/script.js"></script>
+    <script src="bower_components/gaia-switch/script.js"></script>
+    <script src="bower_components/gaia-checkbox/script.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="bower_components/gaia-fonts/style.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/base.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/style.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/modules.css"/>
 
     <!-- Styles only for this styleguide: -->
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="css/apps.css"/>
-    <link rel="stylesheet" type="text/css" href="css/modules.css"/>
 
     <!-- <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/demo/x-tag-components.css"/>
     <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/src/deck.css"/>
@@ -169,6 +167,8 @@
           <button>Done</button>
         </gaia-header>
 
+    
+
         <div class="subheader">
             <div class="subheader-line l-flex-grow"></div>
             <div class="subheader-label gamma">Sub-header</div>
@@ -219,19 +219,19 @@
 
         <ul class="menu">
             <li class="menu-item">
-                <i class="menu-item-icon icon icon-settings-about-phone"></i>
+                <i class="menu-item-icon icon icon-time"></i>
                 <div class="l-flex-grow">Menu 1</div>
                 <i class="icon icon-forward"></i>
                 <div class="menu-item-selected"></div>
             </li>
             <li class="menu-item">
-                <i class="menu-item-icon icon icon-settings-airplane"></i>
+                <i class="menu-item-icon icon icon-sim"></i>
                 <div class="l-flex-grow">Menu 2</div>
                 <i class="icon icon-forward"></i>
                 <div class="menu-item-selected"></div>
             </li>
             <li class="menu-item">
-                <i class="menu-item-icon icon icon-settings-display"></i>
+                <i class="menu-item-icon icon icon-settings"></i>
                 <div class="l-flex-grow">Menu 3</div>
                 <i class="icon icon-forward"></i>
                 <div class="menu-item-selected"></div>
@@ -366,13 +366,13 @@
         
         <div class="tabs">
             <div class="tabs-item">
-                <i class="tabs-item-icon icon icon-dialer-contacts"></i>
+                <i class="tabs-item-icon icon icon-video"></i>
             </div>
             <div class="tabs-item">
-                <i class="tabs-item-icon icon icon-dialer-dialpad"></i>
+                <i class="tabs-item-icon icon icon-user"></i>
             </div>
             <div class="tabs-item tabs-item-selected">
-                <i class="tabs-item-icon icon icon-dialer-recent-calls"></i>
+                <i class="tabs-item-icon icon icon-share"></i>
             </div>
             <div class="tabs-selected-indicator"></div>
         </div>
@@ -392,13 +392,13 @@
 
         <div class="tabs">
             <div class="tabs-item toolbars-item">
-                <i class="tabs-item-icon icon icon-preview-delete"></i>
+                <i class="tabs-item-icon icon icon-skip-back"></i>
             </div>
             <div class="tabs-item toolbars-item">
-                <i class="tabs-item-icon icon icon-preview-share"></i>
+                <i class="tabs-item-icon icon icon-play"></i>
             </div>
             <div class="tabs-item toolbars-item">
-                <i class="tabs-item-icon icon icon-preview-options"></i>
+                <i class="tabs-item-icon icon icon-skip-forward"></i>
             </div>
         </div>        
     </section>

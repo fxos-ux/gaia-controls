@@ -1,5 +1,8 @@
-/* Output resolution DPPX status */
+/*
+styleguide specific styles
+*/
 
+/* resolution DPPX status */
 #resolution {
 }
 
@@ -7,9 +10,9 @@
     content: "default";
 }
 
+/* top landing screen */
 .sg-landing {
     height: 100%;
-    /*position: fixed;*/
     z-index: 100;
 }
 .sg-title {
@@ -35,22 +38,6 @@
     text-align: center;
     z-index: 101;
 }
-
-.sg-principles {
-    display: none;
-    height: 100%;
-    position: fixed;
-    z-index: 99;
-}
-.sg-principles-cards {
-    height: 100%;
-    background: gray;
-}
-
-
-
-
-
 
 
 /* styleguide app */
@@ -89,6 +76,14 @@
     border-color: #4d4d4d;
 }
 
+/* icons */
+.app-icon {
+    width: 40px;
+    height: 40px;
+    background: url('../images/sample-icon-app.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 
 /* app layouts */
 /* to do: move to layouts */

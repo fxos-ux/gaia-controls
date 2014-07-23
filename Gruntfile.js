@@ -17,8 +17,8 @@ module.exports = function(grunt) {
     },
     concat: {
       dist: {
-        src: ['src/app/js/**/*.js'],
-        dest: 'dist/app/js/<%= pkg.name %>.js'
+        src: ['app/js/**/*.js'],
+        dest: 'app/js/<%= pkg.name %>.js'
       }
     },
     cssmin: {
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     open: {
       all: {
         // Gets the port from the connect configuration
-        path: 'http://localhost:<%= connect.all.options.port%>/src/app/index.html'
+        path: 'http://localhost:<%= connect.all.options.port%>/index.html'
       }
     },
     regarde: {
