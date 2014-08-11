@@ -19,14 +19,14 @@
         <!-- Localization -->
     <link rel="resource" type="application/l10n" href="locales/locales.ini" />
     
-    
+    <script>window.packagesBaseUrl='bower_components/';</script>
     <script src="bower_components/gaia-component-utils/index.js"></script>
     <script src="bower_components/gaia-header/dist/script.js"></script>
     <script src="bower_components/gaia-button/script.js"></script>
     <script src="bower_components/gaia-switch/script.js"></script>
     <script src="bower_components/gaia-checkbox/script.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="bower_components/gaia-fonts/style.css"/>
+    <link rel="stylesheet" type="text/css" href="bower_components/fira/fira.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/base.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/style.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/modules.css"/>
@@ -41,7 +41,7 @@
 
 </head>
 
-<body>
+<body class="theme-settings">
     <section class="sg-landing sg-section-full l-mb-mega">
         <div class="sg-title">
             <h1 class="mega l-align-center">FirefoxOS</h1>
@@ -104,10 +104,15 @@
 
     </section> -->
 
-     <section class="sg-section sg-border l-p-small l-mb-mega"> 
-        <h2 class="alpha l-align-center">Colors</h2>
-        <div class="l-clearfix l-align-center">
-            <h3 class="beta">Base colors</h3>
+     <section class="sg-section sg-border l-mb-mega"> 
+        <h2 class="alpha l-align-center l-p-small">Colors</h2>
+
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">Base colours</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+        <div class="sg-color-container l-mt-small l-mlr-auto l-clearfix l-align-center">
             <div class="sg-color" style="background: var(--color-alpha)"></div>
             <div class="sg-color" style="background: var(--color-beta)"></div>
             <div class="sg-color" style="background: var(--color-gamma)"></div>
@@ -117,8 +122,15 @@
             <div class="sg-color" style="background: var(--color-eta)"></div>
             <div class="sg-color" style="background: var(--color-iota)"></div>
         </div>
-        <div class="l-clearfix l-align-center">
-            <h3 class="beta">Gaia theme colors</h3>
+
+        <br/>
+        
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">Gaia brand colours</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+        <div class="sg-color-container l-mt-small l-mlr-auto l-clearfix l-align-center">
             <div class="sg-color" style="background: var(--color-brand-darkblue)"></div>
             <div class="sg-color" style="background: var(--color-brand-blue)"></div>
             <div class="sg-color" style="background: var(--color-brand-turquoise)"></div>
@@ -129,6 +141,8 @@
             <div class="sg-color" style="background: var(--color-brand-beta)"></div>
             <div class="sg-color" style="background: var(--color-brand-gamma)"></div>
         </div>
+
+        <br/>
     </section>
 
     <section class="sg-section sg-border l-p-small l-mb-mega"> 
@@ -137,17 +151,31 @@
         <p class="l-align-center"><span id="resolution"></span> resolution</p>
     </section>
 
-    <section class="sg-section sg-border l-p-small l-mb-mega">
-        <h2 class="alpha l-align-center">Typography</h2>
+    <section class="sg-section sg-border l-mb-mega">
+        <h2 class="alpha l-p-small l-align-center">Typography</h2>
+        
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">Regular 17px</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+        <p class="l-m-small"><a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
 
-        <h3 class="beta">Standard font size</h3>
-        <p><a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">Small 14px</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+        <p class="milli l-m-small"><a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
 
-        <h3 class="beta">Small font size</h3>
-        <p class="milli"><a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+        <div class="subheader">
+            <div class="subheader-line l-flex-grow"></div>
+            <div class="subheader-label gamma">Large 23px</div>
+            <div class="subheader-line l-flex-grow"></div>
+        </div>
+        <p class="large l-m-small"><a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
 
-        <h3 class="beta">Large</h3>
-        <p class="large"><a href="#">Lorem ipsum dolor</a> sit amet, consectetur adipisicing elit. Possimus, enim, dolore, expedita facere deserunt perferendis exercitationem laudantium delectus eligendi molestias dolorem distinctio libero non minus soluta harum laboriosam aspernatur recusandae.</p>
+        <br/>
     </section>
 
     <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
@@ -163,11 +191,11 @@
 
     <section class="sg-section sg-border l-mb-mega">
         <gaia-header action="back">
-          <h1 id="title1">Application header</h1>
+          <h1 id="title1">Application Header</h1>
           <button>Done</button>
         </gaia-header>
 
-    
+        <br/><br/>
 
         <div class="subheader">
             <div class="subheader-line l-flex-grow"></div>
@@ -177,41 +205,21 @@
 
         <div class="subheader subheader-link">
             <div class="subheader-line l-flex-grow"></div>
-            <div class="subheader-link-label subheader-label gamma"><a class="dialogue-display" href=".dialogue-alert">Sub-header link</a></div>
+            <div class="subheader-link-label subheader-label gamma"><a class="dialogue-display" href=".dialogue-option">Sub-header link</a></div>
             <div class="subheader-line l-flex-grow"></div>
         </div>
 
         <br/><br/>
-        <!-- 
-        <h2 id="title1" class="alpha l-align-center l-p-small">Themed headers</h2>
-    
-        <div class="theme-communications">
-            <gaia-header action="back">
-              <h1 id="title1">Communications</h1>
-              <button>Done</button>
-            </gaia-header>
-        </div>
+    </section>
 
-        <div class="theme-media">
-            <gaia-header action="menu">
-              <h1 id="title1">Media</h1>
-              <button>Done</button>
-            </gaia-header>
-        </div>
+    <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
+        
+        <gaia-button>Gaia-button</gaia-button>
 
-        <div class="theme-productivity">
-            <gaia-header action="close">
-              <h1 id="title1">Productivity</h1>
-              <button>Done</button>
-            </gaia-header>
-        </div>
+        <br/><br/>
 
-        <div class="theme-settings">
-            <gaia-header action="back">
-              <h1 id="title1">Settings</h1>
-              <button>Done</button>
-            </gaia-header>
-        </div>        -->
+        <gaia-button><i class="icon icon-location"></i></gaia-button>
+        
     </section>
 
     <section id="menu" class="sg-section sg-border l-mb-mega">
@@ -243,7 +251,7 @@
         <h2 class="alpha">Spinner</h2>
 
         <div class="l-align-center">
-            <span class="spinner spinner-loop"></span>
+            <span class="spinner is-invisible"></span>
         </div>
 
         <br/>
@@ -253,15 +261,7 @@
     </section>
 
 
-    <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
-        
-        <gaia-button>Gaia-button</gaia-button>
-
-        <br/><br/>
-
-        <gaia-button><i class="icon icon-Browser-Back"></i></gaia-button>
-        
-    </section>
+    
 
     <section class="sg-section sg-border l-mb-mega">
         <h2 class="alpha l-align-center l-p-small">Toggles</h2>
@@ -270,18 +270,15 @@
             <li class="menu-item">
                 <label for="switch1" class="l-flex-grow">Toggle switch</label>
                 <gaia-switch id="switch1"></gaia-switch>
-                <div class="menu-item-selected"></div>
             </li>
             <li class="menu-item">
                 <label for="switch3" class="l-flex-grow">Toggle switch checked </label>
                 <gaia-switch id="switch3" checked></gaia-switch>
-                <div class="menu-item-selected"></div>
             </li>
 
             <li class="menu-item">
                 <label for="switch3" class="l-flex-grow">Toggle switch checked </label>
                 <gaia-switch id="switch3" class="l-align-right" checked></gaia-switch>
-                <div class="menu-item-selected"></div>
             </li>
         </ul>
     </section>
@@ -293,17 +290,14 @@
             <li class="menu-item">
                 <label for="b1" class="l-flex-grow">Checkbox checked</label>
                 <gaia-checkbox id="b1" name="b" checked></gaia-checkbox>
-                <div class="menu-item-selected"></div>
             </li>
             <li class="menu-item">
                 <label for="b2" class="l-flex-grow">Checkbox</label>
                 <gaia-checkbox id="b2" name="b"></gaia-checkbox>
-                <div class="menu-item-selected"></div>
             </li>
             <li class="menu-item">
                 <label for="b3" class="l-flex-grow">Checkbox</label>
                 <gaia-checkbox id="b3" name="b"></gaia-checkbox>
-                <div class="menu-item-selected"></div>
             </li>
         </ul> 
     </section>
@@ -311,15 +305,10 @@
     <section class="sg-section sg-border l-mb-mega l-p-small">
         <h2 class="alpha l-align-center">Forms</h2>
         
-        <!-- 
-        <h3>Default input field</h3>
-        <input placeholder="Placeholder text"> 
-        -->
-
         <label class="input-label" for="SampleInput">Inputbox Label</label>
         <div class="input-container">
             <input class="input" placeholder="Placeholder text"></input>
-            <div class="input-clear"><i class="input-clear-icon icon icon-pick-cancel"></i></div>
+            <div class="input-clear"><i class="input-clear-icon icon icon-close"></i></div>
             <div class="input-focus"></div>
         </div>
         <br/>
@@ -327,7 +316,7 @@
         <label class="input-label" for="SamplePassword">Password</label>
         <div class="input-container">
             <input class="input" type="password"></input>
-            <div class="input-clear"><i class="input-clear-icon icon icon-pick-cancel"></i></div>
+            <div class="input-clear"><i class="input-clear-icon icon icon-close"></i></div>
             <div class="input-focus"></div>
         </div>
         <br/>
@@ -335,12 +324,12 @@
         <label class="input-label" for="search">Search</label>
         <div class="input-container input-search-container">
             <input class="input" placeholder="Search..."></input>
-            <div class="input-clear"><i class="input-clear-icon icon icon-pick-cancel"></i></div>
+            <div class="input-clear"><i class="input-clear-icon icon icon-close"></i></div>
             <div class="input-focus"></div>
         </div>
         <br/>
 
-        <label class="input-range-label large l-align-right" for="range">50%</label><label class="input-label" for="range">Range slider</label>
+        <label class="input-range-label l-align-right">50%</label><label class="input-label" for="range">Range slider</label>
 
         
         <div class="input-range-container">
@@ -412,8 +401,8 @@
         </ul>
     </section>
 
-    <div class="banner-container">
-        <div class="banner is-hidden dialogue-button">
+    <div class="banner-container is-hidden">
+        <div class="banner l-align-center is-hidden">
             Alarm is set for 10:15 AM
         </div>
     </div>
@@ -472,19 +461,19 @@
         <div class="dialogue-objectmenu dialogue is-hidden">
             <div class="dialogue-buttons dialogue-buttons-vertical">
                 <button class="dialogue-button dialogue-objectmenu-button l-width-full">
-                    <i class="dialogue-button-icon icon icon-General-new"></i>
+                    <i class="dialogue-button-icon icon icon-add"></i>
                     Open in New Window
                 </button>
                 <button class="dialogue-button dialogue-objectmenu-button l-width-full">
-                    <i class="dialogue-button-icon icon icon-General-bookmark"></i>
+                    <i class="dialogue-button-icon icon icon-star-empty"></i>
                     Add to Home Screen
                 </button>
                 <button class="dialogue-button dialogue-objectmenu-button l-width-full">
-                    <i class="dialogue-button-icon icon icon-General-share"></i>
+                    <i class="dialogue-button-icon icon icon-share"></i>
                     Share Link
                 </button>
                 <button class="dialogue-button dialogue-objectmenu-button l-width-full">
-                    <i class="dialogue-button-icon icon icon-General-settings"></i>
+                    <i class="dialogue-button-icon icon icon-settings"></i>
                     Settings
                 </button>   
             </div>
@@ -496,7 +485,7 @@
             </div>
 
             <div class="dialogue-buttons">
-                <button class="dialogue-button">Ok</button>
+                <button class="dialogue-button-primary dialogue-button">Ok</button>
             </div>
         </div><!-- .dialogue-alert -->
 
@@ -509,22 +498,21 @@
                 <div class="progress-line"></div>
             </div>
             <div class="dialogue-buttons">
-                <button class="dialogue-button">Cancel</button>
+                <button class="dialogue-button dialogue-button-primary">Cancel</button>
             </div>
         </div><!-- .dialogue-progress -->
 
         <div class="dialogue-input dialogue l-align-center is-hidden">
             <div class='l-p-small'>
-               <div class="input-container l-width-full">
-                    <input class="input" placeholder="Device name"></input>
-                    <div class="input-clear"><i class="input-clear-icon icon icon-pick-cancel"></i></div>
-                    <div class="input-focus"></div>
+               <div class="dialogue-input-container input-container l-width-full">
+                    <input class="dialogue-input-input input" placeholder="Device name"></input>
+                    <div class="input-clear"><i class="input-clear-icon icon icon-close"></i></div>
                 </div>
             </div>
             
             <div class="dialogue-buttons">
                 <button class="dialogue-button">Cancel</button>
-                <button class="dialogue-button dialogue-button-warning">Ok</button>
+                <button class="dialogue-button dialogue-button-primary">Ok</button>
             </div>
         </div><!-- .dialogue-input -->
 
@@ -538,7 +526,7 @@
             </div>
 
             <div class="dialogue-buttons">
-                <button class="dialogue-button">Cancel</button>
+                <button class="dialogue-button dialogue-button-primary">Cancel</button>
             </div>
         </div><!-- .dialogue-infiniteprogress -->
 
@@ -562,131 +550,131 @@
 
             <div class="dialogue-buttons dialogue-buttons-vertical">
                 <button class="dialogue-button l-width-full">Action 1</button>
-                <button class="dialogue-button l-width-full">Action 2</button>
+                <button class="dialogue-button-primary dialogue-button l-width-full">Action 2</button>
                 <button class="dialogue-button l-width-full">Cancel</button>
             </div>            
         </div><!-- .dialogue-action -->
 
          <div class="dialogue-install dialogue is-hidden">
-            <div class='l-p-small l-align-center'>
-                <p></p>
-                
-                <table class="l-inline-block l-text-align-left">
-                <tr>
-                    <td class="l-text-valign-top"><div class="app-icon l-mr-small"></div></td>
-                    <td>
-                        <em>Facebook</em><br/>
-                        <small>Facebook Enterprises LLC<br/>
-                        2.5MB
-                        </small>
-                    </td>
-                </tr>
-                </table>
-                
+            <div class='l-p-small'>
+                <div class="l-align-center">
+                    <div class="l-pb-small"><div class="app-icon l-m-auto"></div></div>
+                    <em>Facebook</em><br/>
+                    <small>Facebook Enterprises LLC</small>
+                </div>
+
+                <hr/>
+
+                <p>Do you want to download and install this application?</p>
             </div>
 
             <div class="dialogue-buttons">
                 <button class="dialogue-button l-width-full">Cancel</button>
-                <button class="dialogue-button l-width-full">Install</button>
+                <button class="dialogue-button-primary dialogue-button l-width-full">Install</button>
             </div>
         </div><!-- .dialogue-install -->
 
         <div class="dialogue-permission dialogue is-hidden">
             <div class='l-p-small l-align-center'>
-                <p></p>
                 <div class="l-inline-block l-text-align-left">
-                    <table>
-                    <tr>
-                        <td class="l-text-valign-top"><div class="app-icon l-mr-small"></div></td>
-                        <td>Instagram would like to use the camera</td>
-                    <tr>
-                    </table>
-                        
+                    
+                    <p class="l-m-0 l-align-center"><em>Instagram would like to <br/>use the camera</em></p>
+                    
+                    <hr/>
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu mollis tortor. </p>
 
                     <hr/>
                     
+                    <div class="l-pl-small l-m-0">
                     <gaia-checkbox id="dialogue-permission-remember" name="" checked></gaia-checkbox>
-                    <label for="dialogue-permission-remember" class="l-ml-small">Remember my choice</label>
+                    <label for="dialogue-permission-remember" class="l-m-small font-color-dark">Remember my choice</label>
+                    </div>
                 </div>                
             </div>
 
             <div class="dialogue-buttons">
                 <button class="dialogue-button l-width-full">Don't allow</button>
-                <button class="dialogue-button l-width-full">Allow</button>
+                <button class="dialogue-button-primary dialogue-button l-width-full">Allow</button>
             </div>
         </div><!-- .dialogue-install -->
 
         <div class="dialogue-option dialogue is-hidden">
             <div class='l-p-small l-align-center'>
-                <h1>Ring tone</h1>
+                <h1 class='dialogue-header'>Ring tone</h1>
             </div>
-            <ul class="menu">
-                <li class="menu-item">
-                    <div class="l-flex-grow dialogue-option-selected">
-                        Classic Prism
-                    </div>
-                    <i class="icon icon-tick dialogue-option-selected-tick"></i>
-                    <div class="menu-item-selected"></div>
-                </li>
-                <li class="menu-item">Wallphone
-                    <div class="menu-item-selected"></div>
-                </li>
-                <li class="menu-item">
-                    Disco Drive
-                    <div class="menu-item-selected"></div>
-                </li>
-                <li class="menu-item">Touchmatic</li>
-                <li class="menu-item">Classic Courier</li>
-                <li class="menu-item">Hacker</li>
-            </ul>
+
+            <div class="dialogue-menu">
+                <ul class="menu">
+                    <li class="menu-item dialogue-menu-item">
+                        <div class="l-flex-grow dialogue-option-selected">
+                            Classic Prism
+                        </div>
+                        <i class="icon icon-tick dialogue-option-selected-tick"></i>
+                        <div class="menu-item-selected"></div>
+                    </li>
+                    <li class="menu-item dialogue-menu-item">Wallphone
+                        <div class="menu-item-selected"></div>
+                    </li>
+                    <li class="menu-item dialogue-menu-item">
+                        Disco Drive
+                        <div class="menu-item-selected"></div>
+                    </li>
+                    <li class="menu-item dialogue-menu-item">Touchmatic</li>
+                    <li class="menu-item dialogue-menu-item">Classic Courier</li>
+                    <li class="menu-item dialogue-menu-item">Hacker</li>
+                    <li class="menu-item dialogue-menu-item">Fire</li>
+                    <li class="menu-item dialogue-menu-item">Cracker</li>
+                </ul>
+            </div>
         
-            <button class="dialogue-button l-width-full">Close</button>
+            <button class="dialogue-button-primary dialogue-button l-width-full">Close</button>
         </div><!-- .dialogue-option -->
 
         <div class="dialogue-multioption dialogue is-hidden">
             <div class='l-p-small l-align-center'>
-                <h1>Ring tone</h1>
+                <h1 class='dialogue-header'>Ring tone</h1>
             </div>
-            <ul class="menu">
-                <li class="menu-item">Classic Prism</li>
-                <li class="menu-item">Wallphone</li>
-                <li class="menu-item">
-                    <div class="l-flex-grow dialogue-option-selected">
-                        Disco Drive
-                    </div>
-                    <i class="icon icon-tick dialogue-option-selected-tick"></i>
-                </li>
-                <li class="menu-item">
-                    <div class="l-flex-grow dialogue-option-selected">
-                        Touchmatic
-                    </div>
-                    <i class="icon icon-tick dialogue-option-selected-tick"></i>
-                </li>
-                <li class="menu-item">
-                    <div class="l-flex-grow dialogue-option-selected">
-                        Classic Courier
-                    </div>
-                    <i class="icon icon-tick dialogue-option-selected-tick"></i>
-                </li>
-                <li class="menu-item">Hacker</li>
-            </ul>
-        
+            <div class="dialogue-menu">
+                <ul class="menu">
+                    <li class="menu-item">Classic Prism</li>
+                    <li class="menu-item">Wallphone</li>
+                    <li class="menu-item">
+                        <div class="l-flex-grow dialogue-option-selected">
+                            Disco Drive
+                        </div>
+                        <i class="icon icon-tick dialogue-option-selected-tick"></i>
+                    </li>
+                    <li class="menu-item">
+                        <div class="l-flex-grow dialogue-option-selected">
+                            Touchmatic
+                        </div>
+                        <i class="icon icon-tick dialogue-option-selected-tick"></i>
+                    </li>
+                    <li class="menu-item">
+                        <div class="l-flex-grow dialogue-option-selected">
+                            Classic Courier
+                        </div>
+                        <i class="icon icon-tick dialogue-option-selected-tick"></i>
+                    </li>
+                    <li class="menu-item">Hacker</li>
+                </ul>
+            </div>
             <div class="dialogue-buttons">
                 <button class="dialogue-button l-width-full">Cancel</button>
-                <button class="dialogue-button l-width-full">Select</button>
+                <button class="dialogue-button-primary dialogue-button l-width-full">Select</button>
             </div>
         </div><!-- .dialogue-multioption -->
 
         <div class="dialogue-date dialogue-spinner dialogue is-hidden">
             <div class='l-p-small l-align-center'>
-                <h1>Set Date</h1>
+                <h1 class='dialogue-header'>Set Date</h1>
             </div>
             
             <ul class="grid dialogue-spinner-selected l-clearfix">
-                <li class="col-1-3">Mar</li>
-                <li class="col-1-3">30</li>
-                <li class="col-1-3">2014</li>
+                <li class="col-1-3 dialogue-spinner-value">Mar</li>
+                <li class="col-1-3 dialogue-spinner-day"><span class='dialogue-spinner-day-name'>Sunday</span>30</li>
+                <li class="col-1-3 dialogue-spinner-value">2014</li>
             </ul>
 
             <div class="grid dialogue-spinner-range">
@@ -756,19 +744,19 @@
 
             <div class="dialogue-buttons">
                 <button class="dialogue-button l-width-full">Cancel</button>
-                <button class="dialogue-button l-width-full">Select</button>
+                <button class="dialogue-button-primary dialogue-button l-width-full">Select</button>
             </div>
         </div><!-- .dialogue-date -->
 
         <div class="dialogue-time dialogue-spinner dialogue is-hidden">
             <div class='l-p-small l-align-center'>
-                <h1>Set Time</h1>
+                <h1 class='dialogue-header'>Set Time</h1>
             </div>
             
             <ul class="grid dialogue-spinner-selected l-clearfix">
-                <li class="col-1-3">7</li>
-                <li class="col-1-3">30</li>
-                <li class="col-1-3">PM</li>
+                <li class="col-1-3 dialogue-spinner-value">7</li>
+                <li class="col-1-3 dialogue-spinner-value">30</li>
+                <li class="col-1-3 dialogue-spinner-value">PM</li>
             </ul>
 
             <div class="grid dialogue-spinner-range">
@@ -826,7 +814,7 @@
             </div>
             <div class="dialogue-buttons">
                 <button class="dialogue-button l-width-full">Cancel</button>
-                <button class="dialogue-button l-width-full">Select</button>
+                <button class="dialogue-button-primary dialogue-button l-width-full">Select</button>
             </div>
         </div><!-- .dialogue-time -->
 

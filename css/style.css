@@ -7,7 +7,7 @@ styleguide specific styles
 }
 
 #resolution:before {
-    content: "default";
+    content: "default 1.0x";
 }
 
 /* top landing screen */
@@ -47,6 +47,8 @@ styleguide specific styles
 }
 
 /* styleguide colors */
+.sg-color-container {
+}
 .sg-color {
     width: 70px;
     height: 70px;

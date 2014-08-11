@@ -100,9 +100,9 @@ function Styleapp() {
 
     function initDialogues() {
         var currentDialogue = null;
-        var dialogueElem = document.querySelectorAll(".dialogue-display");
-        var dialogueContainer = document.querySelector('.dialogue-container');
         
+        var dialogueContainer = document.querySelector('.dialogue-container');  // dialogue container that all dialogues sit on top of.
+        var bannerContainer = document.querySelector('.banner-container');
         initDialogueBanners();
         initDialogueLayout();
         initDialogueButtons();
@@ -112,21 +112,59 @@ function Styleapp() {
             for (var i = 0, length = bannerELem.length; i < length; i++) {
                 var el = bannerELem[i];
                 el.addEventListener("click", function(e) {
+                    // e.preventDefault();
+                    // var dialogue = document.querySelector(this.getAttribute("href"));
+                    // currentDialogue = dialogue;
+                    // dialogue.classList.add('banner-animate');
+                    
+                    // dialogue.addEventListener('animationend', function endHandler() {
+                    //     this.removeEventListener('animationend', endHandler);
+                    // }, false)
+
+                    // dialogue.classList.remove('is-hidden');
                     e.preventDefault();
                     var dialogue = document.querySelector(this.getAttribute("href"));
                     currentDialogue = dialogue;
-                    dialogue.classList.add('banner-animate');
-                    
-                    dialogue.addEventListener('animationend', function endHandler() {
-                        this.removeEventListener('animationend', endHandler);
-                    }, false)
 
-                    dialogue.classList.remove('is-hidden');
-                })
+
+                    openBanner();
+
+
+
+                });
             }
+        }
+        function openBanner() {
+            var animation = new AnimationManager();
+            animation.queue = [{
+                  'element': bannerContainer,
+                  'className': ['is-hidden']
+                },
+                {
+                  'element': currentDialogue,
+                  'className': ['is-hidden', 'dialogue-in'],
+                  'nextOn': 'animationend'
+                },
+                {
+                  'element': currentDialogue,
+                  'className': ['dialogue-in','banner-out'],
+                  'classAfter': ['is-hidden', 'banner-out'],
+                  'nextOn': 'animationend'
+                },
+                {
+                  'element': bannerContainer,
+                  'className': ['dialogue-container-out'],
+                  'classAfter': ['is-hidden', 'dialogue-container-out'],
+                  'nextOn': 'animationend'
+                }
+
+            ];
+            animation.play();
         }
         
         function initDialogueLayout() {
+            // add click handlers for .dialogue-display menu items.
+            var dialogueElem = document.querySelectorAll(".dialogue-display");
             for (var i = 0, length = dialogueElem.length; i < length; i++) {
                 dialogueElem[i].addEventListener('click', function(e) {
                     e.preventDefault();
@@ -138,7 +176,7 @@ function Styleapp() {
         };
 
         function initDialogueButtons() {
-            //  clicking any choice will close the dialogue.
+            //  clicking any .dialogue-button will close open dialogue.
             var dialogueButtonElem = document.querySelectorAll(".dialogue-button");
             for (var i = 0, length = dialogueButtonElem.length; i < length; i++) {
                 var el = dialogueButtonElem[i];
@@ -220,7 +258,7 @@ function Styleapp() {
         }
 
         // theme switch
-        var currentTheme = 'default';
+        var currentTheme = 'theme-settings';
         var themeToggles = document.querySelectorAll('.sg-switch-theme');
         for (var i = 0, length = themeToggles.length; i < length; i++) {
             var toggle = themeToggles[i];
@@ -283,6 +321,22 @@ function Styleapp() {
         });
     }
 
+    function initRange() {
+        var handle = document.querySelector('.input-range-handle');
+        
+        handle.addEventListener('mousedown', function() {
+            document.querySelector('.input-range-label').classList.add('input-range-label-active');
+        });
+
+        handle.addEventListener('mouseup', function() {
+            document.querySelector('.input-range-label').classList.remove('input-range-label-active');
+        });
+
+        
+
+    }
+
+
 
     //  HELPERS
     //  animation manager
@@ -295,17 +349,20 @@ function Styleapp() {
         if (item) {
             
             // after
-            item.element.addEventListener(item.nextOn, function handleEvent() {
-                this.removeEventListener(item.nextOn, handleEvent, true);
+            if (item.nextOn !== undefined) {
+                item.element.addEventListener(item.nextOn, function handleEvent() {
+                    this.removeEventListener(item.nextOn, handleEvent, true);
 
-                if (item.classAfter) {
-                    item.classAfter.forEach(function(className) {
-                        item.element.classList.toggle(className);
-                    });
-                }
+                    if (item.classAfter) {
+                        item.classAfter.forEach(function(className) {
+                            item.element.classList.toggle(className);
+                        });
+                    }
+                    that.play();
+                }, true);
+            } else {
                 that.play();
-            }, true);
-            
+            }
             // before
             item.className.forEach(function(className) {
                 item.element.classList.toggle(className);
@@ -333,6 +390,7 @@ function Styleapp() {
         initTabs();
         initDialogues();
         initSpinner();
+        initRange();
     }
     init();
 };

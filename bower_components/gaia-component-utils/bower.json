@@ -1,10 +1,10 @@
 {
   "name": "gaia-component-utils",
   "main": "index.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/wilsonpage/gaia-component-utils",
   "authors": [
-    "Wilson Page <wilsonpage@me.com>"
+    "The Gaia Team"
   ],
   "license": "MIT",
   "ignore": [
