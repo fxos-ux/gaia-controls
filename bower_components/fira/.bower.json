@@ -8,8 +8,7 @@
     "branch": "master",
     "commit": "6bcf57fc7f50df118964f71d7c4eb02e1a4e51b3"
   },
-  "_source": "https://github.com/mozilla/Fira.git",
+  "_source": "git://github.com/mozilla/Fira.git",
   "_target": "*",
-  "_originalSource": "https://github.com/mozilla/Fira.git",
-  "_direct": true
+  "_originalSource": "mozilla/Fira"
 }

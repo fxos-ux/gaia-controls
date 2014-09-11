@@ -15,14 +15,13 @@
     "tests"
   ],
   "devDependencies": {
-    "gaia-theme": "gaia-components/gaia-theme",
-    "gaia-fonts": "gaia-components/gaia-fonts",
+    "gaia-theme": "gaia-components/gaia-theme#master",
     "gaia-header": "gaia-components/gaia-header",
     "gaia-button": "gaia-components/gaia-button",
     "gaia-switch": "gaia-components/gaia-switch",
     "gaia-checkbox": "gaia-components/gaia-checkbox",
-    "gaia-icons": "gaia-components/gaia-icons"
-    
+    "gaia-icons": "gaia-components/gaia-icons",
+    "fira" : "mozilla/Fira"
 
   }
 }

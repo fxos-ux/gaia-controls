@@ -54,8 +54,12 @@ function Styleapp() {
             var el = menuElem[i];
             el.addEventListener('click', function(e) {
                 var animate = document.querySelector('.menu-item-animate');
-                if (animate) animate.classList.remove('menu-item-animate');
+                if (animate) {
+                    animate.classList.remove('menu-item-animate');
+                }
+
                 var selected = this.querySelector('.menu-item-selected');            
+                // Size selected div to to fill menu container.
                 if (selected) {
                     var w = selected.parentNode.offsetWidth*2;
                     selected.style.width = w+'px';
@@ -283,42 +287,8 @@ function Styleapp() {
     function initSpinner() {
         var spinner = document.querySelector('.spinner');
         var spinnerButton = document.querySelector('#spinner-toggle');
-        var spinning = true;
-        spinnerButton.addEventListener('click', function() {
-            if (!spinning) {
-                var animation = new AnimationManager();
-                animation.queue = [
-                    {
-                      'element': spinner,
-                      'className': ['spinner-in','is-invisible'],
-                      'nextOn': 'animationend'
-                    },
-                    {
-                      'element': spinner,
-                      'className': ['spinner-loop','spinner-in'],
-                      'nextOn': 'animationend'
-                    }
-                ];
-                animation.play();
-                spinning = true;
-            } else {
-                var animation = new AnimationManager();
-                animation.queue = [
-                    {
-                      'element': spinner,
-                      'className': ['spinner-loop', 'spinner-out'],
-                      'nextOn': 'animationend'
-                    },
-                    {
-                      'element': spinner,
-                      'className': ['spinner-out','is-invisible'],
-                      'nextOn': 'animationend'
-                    }
-                ];
-                animation.play();
-                spinning = false;
-            }
-        });
+        
+        
     }
 
     function initRange() {

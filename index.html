@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <html>
-<!--
-    Exchange the line above for this to enable offline support
-    <html manifest="manifest.appcache">
-
-    Please make your homework before doing this:
-        http://www.alistapart.com/articles/application-cache-is-a-douchebag/
-        http://appcachefacts.info
-
-    This might be necessary to set up on your server, to make sure
-    files are updated when the appcache file itself is:
-        https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/.htaccess
- -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Firefox OS Styleguide</title>
-        <!-- Localization -->
-    <link rel="resource" type="application/l10n" href="locales/locales.ini" />
     
     <script>window.packagesBaseUrl='bower_components/';</script>
     <script src="bower_components/gaia-component-utils/index.js"></script>
@@ -26,6 +12,7 @@
     <script src="bower_components/gaia-switch/script.js"></script>
     <script src="bower_components/gaia-checkbox/script.js"></script>
     
+    <link rel="stylesheet" type="text/css" href="bower_components/gaia-icons/style.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/fira/fira.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/base.css"/>
     <link rel="stylesheet" type="text/css" href="bower_components/gaia-theme/style.css"/>
@@ -33,12 +20,6 @@
 
     <!-- Styles only for this styleguide: -->
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-
-    <!-- <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/demo/x-tag-components.css"/>
-    <link rel="stylesheet" type="text/css" href="../bower_components/x-tag-deck/src/deck.css"/>
-    <script type="text/javascript" src="../bower_components/x-tag-deck/demo/x-tag-components.js"></script>
-    <script type="text/javascript" src="../bower_components/x-tag-deck/src/deck.js"></script> -->
-
 </head>
 
 <body class="theme-settings">
@@ -49,12 +30,9 @@
         </div>
 
         <div class="sg-landing-content l-width-full l-align-center">
-            
             <div class="install-button-container">
                 <gaia-button id="install-button">Install this app</gaia-button>
             </div>
-            
-
         </div>    
     </section>
 
@@ -66,43 +44,6 @@
         <input class="sg-switch-theme" type="radio" name="theme" value="theme-settings"> Settings
         <input class="sg-switch-theme" type="radio" name="theme" value="default" checked> Default
     </header>
-
-    <!-- 
-    intro
-    [install]
-    [next]
-
-    - principles
-    
-    - Example screens
-        - Email app
-        - Media app
-
-    - Components
-
-     -->
-  
-    <!-- <div class="sg-principles sg-section-full">
-        <x-deck class="sg-principles-cards">
-            <x-card selected>
-                Principles content here.
-            </x-card>
-
-            <x-card><img src="http://placekitten.com/300"/></x-card>
-
-            <x-card><button>Hello!</button></x-card>
-        </x-deck>
-
-    </div> -->
-
-    <!-- <section id="menu" class="sg-section sg-border l-mb-mega">
-        <h2 class="alpha l-p-small l-align-center">Integrated examples</h2> -->
-
-        <!-- <gaia-button id="install-button" onclick="installApp('productivity.webapp');">Sample productivty</gaia-button> -->
-<!--         <a href="../sample_productivity"><gaia-button>Productivity</gaia-button></a>
-
-
-    </section> -->
 
      <section class="sg-section sg-border l-mb-mega"> 
         <h2 class="alpha l-align-center l-p-small">Colors</h2>
@@ -130,6 +71,7 @@
             <div class="subheader-label gamma">Gaia brand colours</div>
             <div class="subheader-line l-flex-grow"></div>
         </div>
+
         <div class="sg-color-container l-mt-small l-mlr-auto l-clearfix l-align-center">
             <div class="sg-color" style="background: var(--color-brand-darkblue)"></div>
             <div class="sg-color" style="background: var(--color-brand-blue)"></div>
@@ -213,13 +155,13 @@
     </section>
 
     <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
-        
         <gaia-button>Gaia-button</gaia-button>
 
         <br/><br/>
 
-        <gaia-button><i class="icon icon-location"></i></gaia-button>
-        
+        <gaia-button style="round">
+            <div class="button-round"><span id="arrow-forward" data-icon="arrow-forward"></span></div>
+        </gaia-button>
     </section>
 
     <section id="menu" class="sg-section sg-border l-mb-mega">
@@ -227,41 +169,47 @@
 
         <ul class="menu">
             <li class="menu-item">
-                <i class="menu-item-icon icon icon-time"></i>
+                <span class="menu-item-icon" data-icon="brightness"></span>
                 <div class="l-flex-grow">Menu 1</div>
-                <i class="icon icon-forward"></i>
-                <div class="menu-item-selected"></div>
+                <a class="menu-item-chevron" href="#next" id="next" data-icon="next"></a>
+                <div class="menu-item-selected-container">
+                    <div class="menu-item-selected"></div>
+                </div>
             </li>
             <li class="menu-item">
-                <i class="menu-item-icon icon icon-sim"></i>
+                <span class="menu-item-icon" data-icon="location"></span>
                 <div class="l-flex-grow">Menu 2</div>
-                <i class="icon icon-forward"></i>
-                <div class="menu-item-selected"></div>
+                <a class="menu-item-chevron" href="#next" id="next" data-icon="next"></a>
+                <div class="menu-item-selected-container">
+                    <div class="menu-item-selected"></div>
+                </div>
             </li>
             <li class="menu-item">
-                <i class="menu-item-icon icon icon-settings"></i>
+                <span class="menu-item-icon" data-icon="settings"></span>
                 <div class="l-flex-grow">Menu 3</div>
-                <i class="icon icon-forward"></i>
-                <div class="menu-item-selected"></div>
+                <a class="menu-item-chevron" href="#next" id="next" data-icon="next"></a>
+                <div class="menu-item-selected-container">
+                    <div class="menu-item-selected"></div>
+                </div>
             </li>
         </ul>
     </section>
     
     <section class="sg-section sg-border l-p-small l-mb-mega l-align-center">
-        <h2 class="alpha">Spinner</h2>
+        <h2 class="alpha">Progress</h2>
 
         <div class="l-align-center">
-            <span class="spinner is-invisible"></span>
+            <div class="spinner">
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+
+            </div>
         </div>
 
         <br/>
 
-        <gaia-button id="spinner-toggle">Toggle spinner</gaia-button>
-
     </section>
-
-
-    
 
     <section class="sg-section sg-border l-mb-mega">
         <h2 class="alpha l-align-center l-p-small">Toggles</h2>
@@ -271,14 +219,20 @@
                 <label for="switch1" class="l-flex-grow">Toggle switch</label>
                 <gaia-switch id="switch1"></gaia-switch>
             </li>
+
             <li class="menu-item">
-                <label for="switch3" class="l-flex-grow">Toggle switch checked </label>
-                <gaia-switch id="switch3" checked></gaia-switch>
+                <label for="switch2" class="l-flex-grow">Toggle switch checked </label>
+                <gaia-switch id="switch2" checked></gaia-switch>
             </li>
 
             <li class="menu-item">
                 <label for="switch3" class="l-flex-grow">Toggle switch checked </label>
                 <gaia-switch id="switch3" class="l-align-right" checked></gaia-switch>
+            </li>
+
+            <li class="menu-item">
+                <label for="switch4" class="l-flex-grow">Divided switch</label>
+                <gaia-switch class="switch-divided" id="switch4"></gaia-switch>
             </li>
         </ul>
     </section>
@@ -299,6 +253,10 @@
                 <label for="b3" class="l-flex-grow">Checkbox</label>
                 <gaia-checkbox id="b3" name="b"></gaia-checkbox>
             </li>
+            <li class="menu-item">
+                <label for="b4" class="l-flex-grow">Checkbox divided</label>
+                <gaia-checkbox class="checkbox-divided" id="b4" name="b"></gaia-checkbox>
+            </li>
         </ul> 
     </section>
     
@@ -308,7 +266,7 @@
         <label class="input-label" for="SampleInput">Inputbox Label</label>
         <div class="input-container">
             <input class="input" placeholder="Placeholder text"></input>
-            <div class="input-clear"><i class="input-clear-icon icon icon-close"></i></div>
+            <div class="input-clear"><a href="#close" id="close" data-icon="close"></a></div>
             <div class="input-focus"></div>
         </div>
         <br/>
@@ -316,7 +274,7 @@
         <label class="input-label" for="SamplePassword">Password</label>
         <div class="input-container">
             <input class="input" type="password"></input>
-            <div class="input-clear"><i class="input-clear-icon icon icon-close"></i></div>
+            <div class="input-clear"><a href="#close" id="close" data-icon="close"></a></div>
             <div class="input-focus"></div>
         </div>
         <br/>
@@ -324,7 +282,7 @@
         <label class="input-label" for="search">Search</label>
         <div class="input-container input-search-container">
             <input class="input" placeholder="Search..."></input>
-            <div class="input-clear"><i class="input-clear-icon icon icon-close"></i></div>
+            <div class="input-clear"><a href="#close" id="close" data-icon="close"></a></div>
             <div class="input-focus"></div>
         </div>
         <br/>
@@ -355,13 +313,13 @@
         
         <div class="tabs">
             <div class="tabs-item">
-                <i class="tabs-item-icon icon icon-video"></i>
+                <span data-icon="call"></span>
             </div>
             <div class="tabs-item">
-                <i class="tabs-item-icon icon icon-user"></i>
+                <span data-icon="contacts"></span>
             </div>
             <div class="tabs-item tabs-item-selected">
-                <i class="tabs-item-icon icon icon-share"></i>
+                <span data-icon="dialpad"></span>
             </div>
             <div class="tabs-selected-indicator"></div>
         </div>
@@ -381,13 +339,13 @@
 
         <div class="tabs">
             <div class="tabs-item toolbars-item">
-                <i class="tabs-item-icon icon icon-skip-back"></i>
+                <span data-icon="seek-back"></span>
             </div>
             <div class="tabs-item toolbars-item">
-                <i class="tabs-item-icon icon icon-play"></i>
+                <span data-icon="play"></span>
             </div>
             <div class="tabs-item toolbars-item">
-                <i class="tabs-item-icon icon icon-skip-forward"></i>
+                <span data-icon="seek-forward"></span>
             </div>
         </div>        
     </section>
@@ -461,19 +419,19 @@
         <div class="dialogue-objectmenu dialogue is-hidden">
             <div class="dialogue-buttons dialogue-buttons-vertical">
                 <button class="dialogue-button dialogue-objectmenu-button l-width-full">
-                    <i class="dialogue-button-icon icon icon-add"></i>
+                    <div class="dialogue-objectmenu-icon"><a href="#add" id="add" data-icon="add"></a></div>
                     Open in New Window
                 </button>
                 <button class="dialogue-button dialogue-objectmenu-button l-width-full">
-                    <i class="dialogue-button-icon icon icon-star-empty"></i>
+                    <div class="dialogue-objectmenu-icon"><a href="#firefox" id="firefox" data-icon="firefox"></a></div>
                     Add to Home Screen
                 </button>
                 <button class="dialogue-button dialogue-objectmenu-button l-width-full">
-                    <i class="dialogue-button-icon icon icon-share"></i>
+                    <div class="dialogue-objectmenu-icon"><a href="#share" id="share" data-icon="share"></a></div>
                     Share Link
                 </button>
                 <button class="dialogue-button dialogue-objectmenu-button l-width-full">
-                    <i class="dialogue-button-icon icon icon-settings"></i>
+                    <div class="dialogue-objectmenu-icon"><a href="#settings" id="settings" data-icon="settings"></a></div>
                     Settings
                 </button>   
             </div>
@@ -588,7 +546,7 @@
                     
                     <div class="l-pl-small l-m-0">
                     <gaia-checkbox id="dialogue-permission-remember" name="" checked></gaia-checkbox>
-                    <label for="dialogue-permission-remember" class="l-m-small font-color-dark">Remember my choice</label>
+                    <label class="dialogue-permission-remember l-ml-small" for="dialogue-permission-remember" class="l-m-small font-color-dark">Remember my choice</label>
                     </div>
                 </div>                
             </div>
