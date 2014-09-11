@@ -1,0 +1,224 @@
+/*
+Gaia theme variables
+*/
+
+
+:root {
+  /* brand colors */
+  --color-brand-darkblue: #00539f;
+  --color-brand-blue: #00caf2;
+  --color-brand-turquoise: #27c8c2;
+  --color-brand-darkorange: #e66000;
+  --color-brand-orange: #ff9500;
+  --color-brand-yellow: #ffcb00;
+  --color-brand-violet: #c40c84;
+  --color-brand-alpha: #00aac5;
+  --color-brand-beta: #00caf2;
+  --color-brand-gamma: #b2f2ff;
+
+  --color-warning: #fbbd3c;
+  --color-destructive: #e2443a;
+  --color-preffered: #00ba91;
+
+  /* base dimensions */
+  --dim-micro: 6px;
+  --dim-milli: 12px;
+  --dim-small: 16px;
+  --dim-medium: 45px;
+  --dim-large: 50px;
+  --dim-mega: 60px;
+
+  /* font dimensions */
+  --font-small: 14px;
+  --font-medium: 17px;
+  --font-large: 23px;
+
+  /* module styles  */
+  --header-background: #fff;
+  --header-nav-button-color:  var(--color-alpha);
+  --header-nav-button-color-active: var(--color-alpha);
+  --header-button-background: rgba(0,0,0,0.1);
+  --header-button-color-active: var(--color-alpha);
+  --header-button-color: var(--color-alpha);
+  --header-title-color: var(--color-alpha);
+
+  --button-background: var(--color-iota);
+  --button-background-active: var(--color-brand-blue);
+  --button-color: var(--color-epsilon);
+  --button-color-active: var(--color-beta);
+  --button-transition: all 0.2s;
+  --button-boxshadow: inset 0 -1px 0 #d8d8d8, inset 0 1px 0 #eeeeee;
+
+  --switch-handle-color: var(--color-beta);
+  --switch-track-color: var(--color-zeta);
+  --switch-outline-color: var(--color-zeta);
+
+  --checkbox-border: 2px solid var(--color-zeta);
+  --checkbox-background: var(--color-beta);
+
+  --input-background: var(--color-beta);
+  --input-border: 1px solid var(--color-theta);
+  --input-color: var(--color-alpha);
+  --input-placeholder-color: #909ca7;
+  --input-clear-background: #909ca7;
+
+  --dialogue-header-color: var(--color-epsilon);
+  --dialogue-input-color: var(--color-alpha);
+  --dialogue-input-background: var(--color-beta);
+  --dialogue-input-border: 1px solid var(--color-theta);
+  --dialogue-menuitem-border-color: var(--color-theta);
+  
+  --banner-background: var(--color-iota);
+  
+  /* generic styles */
+  --highlight-color: #000;
+  --border-color: var(--color-theta);
+}
+
+
+/* sub-theme specific variables */
+.theme-productivity {
+    /* generic styles */
+    --highlight-color: var(--color-brand-orange);
+    
+    /* module styles */
+    --header-background: var(--color-brand-orange);
+    --header-nav-button-color:  var(--color-beta);
+    --header-nav-button-color-active: rgba(255,255,255,0.2);
+    --header-button-color: var(--color-beta);
+    --header-button-color-active: rgba(255,255,255,0.2);
+    --header-button-background: transparent;
+    --header-title-color: var(--color-beta);
+
+    --button-background-active: var(--color-brand-orange);
+    --button-color-active: var(--color-beta);   
+}
+
+.theme-communications {
+  /* generic styles */
+  --highlight-color: var(--color-brand-turquoise);
+  
+  /* module styles */
+  --header-background: var(--color-brand-turquoise);
+  --header-nav-button-color:  var(--color-beta);
+  --header-nav-button-color-active: rgba(255,255,255,0.2);
+  --header-button-color: #177874;
+  --header-button-color-active: rgba(23,120,116,0.2);
+  --header-button-background: transparent;
+  --header-title-color: var(--color-beta);
+
+  --button-background-active: var(--color-brand-turquoise);
+  --button-color-active: var(--color-beta);
+}
+
+.theme-settings {
+  /* generic styles */
+  --highlight-color: var(--color-brand-blue);
+
+  /* module styles */
+  --header-background: var(--color-iota);
+  --header-nav-button-color:  var(--color-alpha);
+  --header-nav-button-color-active: rgba(51,51,51,0.2);
+  --header-button-color: var(--color-brand-blue);
+  --header-button-background: transparent;  
+  --header-button-color-active: rgba(0,202,242,0.2);
+  --header-title-color: var(--color-alpha);
+    
+  --button-background-active: var(--color-brand-blue);
+  --button-background: var(--color-beta);
+  --button-color-active: var(--color-beta);
+
+  --banner-background: var(--color-beta);
+  
+  /* container styles */
+  background: var(--color-iota);
+}
+
+
+.theme-media {
+  /* generic styles */
+  --highlight-color: var(--color-brand-blue);
+
+  /* module styles */
+  --header-background: var(--color-gamma);
+  --header-nav-button-color:  var(--color-beta);
+  --header-nav-button-color-active:  rgba(255,255,255,0.2);
+  --header-button-color: var(--color-brand-blue);
+  --header-button-color-active: rgba(0,170,197,0.3);
+  --header-button-background: transparent;
+  --header-title-color: var(--color-beta);
+    
+  --button-background: var(--color-delta);
+  --button-background-active: var(--color-brand-blue);
+  --button-color: var(--color-beta);
+  --button-color-active: var(--color-beta);
+  --button-boxshadow: 'none';
+  
+  --switch-handle-color: var(--color-delta);
+  --switch-track-color: #1a1a1a;
+  --switch-outline-color: #1a1a1a;
+
+  --checkbox-border: 2px solid #1a1a1a;
+  --checkbox-background: var(--color-delta);
+
+  --input-background: #2b2b2b;
+  --input-border: 1px solid #4d4d4d;
+  --input-color: var(--color-beta);
+  --input-placeholder-color: var(--color-eta);
+
+  --banner-background: var(--color-gamma);
+  
+  /* container styles  */
+  color: var(--color-eta);
+  background: var(--color-alpha);
+}
+
+/* overrides */
+.theme-media h1, .theme-media .alpha,
+.theme-media h2, .theme-media .beta,
+.theme-media h3, .theme-media .gamma {
+    color: #fff;
+}
+.theme-media .menu-item {
+  color: var(--color-eta)
+}
+.theme-media .menu-item a {
+    color: inherit;
+}
+.theme-media .menu-item:after {
+    background: var(--color-gamma);
+}
+.theme-media .subheader-link-label {
+    color: var(--highlight-color);
+}
+.theme-media .subheader-line {
+    background: var(--color-gamma);
+}
+.theme-media .menu-item a {
+    color: inherit;
+}
+.theme-media .menu-item-selected { 
+    background: var(--color-gamma);
+}
+.theme-media .input-range-track {
+    background: var(--color-gamma);
+}
+.theme-media .input-range-range {
+    background: var(--highlight-color);
+}
+.theme-media .input-range-handle {
+    background: var(--color-alpha);    
+}
+.theme-media .input-range-handle:active {
+    background:var(--color-gamma);
+}
+.theme-media .tabs {
+    border-top-color: var(--color-gamma);
+}
+.theme-media .dialogue-container {
+    background: rgba(51,51,51,0.85);
+}
+.theme-media .dialogue {
+    color: var(--color-epsilon);
+}
+
