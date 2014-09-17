@@ -1,6 +1,6 @@
 ## Firefox OS Styleguide
 
-http://caseyyee.github.io/gaia-controls/
+http://fxos-ux.github.io/gaia-controls/
 
 
 ### Intallation
