@@ -6,7 +6,7 @@ http://fxos-ux.github.io/gaia-controls/
 ### Intallation
 Clone repo
 
-    git clone https://github.com/caseyyee/gaia-controls
+    git clone https://github.com/fxos-ux/gaia-controls
 
 Use bower to install required components
 
